@@ -1,0 +1,5407 @@
+{
+  "departments": [
+    {
+      "id": "e891fd0e-5088-47f5-be66-c3b8416763d3",
+      "code": "MA",
+      "name": "MA"
+    },
+    {
+      "id": "59904cc6-df94-41d1-8198-f0a362ac619a",
+      "code": "FN",
+      "name": "FN"
+    },
+    {
+      "id": "9b064d4f-8b02-4088-9002-43392dfb9c6b",
+      "code": "AA",
+      "name": "AA"
+    },
+    {
+      "id": "a59d4e04-1181-4189-abf4-9bfed9592ae7",
+      "code": "HR",
+      "name": "HR"
+    },
+    {
+      "id": "9a4627fe-6749-48e3-a451-050971f5b620",
+      "code": "HD",
+      "name": "HD"
+    },
+    {
+      "id": "36110abe-4f43-4004-80c0-0e872353c007",
+      "code": "GH",
+      "name": "GH"
+    },
+    {
+      "id": "b27dc97f-488a-4630-82a3-74c18bb5bd81",
+      "code": "EHKC",
+      "name": "EHKC"
+    },
+    {
+      "id": "63e2e3d7-8b30-421b-8cf4-4d0d2502747e",
+      "code": "OH",
+      "name": "OH"
+    },
+    {
+      "id": "297e48b3-9acf-4832-b487-c97ae437fd08",
+      "code": "MKT",
+      "name": "MKT"
+    },
+    {
+      "id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1",
+      "code": "YB",
+      "name": "YB"
+    },
+    {
+      "id": "41b75497-f3e8-4918-9692-96285d20b044",
+      "code": "PV",
+      "name": "PV"
+    },
+    {
+      "id": "27ea3e8d-0cb0-4f47-8e22-c16dd4fb7117",
+      "code": "RCKL",
+      "name": "RCKL"
+    }
+  ],
+  "employees": [
+    {
+      "id": "e4074f9c-b2fd-4e5f-b41f-1d9af6c19d89",
+      "name": "Kwan Peng Chung",
+      "title": "PC/DC",
+      "department_id": "e891fd0e-5088-47f5-be66-c3b8416763d3"
+    },
+    {
+      "id": "fa8cb445-079b-46d5-89fd-73d360671cfd",
+      "name": "Muhammad Qarafi Bin Mohd Alias",
+      "title": "PA",
+      "department_id": "e891fd0e-5088-47f5-be66-c3b8416763d3"
+    },
+    {
+      "id": "165975e5-3450-43e6-b1eb-13532ab18674",
+      "name": "Pavithran A/L Manoharan",
+      "title": "IT ADMIN",
+      "department_id": "e891fd0e-5088-47f5-be66-c3b8416763d3"
+    },
+    {
+      "id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "name": "Steve",
+      "title": "IT Intern",
+      "department_id": "e891fd0e-5088-47f5-be66-c3b8416763d3"
+    },
+    {
+      "id": "d3f8a969-396e-4fcb-bd8a-a7ab8eaf8114",
+      "name": "Fatin",
+      "title": "Accounting Support",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "cf18cd34-61ee-46bc-a109-231796ebcdae",
+      "name": "Dalilah",
+      "title": "Accounting Support",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "11b66e6b-5341-44d4-8926-01c6ab0c8e9a",
+      "name": "Darren",
+      "title": "AA Admin",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "e6b0c0f7-573a-4f1c-bce8-0ce3781ed4ad",
+      "name": "Dhivya",
+      "title": "HR Executive",
+      "department_id": "a59d4e04-1181-4189-abf4-9bfed9592ae7"
+    },
+    {
+      "id": "44b809e7-0f45-4eb0-a049-2b706a6a6469",
+      "name": "Hoo Yik Shin",
+      "title": "Office Manager",
+      "department_id": "e891fd0e-5088-47f5-be66-c3b8416763d3"
+    },
+    {
+      "id": "a9e9c1f4-ddb5-4a8f-aa10-4497c58d927b",
+      "name": "Marie",
+      "title": "Office Manager",
+      "department_id": "e891fd0e-5088-47f5-be66-c3b8416763d3"
+    },
+    {
+      "id": "a874feef-1941-448a-8334-1116989c7dda",
+      "name": "Hafiz",
+      "title": "Admin Executive",
+      "department_id": "9a4627fe-6749-48e3-a451-050971f5b620"
+    },
+    {
+      "id": "8cf193df-ffdd-48a3-866e-876bc8a04aa6",
+      "name": "Ashley Chin",
+      "title": "HR Manager",
+      "department_id": "a59d4e04-1181-4189-abf4-9bfed9592ae7"
+    },
+    {
+      "id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "name": "Tee Sok Kian",
+      "title": "Account Executive",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "name": "Sharifah Anisah Binti Syed Harun",
+      "title": "Accounts Executive",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "22f1aa1d-9544-42d4-b198-77b96851279a",
+      "name": "Tang Hwee Chew",
+      "title": "Project Assistant",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "dc510d68-26ce-41b2-bf97-a626bb2488da",
+      "name": "Patricia Lee",
+      "title": "Marcom Executive",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "name": "Yuna Chong",
+      "title": "Admin Executive",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "39dfce77-f006-42f2-961c-164878445c80",
+      "name": "John Then",
+      "title": "EHKL Manager",
+      "department_id": "b27dc97f-488a-4630-82a3-74c18bb5bd81"
+    },
+    {
+      "id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "name": "Lai Kian Seng",
+      "title": "Elder Home Care Manager",
+      "department_id": "b27dc97f-488a-4630-82a3-74c18bb5bd81"
+    },
+    {
+      "id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "name": "Intan",
+      "title": "HR Admin",
+      "department_id": "a59d4e04-1181-4189-abf4-9bfed9592ae7"
+    },
+    {
+      "id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "name": "Catherine",
+      "title": "Finance Manager",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "name": "Nurin",
+      "title": "Accounts Executive",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "6de20df7-3e11-4eb6-a274-a7aa747b2dc9",
+      "name": "Thiru",
+      "title": "Accounting Support",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "b9c1fb00-303a-42ad-be29-e808454f3737",
+      "name": "Qayyum",
+      "title": "Accounts Executive",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "name": "Alice Pang",
+      "title": "Account Executive",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "971f48f9-0402-44ec-ab27-1b94e9ead91d",
+      "name": "Joanne Goh",
+      "title": "Orphanage Operations Manager",
+      "department_id": "63e2e3d7-8b30-421b-8cf4-4d0d2502747e"
+    },
+    {
+      "id": "f8d760c4-325e-4ce5-8c86-64231287da22",
+      "name": "Santhiya",
+      "title": "Account Assistant",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "name": "Mr Soo",
+      "title": "",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "name": "Suguna A/P Radhakrishan",
+      "title": "Accounts Executive",
+      "department_id": "59904cc6-df94-41d1-8198-f0a362ac619a"
+    },
+    {
+      "id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "name": "Paige",
+      "title": "Marketing Manager",
+      "department_id": "297e48b3-9acf-4832-b487-c97ae437fd08"
+    },
+    {
+      "id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "name": "Kee Fui Ying (Niclole) Lead Desginer",
+      "title": "",
+      "department_id": "297e48b3-9acf-4832-b487-c97ae437fd08"
+    },
+    {
+      "id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "name": "Iman Firdaus",
+      "title": "Public Relations & Marketing Executive",
+      "department_id": "297e48b3-9acf-4832-b487-c97ae437fd08"
+    },
+    {
+      "id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "name": "Sarah Cheng",
+      "title": "Administrative Leader",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "name": "Vivian",
+      "title": "EH Manager Trainee",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "d41aaa5c-e0a9-4c13-8a53-208f39eba2e9",
+      "name": "Adaline",
+      "title": "Business Manager",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "57ceec5b-7741-4962-ae7b-6b8ee675d0d0",
+      "name": "Morgan",
+      "title": "Business Manager",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "bd883ea0-0842-48f6-80af-f78a6d8d1e4d",
+      "name": "Jasmine",
+      "title": "Business Manager",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "442d4463-79d7-4bfd-a4f2-f4c2ba3ab16f",
+      "name": "Raymend",
+      "title": "",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "name": "Ming Fang",
+      "title": "Office Administrator",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "90f19282-a15e-42e9-b69c-74733347d67f",
+      "name": "Lim Pee Wei",
+      "title": "Business Manager",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "bda0f99f-7f59-4d16-adda-d0b908ce127e",
+      "name": "Messi Hew",
+      "title": "Business Development Manager",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "50a62df2-0c92-4b52-afd6-425f1703ab04",
+      "name": "Anis Saheera Binti Shah Kalam",
+      "title": "",
+      "department_id": "36110abe-4f43-4004-80c0-0e872353c007"
+    },
+    {
+      "id": "f48e18a6-4ac6-4510-a135-9d21a4d1eb61",
+      "name": "Chan Lih Jing, Chloe",
+      "title": "General Manager",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "7b8d1114-29a0-4d65-a14d-512a543465cd",
+      "name": "Elson Koh",
+      "title": "Marketing Executive",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "db67b0d9-cba9-4327-b928-54b0b6b90de4",
+      "name": "Lee Zee Xiu",
+      "title": "Multimedia Designer Intern",
+      "department_id": "9b064d4f-8b02-4088-9002-43392dfb9c6b"
+    },
+    {
+      "id": "f78fdefb-86e4-48ef-8113-d09ff0d2ea65",
+      "name": "Jasmin Mullai",
+      "title": "Nurse Manager",
+      "department_id": "9a4627fe-6749-48e3-a451-050971f5b620"
+    },
+    {
+      "id": "0b54d3f5-f4ae-42c6-b776-29582c90c0b7",
+      "name": "Chong Tzer Bin",
+      "title": "Chairman",
+      "department_id": "63e2e3d7-8b30-421b-8cf4-4d0d2502747e"
+    },
+    {
+      "id": "84794121-775c-470b-a6f6-90a6d208d2fd",
+      "name": "Alston",
+      "title": "Head of Putuo Village",
+      "department_id": "41b75497-f3e8-4918-9692-96285d20b044"
+    },
+    {
+      "id": "7996e538-f96f-4662-af7f-3082c8634478",
+      "name": "Liw Chia Li",
+      "title": "",
+      "department_id": "41b75497-f3e8-4918-9692-96285d20b044"
+    },
+    {
+      "id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "name": "Patrick Seah",
+      "title": "Recycling & Operation Manager",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "667f402b-25b2-491d-88a1-2cfec251e8f4",
+      "name": "Hazel Koh",
+      "title": "Senior Sales Executive",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "2be5f5c4-7c69-4f9d-b3e0-154d1f013a56",
+      "name": "Chong Kon Mung",
+      "title": "Lorry Driver",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "2475599f-1bf4-4cbc-92c9-7875c257cc37",
+      "name": "Chee Lip Boon",
+      "title": "Lorry Driver",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "93125cc0-e404-4fcf-afca-2ef652f7287d",
+      "name": "Tan Leng Chuan",
+      "title": "Lorry Driver",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "8fa04d17-f97f-4fac-b6dd-95ab29166649",
+      "name": "Tey Kok An",
+      "title": "Lorry Driver",
+      "department_id": "a912b61e-6d52-49d4-b9aa-9a16da3046a1"
+    },
+    {
+      "id": "7713a7e2-f9ca-4f5f-931a-3303004ab930",
+      "name": "Yun Woon Sang",
+      "title": "",
+      "department_id": "b27dc97f-488a-4630-82a3-74c18bb5bd81"
+    },
+    {
+      "id": "f679bd8d-1fb8-4656-a370-6ad91868ced7",
+      "name": "Chee Yik Mei",
+      "title": "Admin Executive",
+      "department_id": "b27dc97f-488a-4630-82a3-74c18bb5bd81"
+    },
+    {
+      "id": "eae4278b-a442-473e-85bd-aa4b921d715e",
+      "name": "Ong Meng Soon",
+      "title": "Lorry Driver",
+      "department_id": "27ea3e8d-0cb0-4f47-8e22-c16dd4fb7117"
+    }
+  ],
+  "assets": [
+    {
+      "id": "ac9f097d-1161-4e70-a676-b28f02f98466",
+      "asset_type": "Laptop",
+      "description": "Lenovo ThinkPad",
+      "serial_no": "PF-51Z1Q0",
+      "notes": null,
+      "_sourceBils": "1",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 1
+    },
+    {
+      "id": "1d9537f4-3101-4107-8866-5197623e7c83",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter",
+      "serial_no": "8SGX21J75547L1CZ",
+      "notes": null,
+      "_sourceBils": "2",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 2
+    },
+    {
+      "id": "6f572fe4-b3ac-47ee-80a5-4b70fa6d21d2",
+      "asset_type": "Monitor",
+      "description": "Philips V Line 24VA Panel Monitor",
+      "serial_no": "UK02331005759",
+      "notes": null,
+      "_sourceBils": "3",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 3
+    },
+    {
+      "id": "48ed8457-407d-4e26-be91-68cbda87628a",
+      "asset_type": "Handphone",
+      "description": "Honor 90 Lite (Blue Color)",
+      "serial_no": "IMEI: 868452072576998",
+      "notes": null,
+      "_sourceBils": "4",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 4
+    },
+    {
+      "id": "ff335e62-fa38-46ea-be0d-962a856f32a5",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 019-2662291",
+      "serial_no": "SN: 89001622020808264282",
+      "notes": null,
+      "_sourceBils": "5",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 5
+    },
+    {
+      "id": "f905a5d7-d5fc-40c0-97e8-e2bec8bedbcd",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D15\nModel: BOB-WAH9",
+      "serial_no": "9PFPM21A12001550",
+      "notes": null,
+      "_sourceBils": "6",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 6
+    },
+    {
+      "id": "c116987e-ae91-4ebd-95aa-96f665c979e7",
+      "asset_type": "Monitor",
+      "description": "LG Monitor 27MP400 27\"",
+      "serial_no": "305NTPC09560",
+      "notes": null,
+      "_sourceBils": "7,14,17",
+      "_typeMismatch": false,
+      "_groupRowCount": 3,
+      "_firstBil": 7
+    },
+    {
+      "id": "46ed0561-2f25-4f5e-9cda-28ea8886e385",
+      "asset_type": "Mouse",
+      "description": "Logitech - Wireless Mouse\nModel: B175 / MR0087",
+      "serial_no": "2345LZX7KZ78",
+      "notes": null,
+      "_sourceBils": "8",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 8
+    },
+    {
+      "id": "38e03885-5b86-4caa-b4b5-202811c1f32c",
+      "asset_type": "Laptop Adapter",
+      "description": "Huawei Power Adapter",
+      "serial_no": "_",
+      "notes": null,
+      "_sourceBils": "9",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 9
+    },
+    {
+      "id": "354f61b4-82fd-488d-b067-21315015802b",
+      "asset_type": "Monitor Adapter",
+      "description": "Power Adapter",
+      "serial_no": "HP469627686266162",
+      "notes": null,
+      "_sourceBils": "10",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 10
+    },
+    {
+      "id": "b5ccb272-126b-461a-843f-9369f6bfba02",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D15\nModel: BOB-WAH9",
+      "serial_no": "KGHPM22415000465",
+      "notes": null,
+      "_sourceBils": "11,49,79",
+      "_typeMismatch": false,
+      "_groupRowCount": 3,
+      "_firstBil": 11
+    },
+    {
+      "id": "16e571a6-efdd-41f2-8175-a947aa73ad12",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter",
+      "serial_no": "HW-200325BP0",
+      "notes": null,
+      "_sourceBils": "12,200",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 12
+    },
+    {
+      "id": "820938d8-85f0-4635-9c2a-0292cf9a875c",
+      "asset_type": "Monitor Adapter",
+      "description": "ADS-25FSF-19",
+      "serial_no": "ADS-25FSF-19",
+      "notes": null,
+      "_sourceBils": "13,20",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 13
+    },
+    {
+      "id": "9059722f-f7c7-4493-8d7a-3292dd8de53c",
+      "asset_type": "Laptop",
+      "description": "LAPTOP  D15 FDXX",
+      "serial_no": "5CD3316P4H",
+      "notes": null,
+      "_sourceBils": "15",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 15
+    },
+    {
+      "id": "ae172fb0-538c-4b01-927a-5a66a6497aed",
+      "asset_type": "Laptop Adapter",
+      "description": "AC Adapter",
+      "serial_no": "L25296-001",
+      "notes": null,
+      "_sourceBils": "16",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 16
+    },
+    {
+      "id": "c4c81729-399e-4199-aec8-d6eb6d005be3",
+      "asset_type": "Mouse",
+      "description": "Mx Master 2s",
+      "serial_no": "2043LZ09DFQ8",
+      "notes": null,
+      "_sourceBils": "18,35",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 18
+    },
+    {
+      "id": "022a502c-8050-4f81-9a13-be1325b3e5a2",
+      "asset_type": "Hdmi Cable",
+      "description": "Vendor bohoi",
+      "serial_no": "VENDOR HDMI",
+      "notes": null,
+      "_sourceBils": "19",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 19
+    },
+    {
+      "id": "60e3cfaf-4f60-41f0-9ff6-957e1ffb1bda",
+      "asset_type": "Laptop Adapter",
+      "description": "HP Power Adapter",
+      "serial_no": "TPN-DA16",
+      "notes": null,
+      "_sourceBils": "21,24,221",
+      "_typeMismatch": false,
+      "_groupRowCount": 3,
+      "_firstBil": 21
+    },
+    {
+      "id": "62de1036-6a30-4eca-9ac4-99d0ada652ea",
+      "asset_type": "Laptop",
+      "description": "HP Laptop (Silver)",
+      "serial_no": "5CD5193LLK",
+      "notes": null,
+      "_sourceBils": "22,25",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 22
+    },
+    {
+      "id": "15e883f9-bf30-4e76-92b9-243ce0a23252",
+      "asset_type": "Acer Wireless mouse",
+      "description": "AMR100",
+      "serial_no": "GPMCE1103M435506880Z01",
+      "notes": null,
+      "_sourceBils": "23,26",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 23
+    },
+    {
+      "id": "6e02965f-df48-42d8-b676-01b47cea7696",
+      "asset_type": "Monitor",
+      "description": "LG Monitor 27MP400 27\"",
+      "serial_no": "305NTNH09575",
+      "notes": null,
+      "_sourceBils": "27",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 27
+    },
+    {
+      "id": "72b27a4a-8af0-46d0-b0e3-c4ee51add9fb",
+      "asset_type": "Monitor Adapter",
+      "description": "Power Adapter",
+      "serial_no": "HP469627686264018",
+      "notes": null,
+      "_sourceBils": "28",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 28
+    },
+    {
+      "id": "5a641419-70fb-4584-a5bd-d67336da0815",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D16",
+      "serial_no": "2NZBB24227800205",
+      "notes": null,
+      "_sourceBils": "29",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 29
+    },
+    {
+      "id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "asset_type": "Laptop Adapter",
+      "description": "Huawei Power Adapter",
+      "serial_no": "HW-200325BP3",
+      "notes": null,
+      "_sourceBils": "30,67,85,179,197,206,270,278",
+      "_typeMismatch": false,
+      "_groupRowCount": 8,
+      "_firstBil": 30
+    },
+    {
+      "id": "7cb27fea-3e3f-433c-87ba-240e505985de",
+      "asset_type": "Simcard",
+      "description": "CelcomDigi Simcard\nNo.: 012-7226809",
+      "serial_no": "SN: 89601622020813196172",
+      "notes": null,
+      "_sourceBils": "31",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 31
+    },
+    {
+      "id": "b6f24d11-591d-47ac-9170-37bd1c889536",
+      "asset_type": "Monitor",
+      "description": "Philips V Line 24VA Panel Monitor",
+      "serial_no": "UK02331005755",
+      "notes": null,
+      "_sourceBils": "32",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 32
+    },
+    {
+      "id": "d67647e9-1b21-4831-81cb-9872ef5cfc9c",
+      "asset_type": "Monitor Adapter",
+      "description": "Power Adapter",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "33",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 33
+    },
+    {
+      "id": "b7ec0764-e1a1-431d-9b9a-7aa5427270cf",
+      "asset_type": "Laptop",
+      "description": "Huawei Matebook D16\nModel: BOD-WDH9",
+      "serial_no": "JQBPM21B25001410",
+      "notes": null,
+      "_sourceBils": "34",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 34
+    },
+    {
+      "id": "a57a1c8c-164a-4b71-942b-4b32133494f6",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "36",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 36
+    },
+    {
+      "id": "2bea437d-f71d-46d0-af51-c3574bd9b52e",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D15\nModel: BOM-WAQ9R",
+      "serial_no": "M5EPM20102001526",
+      "notes": null,
+      "_sourceBils": "37",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 37
+    },
+    {
+      "id": "ebdeee5e-a324-413d-ae6f-2519d75b0c1b",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter",
+      "serial_no": "HW-200326BPO",
+      "notes": null,
+      "_sourceBils": "38",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 38
+    },
+    {
+      "id": "73b3517f-ffee-4418-b8b5-2de43cfb70f7",
+      "asset_type": "Mouse",
+      "description": "Logitech - Wireless Mouse\nModel: B175 / MR0087",
+      "serial_no": "2345LZX7MBL8",
+      "notes": null,
+      "_sourceBils": "39",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 39
+    },
+    {
+      "id": "284b28da-226b-44af-a64c-9697806345e8",
+      "asset_type": "Handphone",
+      "description": "Honor 90 Lite (Black Color)",
+      "serial_no": "IMEI: 868452071291045",
+      "notes": null,
+      "_sourceBils": "40",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 40
+    },
+    {
+      "id": "6ff6a55a-8a91-47ee-b47a-3e18871920bb",
+      "asset_type": "Handphone Charger",
+      "description": "Super Charger Adapter & USB\nModel: HW-100225B00",
+      "serial_no": "HF49E6P8804207",
+      "notes": null,
+      "_sourceBils": "41",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 41
+    },
+    {
+      "id": "48ef9b61-8bce-4037-b112-5659fa51cb28",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 011-36680887",
+      "serial_no": "SN: 89601621081606454559",
+      "notes": null,
+      "_sourceBils": "42",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 42
+    },
+    {
+      "id": "5f2dbb19-5d97-48a9-937d-90c18e58fdea",
+      "asset_type": "Monitor",
+      "description": "Lenovo (l27i-4A)\nModel: VC14102",
+      "serial_no": "4P102B34",
+      "notes": null,
+      "_sourceBils": "43",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 43
+    },
+    {
+      "id": "340a29c5-4f3b-4896-b09f-b7d8051a1f31",
+      "asset_type": "Laptop",
+      "description": "Huawei  MateBook\nModel: MCLF-X",
+      "serial_no": "27GBB2489800104",
+      "notes": null,
+      "_sourceBils": "44",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 44
+    },
+    {
+      "id": "7acc2c8e-1386-46e7-8fc0-a52cd9ed1fb3",
+      "asset_type": "Hdmi Cable",
+      "description": "2443008925",
+      "serial_no": "389G1848HAA140-NELV",
+      "notes": null,
+      "_sourceBils": "45",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 45
+    },
+    {
+      "id": "e2ca0451-ebb2-446e-9633-5d2436f93caf",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter with cable",
+      "serial_no": "HW-200325BP5",
+      "notes": null,
+      "_sourceBils": "46",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 46
+    },
+    {
+      "id": "d0f2fdf4-4a40-44c9-9337-12729564ef25",
+      "asset_type": "Handphone",
+      "description": "Honor 90 Lite \nModel: CR7-NX1",
+      "serial_no": "A4AV6R3A13018414",
+      "notes": null,
+      "_sourceBils": "47",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 47
+    },
+    {
+      "id": "9075d06f-3724-4824-ae6a-cc17b9b65eff",
+      "asset_type": "Handphone Charger",
+      "description": "Power Adapter",
+      "serial_no": "HW-100225D00",
+      "notes": null,
+      "_sourceBils": "48",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 48
+    },
+    {
+      "id": "e29e07fa-3079-4969-bd0b-b3b951446227",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter with cable",
+      "serial_no": "HW-200325BPO",
+      "notes": null,
+      "_sourceBils": "50,80,99",
+      "_typeMismatch": true,
+      "_groupRowCount": 3,
+      "_firstBil": 50
+    },
+    {
+      "id": "4c5dfb17-553b-4641-b0b2-93db9e324543",
+      "asset_type": "Hdmi Cable",
+      "description": "-",
+      "serial_no": "2423l2LXMGY98",
+      "notes": null,
+      "_sourceBils": "51,81",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 51
+    },
+    {
+      "id": "aae8a71f-1bde-4701-a024-53513cf63b40",
+      "asset_type": "Mouse",
+      "description": "Logitech - Wireless Mouse\nModel: B175 / MR0087",
+      "serial_no": null,
+      "notes": null,
+      "_sourceBils": "52",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 52
+    },
+    {
+      "id": "fa109bd1-120e-4d9a-a2cd-41f20a135393",
+      "asset_type": "Monitor",
+      "description": "View Sonic Desktop\nModel: VC14102",
+      "serial_no": "SMM114200108",
+      "notes": null,
+      "_sourceBils": "53,83,92,95",
+      "_typeMismatch": false,
+      "_groupRowCount": 4,
+      "_firstBil": 53
+    },
+    {
+      "id": "a67bcddc-578e-48ab-adce-025d2c7cf86f",
+      "asset_type": "Handphone",
+      "description": "Oppo",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "54",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 54
+    },
+    {
+      "id": "538b0583-1a0d-4ddf-88fb-b403b94323b9",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "55",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 55
+    },
+    {
+      "id": "3b9c2685-cb52-433e-b892-9ffaf495cdee",
+      "asset_type": "Laptop",
+      "description": "HP Laptop (Silver)\nModel: 15S-fq511474",
+      "serial_no": "5CD34364VQ",
+      "notes": null,
+      "_sourceBils": "56,96",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 56
+    },
+    {
+      "id": "e2a750e7-2f80-42c3-ad31-d9d4c2d7c3db",
+      "asset_type": "Laptop Adapter",
+      "description": "HP Laptop Power Adapter",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "57",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 57
+    },
+    {
+      "id": "318e66bb-f2e9-4c54-bcb8-11de868565a0",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse",
+      "serial_no": "2026L20AR578",
+      "notes": null,
+      "_sourceBils": "58,222,231",
+      "_typeMismatch": false,
+      "_groupRowCount": 3,
+      "_firstBil": 58
+    },
+    {
+      "id": "afb331ba-f75a-4f5c-816b-a6aa84f33b74",
+      "asset_type": "Monitor",
+      "description": "Samsung Desktop",
+      "serial_no": "S24D300",
+      "notes": null,
+      "_sourceBils": "59",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 59
+    },
+    {
+      "id": "c4f4c341-a04e-48d7-986b-f1fd6519a932",
+      "asset_type": "Monitor",
+      "description": "LG PC Monitor",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "60",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 60
+    },
+    {
+      "id": "f45dd45e-ea29-4c95-b8b4-941dd213774b",
+      "asset_type": "Mouse",
+      "description": "Acer Wireless Mouse",
+      "serial_no": "DC1121101C",
+      "notes": null,
+      "_sourceBils": "61",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 61
+    },
+    {
+      "id": "3e10d7ae-c4d4-4bf5-b685-f145d3a0a033",
+      "asset_type": "Monitor",
+      "description": "Lenovo Monitor",
+      "serial_no": "VKF27370",
+      "notes": null,
+      "_sourceBils": "62",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 62
+    },
+    {
+      "id": "f7cfa95f-bede-4a40-9552-087a8a15c06c",
+      "asset_type": "PC",
+      "description": "Think Centre",
+      "serial_no": "PL0149KX",
+      "notes": null,
+      "_sourceBils": "63",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 63
+    },
+    {
+      "id": "64c3e52f-beb9-4019-9be9-19333044d944",
+      "asset_type": "Mouse",
+      "description": "Lenovo Mouse with cable",
+      "serial_no": "8SSMS-0L24505MC.CC0240",
+      "notes": null,
+      "_sourceBils": "64",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 64
+    },
+    {
+      "id": "454c33e9-480b-4d35-9e5e-35143f7904c1",
+      "asset_type": "Keyboard",
+      "description": "Probex Keyboard",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "65",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 65
+    },
+    {
+      "id": "bdf26bc2-32ec-4545-a4af-5618ac8226d9",
+      "asset_type": "Laptop",
+      "description": "Huawei Matebook D16\nModel: MCLF-X",
+      "serial_no": "27GBB24920800154",
+      "notes": null,
+      "_sourceBils": "66,84",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 66
+    },
+    {
+      "id": "c106a73d-cc90-48b7-ad13-f97d7128c504",
+      "asset_type": "Mouse",
+      "description": "Salpido Wireless Mouse\nModel: SAL-BTM2",
+      "serial_no": "240911800240304",
+      "notes": null,
+      "_sourceBils": "68",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 68
+    },
+    {
+      "id": "695374e5-f960-4126-89bf-d8949fc38b99",
+      "asset_type": "Monitor",
+      "description": "Lenovo Monitor\nModel: L27i-4A",
+      "serial_no": "UP102B34",
+      "notes": null,
+      "_sourceBils": "69",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 69
+    },
+    {
+      "id": "da27f547-fb71-4455-8522-f31be66c0e25",
+      "asset_type": "Monitor Adapter",
+      "description": "Power Adapter",
+      "serial_no": "8SSL60K75040LIJA-8V05LT",
+      "notes": null,
+      "_sourceBils": "70",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 70
+    },
+    {
+      "id": "cfa4318c-8f7c-458f-bf75-89f7b0e99ff2",
+      "asset_type": "Keyboard",
+      "description": "Dell Keyboard\nModel: E145614",
+      "serial_no": "DP/N: 04526KUS",
+      "notes": null,
+      "_sourceBils": "71",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 71
+    },
+    {
+      "id": "fb2ab86d-ff9b-4c49-b670-eb2b72ce20ed",
+      "asset_type": "Laptop",
+      "description": "Asus ZenBook 14",
+      "serial_no": "UX425E",
+      "notes": null,
+      "_sourceBils": "72,110",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 72
+    },
+    {
+      "id": "3da64617-47e4-4d2d-84f8-a73014d19815",
+      "asset_type": "Laptop Adapter",
+      "description": "AC Adapter - Asus",
+      "serial_no": "AD10380",
+      "notes": null,
+      "_sourceBils": "73,111",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 73
+    },
+    {
+      "id": "3caa3398-5f6e-4a53-b835-771dd8a3a5e8",
+      "asset_type": "Mouse",
+      "description": "Lenovo Mouse with cable",
+      "serial_no": "8SSMS-0L24505AVL.COCC0240",
+      "notes": null,
+      "_sourceBils": "74",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 74
+    },
+    {
+      "id": "df465385-103a-48ad-9a36-31169bd95830",
+      "asset_type": "Monitor",
+      "description": "Lenovo L24i-4A LCD Monitor\nModel: D24238FL0",
+      "serial_no": "UMHP8R8V",
+      "notes": null,
+      "_sourceBils": "75,87",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 75
+    },
+    {
+      "id": "f61ead36-e878-4dff-b05c-9c53225773e3",
+      "asset_type": "Monitor Adapter",
+      "description": "Lenovo",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "76",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 76
+    },
+    {
+      "id": "6ebb3281-938e-45a1-96ca-d755ffd89c93",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse\nModel: M170",
+      "serial_no": "24292FS87478",
+      "notes": null,
+      "_sourceBils": "77",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 77
+    },
+    {
+      "id": "e689f7f8-42b5-4f68-b098-8cedc0475f92",
+      "asset_type": "Keyboard",
+      "description": "Logitech Wireless Keyboard\nModel: MK235",
+      "serial_no": "2433CE0E82119",
+      "notes": null,
+      "_sourceBils": "78",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 78
+    },
+    {
+      "id": "8a50897b-e38e-417a-9400-c5291dd07601",
+      "asset_type": "Mouse",
+      "description": "Logitech - Wireless Mouse\nModel: B175 / MR0087",
+      "serial_no": null,
+      "notes": null,
+      "_sourceBils": "82",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 82
+    },
+    {
+      "id": "0cccb09f-684a-495d-a264-f50541331713",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse",
+      "serial_no": "2345L2X7MNC8",
+      "notes": null,
+      "_sourceBils": "86",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 86
+    },
+    {
+      "id": "f220bb3c-af2e-4ef1-8f5f-baefdc3a2fb4",
+      "asset_type": "Monitor Adapter",
+      "description": "Power Adapter",
+      "serial_no": "FRUV00XL025",
+      "notes": null,
+      "_sourceBils": "88",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 88
+    },
+    {
+      "id": "54db39d9-284d-4b8c-ae41-c19b173657f5",
+      "asset_type": "HDMI",
+      "description": "HDMI Cable",
+      "serial_no": "35061SY00-13L-G(A)",
+      "notes": null,
+      "_sourceBils": "89",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 89
+    },
+    {
+      "id": "8c90d793-8023-4945-a3f4-27598038981c",
+      "asset_type": "Keyboard",
+      "description": "Dell Wired Keyboard (SK-8185)",
+      "serial_no": "CN-0Y526K-71616-0A7-0090-A01",
+      "notes": null,
+      "_sourceBils": "90",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 90
+    },
+    {
+      "id": "a4dca511-349a-49ba-9718-7ce9f1b064a0",
+      "asset_type": "Laptop",
+      "description": "Huawei Notebook D16",
+      "serial_no": "2NZbb24729800073",
+      "notes": null,
+      "_sourceBils": "91",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 91
+    },
+    {
+      "id": "f9a312ed-2a96-48bb-99a6-3b4981b89399",
+      "asset_type": "Laptop Adapter",
+      "description": "HW-200325BP3",
+      "serial_no": "QLS8LCQ7G03621",
+      "notes": null,
+      "_sourceBils": "93",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 93
+    },
+    {
+      "id": "2c3a7327-2245-484f-8af1-8a7ba71841c4",
+      "asset_type": "Mouse",
+      "description": "Mouse B175",
+      "serial_no": "Logitech - Wireless Mouse\nModel: B175 / MR0087",
+      "notes": null,
+      "_sourceBils": "94",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 94
+    },
+    {
+      "id": "8f824399-8290-439a-b4e0-82f5cc416737",
+      "asset_type": "Laptop Adapter",
+      "description": "HP Laptop Power Adapter",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "97",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 97
+    },
+    {
+      "id": "22518381-048b-47b2-a145-e40c9f9298fa",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D15\nModel: BOB-WAH9",
+      "serial_no": "9PFM2LA001550",
+      "notes": null,
+      "_sourceBils": "98",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 98
+    },
+    {
+      "id": "54cfc36e-a21d-4169-8ef7-83d81015f9c8",
+      "asset_type": "Mouse",
+      "description": "M196",
+      "serial_no": "251L0248FL8",
+      "notes": null,
+      "_sourceBils": "100",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 100
+    },
+    {
+      "id": "31e03bef-5037-41c1-876d-e1661a40436f",
+      "asset_type": "Monitor",
+      "description": "Philips  24EN1500",
+      "serial_no": "UK2532000869",
+      "notes": null,
+      "_sourceBils": "101",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 101
+    },
+    {
+      "id": "1d5b2a84-9349-466e-a846-3e370e5a3921",
+      "asset_type": "Monitor Adapter",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "102",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 102
+    },
+    {
+      "id": "1202d28c-ebb3-451f-b2d6-b5530f1065a9",
+      "asset_type": "HDMI",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "103",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 103
+    },
+    {
+      "id": "c46f020b-11f0-479f-8e43-c35161e958bc",
+      "asset_type": "Keyboard Logitech",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "104",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 104
+    },
+    {
+      "id": "7c8ff106-9756-40ea-b328-d7b25659ebf9",
+      "asset_type": "Monitor",
+      "description": "Lenovo Monitor\nModel: L27i-4A",
+      "serial_no": "UP103MND",
+      "notes": null,
+      "_sourceBils": "105",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 105
+    },
+    {
+      "id": "76cc6883-e9ad-4b0f-9854-1d3f1e502191",
+      "asset_type": "HDMI",
+      "description": "HDMI Cable",
+      "serial_no": "290-64794",
+      "notes": null,
+      "_sourceBils": "106",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 106
+    },
+    {
+      "id": "2202d945-0b9c-4f9d-bb40-87fc23680da8",
+      "asset_type": "Monitor Adapter",
+      "description": "Power Adapter",
+      "serial_no": "SL60K75040",
+      "notes": null,
+      "_sourceBils": "107",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 107
+    },
+    {
+      "id": "1a6be229-f887-406c-b578-f4468f525f46",
+      "asset_type": "Mouse",
+      "description": "Xiaomi Wireless Mouse (white)",
+      "serial_no": "WXJS02YM",
+      "notes": null,
+      "_sourceBils": "108",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 108
+    },
+    {
+      "id": "85bf5d57-5c0c-473d-a06d-8e48acae0b9b",
+      "asset_type": "Keyboard",
+      "description": "Xiaomi Wireless Keyboard (white)",
+      "serial_no": "55831/B2ACTF5QA-07757",
+      "notes": null,
+      "_sourceBils": "109",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 109
+    },
+    {
+      "id": "87bcdf59-1e96-4d6f-9ff6-6d73fcac1a2c",
+      "asset_type": "Laptop",
+      "description": "15-Inch MacBook Air with Apple M3 \nModel: A3114",
+      "serial_no": "D9T237HQ5Q",
+      "notes": null,
+      "_sourceBils": "112,131",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 112
+    },
+    {
+      "id": "0bfe63b0-b55c-4902-8fea-42ecd685ad8e",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter",
+      "serial_no": "35 W USB-C",
+      "notes": null,
+      "_sourceBils": "113,135",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 113
+    },
+    {
+      "id": "d826d250-d190-4ee7-8c8a-78efc02602e2",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 010-9332238",
+      "serial_no": "89601624061401-793200",
+      "notes": null,
+      "_sourceBils": "114",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 114
+    },
+    {
+      "id": "76ca2d27-c9dd-43d7-a874-0d82a2b17b8e",
+      "asset_type": "Camera",
+      "description": "Sony Camera with lense\nModel: @6400",
+      "serial_no": "4548736092440",
+      "notes": null,
+      "_sourceBils": "115",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 115
+    },
+    {
+      "id": "c7e2d9f1-b641-4715-a09e-9139dd2c19b9",
+      "asset_type": "Camera Battery",
+      "description": "Sony Battery\nModel: NP-FW50",
+      "serial_no": "E3FEC2EK",
+      "notes": null,
+      "_sourceBils": "116",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 116
+    },
+    {
+      "id": "ddd551a1-4885-43fa-a103-8c80dd5dcb45",
+      "asset_type": "Camera Battery",
+      "description": "Sony Battery\nModel: NP-FW50",
+      "serial_no": "E3GNU2EK",
+      "notes": null,
+      "_sourceBils": "117",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 117
+    },
+    {
+      "id": "344b1bb5-385e-43ca-b99c-aed8632c2c54",
+      "asset_type": "Camera Battery Charger",
+      "description": "Viloso Camera Battery Charger with Cable",
+      "serial_no": "Viloso",
+      "notes": null,
+      "_sourceBils": "118",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 118
+    },
+    {
+      "id": "864d0c92-2ab2-48ea-85e6-3b022da757dd",
+      "asset_type": "Camera Adapter",
+      "description": "AC Adapter - Sony Camera\nModel: AC-UUE12",
+      "serial_no": "150873-11",
+      "notes": null,
+      "_sourceBils": "119",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 119
+    },
+    {
+      "id": "2b900a3b-05c9-431c-bcbd-6a66fa935903",
+      "asset_type": "Camera Stabilization",
+      "description": "Camera Stabilization\nDJ1 RS3 Mini",
+      "serial_no": "5RFZL810051XE1",
+      "notes": null,
+      "_sourceBils": "120",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 120
+    },
+    {
+      "id": "c3d2ddde-bd77-4f56-abe5-03a4391fbe23",
+      "asset_type": "Camera Tripod",
+      "description": "SIRUI Tripod",
+      "serial_no": "SR239505",
+      "notes": null,
+      "_sourceBils": "121",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 121
+    },
+    {
+      "id": "91b94e64-121f-4e59-910a-875307b6a6bf",
+      "asset_type": "Camera Mic",
+      "description": "COMICA Camera Mic\nModel: Vimoe",
+      "serial_no": "T095G191464",
+      "notes": null,
+      "_sourceBils": "122",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 122
+    },
+    {
+      "id": "e5533c0f-af33-4d9f-88ce-23b8a95fc70d",
+      "asset_type": "Laptop",
+      "description": "HP Laptop 15\nFD0219T4",
+      "serial_no": "5CD345JVLW",
+      "notes": null,
+      "_sourceBils": "123,187",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 123
+    },
+    {
+      "id": "a6ff8eb1-87ed-4731-8880-e2c9a10bf9ab",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter\nModel: HP-L25296-003",
+      "serial_no": "ADD-45FE FA DCWP JH-1",
+      "notes": null,
+      "_sourceBils": "124,188",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 124
+    },
+    {
+      "id": "f6b80496-c4d9-4b7b-ae0b-ca8421ca4cf0",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse\nModel: M170",
+      "serial_no": "2344AP053KU8",
+      "notes": null,
+      "_sourceBils": "125",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 125
+    },
+    {
+      "id": "4557ed16-afab-49da-95e7-3524e0fa3756",
+      "asset_type": "Monitor",
+      "description": "PRISM+ Desktop\nModel: UH074BL",
+      "serial_no": "HG10MKDDR4",
+      "notes": null,
+      "_sourceBils": "126,130",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 126
+    },
+    {
+      "id": "9e658b0a-0ce0-4dce-bfcd-356ec50ced22",
+      "asset_type": "CPU",
+      "description": "Tungsten CPU",
+      "serial_no": "Intel Core i5",
+      "notes": null,
+      "_sourceBils": "127,134",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 127
+    },
+    {
+      "id": "02f8d622-f71f-446a-84ef-03e92e912e9c",
+      "asset_type": "Keyboard",
+      "description": "Keyboard with cable\nModel: HP-KU-0316",
+      "serial_no": "BAUJQOHVB21AOB",
+      "notes": null,
+      "_sourceBils": "128,132",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 128
+    },
+    {
+      "id": "81ea76f8-796f-43ac-8fc2-a4ee9c3be215",
+      "asset_type": "Mouse",
+      "description": "GigaByte Mouse\n(GM-M8000)",
+      "serial_no": "SN: 084515019827",
+      "notes": null,
+      "_sourceBils": "129,133",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 129
+    },
+    {
+      "id": "798dec86-5ab1-491a-a593-2cb0f9319b90",
+      "asset_type": "Bluetoth Mouse",
+      "description": "M196",
+      "serial_no": "2511L02492R8",
+      "notes": null,
+      "_sourceBils": "136",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 136
+    },
+    {
+      "id": "a9fc11ed-704e-4d68-b8b5-ba0edfb8378f",
+      "asset_type": "Macbook Adapter",
+      "description": "Silver Colour",
+      "serial_no": "3 Port Type C",
+      "notes": null,
+      "_sourceBils": "137",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 137
+    },
+    {
+      "id": "813bd919-8f6f-4841-bbe0-fbe7020ff889",
+      "asset_type": "Handphone",
+      "description": "Honor 90 Lite",
+      "serial_no": "AYAV6R3A20007834",
+      "notes": null,
+      "_sourceBils": "139",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 139
+    },
+    {
+      "id": "a020d7ea-5e5b-4f81-a1bf-c32a239a5601",
+      "asset_type": "Handphone",
+      "description": "Redmi L3C\nColor: Starry Silver)",
+      "serial_no": "IMEI: 865408068535540",
+      "notes": null,
+      "_sourceBils": "140",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 140
+    },
+    {
+      "id": "46a6717e-4074-4158-a3eb-4341a9ef112c",
+      "asset_type": "Handphone Charger",
+      "description": "",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "141",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 141
+    },
+    {
+      "id": "54547547-2f95-4f87-b7d1-db8ea04b7d26",
+      "asset_type": "Laptop",
+      "description": "Huawei Laptop",
+      "serial_no": "Boh-WAQ9R",
+      "notes": null,
+      "_sourceBils": "142",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 142
+    },
+    {
+      "id": "b5e6b4ce-92ce-4fd0-b090-b29522f64ee5",
+      "asset_type": "Pendrive",
+      "description": "16GB",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "143",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 143
+    },
+    {
+      "id": "188091f0-41c9-4995-aa26-12579e208c17",
+      "asset_type": "canon printer Pixma E410",
+      "description": "Black",
+      "serial_no": "KPTM25166",
+      "notes": null,
+      "_sourceBils": "144,158,163",
+      "_typeMismatch": true,
+      "_groupRowCount": 3,
+      "_firstBil": 144
+    },
+    {
+      "id": "66ad9efb-434a-405f-9cf8-59364d00680d",
+      "asset_type": "Handphone",
+      "description": "Realme C11",
+      "serial_no": "IMEI 1: 861316052273792\nIMEI 2: 861316052273784",
+      "notes": null,
+      "_sourceBils": "145,172,176",
+      "_typeMismatch": false,
+      "_groupRowCount": 3,
+      "_firstBil": 145
+    },
+    {
+      "id": "a8bbf87f-384f-4874-9996-7424da52090a",
+      "asset_type": "Handphone Charger",
+      "description": "EP-TA20UBE\nSamsung\nBlack\n+ USB",
+      "serial_no": "R37J55M0231SE3",
+      "notes": null,
+      "_sourceBils": "146",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 146
+    },
+    {
+      "id": "15ea3b8e-bd55-4f9a-a91c-ad879af98e54",
+      "asset_type": "Mouse",
+      "description": "Wireless Mouse",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "147",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 147
+    },
+    {
+      "id": "77ae3b75-bf81-4347-a9c0-f86d3088043a",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7980991",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "148",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 148
+    },
+    {
+      "id": "091b55d7-d990-4edf-b00c-885f2c99c8e6",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 016-8222599",
+      "serial_no": "SN: 89601623042706859111",
+      "notes": null,
+      "_sourceBils": "149",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 149
+    },
+    {
+      "id": "27174be0-41f0-4953-94ba-edda204d879d",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7299811",
+      "serial_no": "SN: 89601622020813196164",
+      "notes": null,
+      "_sourceBils": "150",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 150
+    },
+    {
+      "id": "5461101d-c532-4ce4-bb84-fa8e676699b0",
+      "asset_type": "Handphone",
+      "description": "Huawei\nModel: AMN-LX2",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "151",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 151
+    },
+    {
+      "id": "41706f80-0450-40c3-9971-7a20a9e818a4",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7980991",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "152",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 152
+    },
+    {
+      "id": "ecfc9606-9cdf-466e-bd05-fffa0f8af1e7",
+      "asset_type": "Handphone Charger",
+      "description": "Oppo-BK0721",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "153",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 153
+    },
+    {
+      "id": "dd72b45e-a543-4d2d-9d50-62f68c72dc3c",
+      "asset_type": "Laptop",
+      "description": "Dell Laptop\nModel: Lattitude 143420",
+      "serial_no": "B3W8HX3",
+      "notes": null,
+      "_sourceBils": "154",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 154
+    },
+    {
+      "id": "ba7d3fef-e82b-4741-b579-2cf77073203a",
+      "asset_type": "Laptop Adapter",
+      "description": "Dell Power Adapter\nModel: DA65NM191",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "155",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 155
+    },
+    {
+      "id": "0b7244ec-d496-41be-af44-4c462121583b",
+      "asset_type": "Handphone",
+      "description": "Oppo Handphone (Balck Color)",
+      "serial_no": "PN9DLJZP9E8PHQHE\nIMEI: 865498046614376",
+      "notes": null,
+      "_sourceBils": "156",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 156
+    },
+    {
+      "id": "c486f967-d34e-4c09-a1cf-6380c7f4d4d0",
+      "asset_type": "Pendrive  (GH Music )",
+      "description": "16 GB",
+      "serial_no": "Sin Disk",
+      "notes": null,
+      "_sourceBils": "157,162",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 157
+    },
+    {
+      "id": "06bcc825-1a11-4bab-8425-3e92532f3f3f",
+      "asset_type": "Laptop",
+      "description": "Dell Laptop\nModel: Lattitude 143420",
+      "serial_no": "ST:67XYLS3",
+      "notes": null,
+      "_sourceBils": "159,164,167,235",
+      "_typeMismatch": false,
+      "_groupRowCount": 4,
+      "_firstBil": 159
+    },
+    {
+      "id": "96c26fa6-baf6-4a13-9184-a164950459ee",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter (Dell)",
+      "serial_no": "CN-07JHD3-CH600-2CN-08BE-A01",
+      "notes": null,
+      "_sourceBils": "160,165,168,236",
+      "_typeMismatch": false,
+      "_groupRowCount": 4,
+      "_firstBil": 160
+    },
+    {
+      "id": "76492053-b262-4a9f-a4e0-50a6c8b64224",
+      "asset_type": "Mouse",
+      "description": "HP Mouse with Cable",
+      "serial_no": "7CH1447YL3",
+      "notes": null,
+      "_sourceBils": "161,166,169,237",
+      "_typeMismatch": false,
+      "_groupRowCount": 4,
+      "_firstBil": 161
+    },
+    {
+      "id": "8eacc2f9-0d48-479b-863f-0496f4f45eb4",
+      "asset_type": "Laptop",
+      "description": "MCLF-X",
+      "serial_no": "S/N 27BB24327800113",
+      "notes": null,
+      "_sourceBils": "170,173",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 170
+    },
+    {
+      "id": "d75654be-1867-4aeb-9615-97090e32c293",
+      "asset_type": "Laptop Adapter",
+      "description": "Huawei Power Adapter",
+      "serial_no": "200325BP3",
+      "notes": null,
+      "_sourceBils": "171,174",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 171
+    },
+    {
+      "id": "0cd990a7-7802-4089-a1cd-43f804ac0e4b",
+      "asset_type": "wirelss Mouse",
+      "description": "Mouse B175",
+      "serial_no": "MR0087",
+      "notes": null,
+      "_sourceBils": "175",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 175
+    },
+    {
+      "id": "898c8d2e-96d6-4848-9f55-d8b440b88498",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook 15\nModel: BOM-WFP9",
+      "serial_no": "FG7PM24123000381",
+      "notes": null,
+      "_sourceBils": "177",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 177
+    },
+    {
+      "id": "1184314b-487b-4222-a761-7d891005c994",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse\nModel: M170",
+      "serial_no": "2345LZX7JKeQ8",
+      "notes": null,
+      "_sourceBils": "178",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 178
+    },
+    {
+      "id": "7a992cb9-3b9e-48de-98b5-20d320f86e8d",
+      "asset_type": "huawei  Matebook 15",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "180",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 180
+    },
+    {
+      "id": "1f2636c2-a6f6-4f2c-ad2a-fb25d72c5aa3",
+      "asset_type": "Logitech mouse",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "181",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 181
+    },
+    {
+      "id": "aea34cfa-8782-4eee-9a20-91ed46abba3b",
+      "asset_type": "Huawei  Adapper Charger",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "182",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 182
+    },
+    {
+      "id": "50ce99b5-1e04-4a7a-9cfe-28898b288773",
+      "asset_type": "Handphone",
+      "description": "Oppo (Black Color) \nModel: CPH2711",
+      "serial_no": "78F18033",
+      "notes": null,
+      "_sourceBils": "183",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 183
+    },
+    {
+      "id": "81be1a33-6cb3-406e-9e61-ad0de06a4c2a",
+      "asset_type": "Laptop",
+      "description": "MacBook Air 13\" M3 2024\nMBA 13.6 M3/ 8L GPU / 8GB / 256GB\nSpark Grey Color",
+      "serial_no": "SN: SF9DR9772LT",
+      "notes": null,
+      "_sourceBils": "184",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 184
+    },
+    {
+      "id": "5c5b3a4b-fcb3-40cf-ae7e-7f13b6b23d56",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter - MacBook Air",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "185",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 185
+    },
+    {
+      "id": "e04b86ca-44eb-45b8-bcfd-25468ede66f2",
+      "asset_type": "Tab",
+      "description": "Samsung Tab",
+      "serial_no": "R52K30ZYZ90",
+      "notes": null,
+      "_sourceBils": "186",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 186
+    },
+    {
+      "id": "0e137c8f-6ee4-4fe4-afce-11f8aaed6555",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 010-5688002",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "189",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 189
+    },
+    {
+      "id": "494ad197-dcbd-4402-b9d8-12ab5f133a1d",
+      "asset_type": "Handphone",
+      "description": "Honor 90 Lite (Black Color)\nModel: CRT-NX1",
+      "serial_no": "AYAV6R3A13018456",
+      "notes": null,
+      "_sourceBils": "190",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 190
+    },
+    {
+      "id": "b6e76e86-26e7-4b4e-b4e2-7f15c64a4dec",
+      "asset_type": "Handphone Charger",
+      "description": "Charger Adapter",
+      "serial_no": "HW-100225B00",
+      "notes": null,
+      "_sourceBils": "191",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 191
+    },
+    {
+      "id": "ba8d52ec-5a72-4931-8df8-0b71c182cc32",
+      "asset_type": "Simcard",
+      "description": "012-7799581",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "192",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 192
+    },
+    {
+      "id": "8bd20178-cb5b-4d34-a463-24be17042976",
+      "asset_type": "Simcard",
+      "description": "012-7770244",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "193",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 193
+    },
+    {
+      "id": "bfa18b18-8a6e-44cd-8d81-aafd519777d3",
+      "asset_type": "Machine",
+      "description": "Money Counting Machine",
+      "serial_no": "UMEIEC851R",
+      "notes": null,
+      "_sourceBils": "194",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 194
+    },
+    {
+      "id": "c67449ac-9a2d-486c-81b1-1a6caccd66a5",
+      "asset_type": "Laptop",
+      "description": "MacBook Air 13\" (Silver Color)\nModel: A2337",
+      "serial_no": "HXJLN6UHIWFY",
+      "notes": null,
+      "_sourceBils": "195",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 195
+    },
+    {
+      "id": "80aa5444-09b8-49ac-b4f1-a5050989723f",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D16",
+      "serial_no": "27FBB24327800113",
+      "notes": null,
+      "_sourceBils": "196",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 196
+    },
+    {
+      "id": "42db8aed-2061-47b2-8fc1-3c8cd64872c7",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse\nModel: B175",
+      "serial_no": "2345LZX73X09",
+      "notes": null,
+      "_sourceBils": "198",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 198
+    },
+    {
+      "id": "54a50b8d-be41-4bcf-9fa9-2ab9eae9d0c3",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook 15\nModel: BOM-WFP9",
+      "serial_no": "5XHP281300378",
+      "notes": null,
+      "_sourceBils": "199",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 199
+    },
+    {
+      "id": "d2e67bd4-2465-4e9e-bd0b-19b4769bdce7",
+      "asset_type": "Monitor",
+      "description": "Monitor PRISM+  Desktop",
+      "serial_no": "NGSPS7603422630176",
+      "notes": null,
+      "_sourceBils": "201,208",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 201
+    },
+    {
+      "id": "12a7d450-3410-4970-b7f3-6d3473151e9c",
+      "asset_type": "PC",
+      "description": "Segotep Intel Core i7",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "202",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 202
+    },
+    {
+      "id": "0a9e32d3-5831-413f-811d-6b92db220e6d",
+      "asset_type": "Keyboard",
+      "description": "Logitech Keyboard",
+      "serial_no": "2340MR1E7198",
+      "notes": null,
+      "_sourceBils": "203,210",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 203
+    },
+    {
+      "id": "c51e8306-58a1-4bc1-a3ef-79cf8a589d6e",
+      "asset_type": "Mouse",
+      "description": "Logitech Mouse with cable",
+      "serial_no": "PN: 810-002182\nPD: HS338HD",
+      "notes": null,
+      "_sourceBils": "204,211",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 204
+    },
+    {
+      "id": "8b882ac8-3fc4-433f-8093-a95044d3afbe",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D16",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "205",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 205
+    },
+    {
+      "id": "ef866e1a-7233-4d94-88b4-c2e17f9f7edc",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "207",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 207
+    },
+    {
+      "id": "b543ea17-cd14-48b8-b09c-f2e36536c260",
+      "asset_type": "PC",
+      "description": "Segotep Intel Core i7",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "209",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 209
+    },
+    {
+      "id": "ca7631c6-e5db-4836-8068-1ab61ee53ba6",
+      "asset_type": "Monitor",
+      "description": "Damsung Desktop",
+      "serial_no": "Syne Master SA450",
+      "notes": null,
+      "_sourceBils": "212",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 212
+    },
+    {
+      "id": "a0e1b52d-ec54-4f26-8717-e69b16588419",
+      "asset_type": "PC",
+      "description": "Computer PC Dell",
+      "serial_no": "655J725",
+      "notes": null,
+      "_sourceBils": "213",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 213
+    },
+    {
+      "id": "1e5e568a-6efa-4368-8364-63b2221b7545",
+      "asset_type": "Mouse",
+      "description": "Logitech Mouse with cable",
+      "serial_no": "810-002182",
+      "notes": null,
+      "_sourceBils": "214",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 214
+    },
+    {
+      "id": "ca57de53-9e31-4674-8804-23c070429a66",
+      "asset_type": "Monitor",
+      "description": "Think Vision Desktop",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "215",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 215
+    },
+    {
+      "id": "20c2b54c-3877-470a-9239-2194466bc13f",
+      "asset_type": "Keyboard",
+      "description": "Dell Keyboard",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "216",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 216
+    },
+    {
+      "id": "0297d2f5-9d83-4ef5-b1b2-17857be84ef9",
+      "asset_type": "Printer",
+      "description": "Mini Thermal Printer with charger",
+      "serial_no": "23-8003",
+      "notes": null,
+      "_sourceBils": "217",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 217
+    },
+    {
+      "id": "4a0cd781-63f2-4af1-b8ad-8bc561fc6646",
+      "asset_type": "Laptop",
+      "description": "HP Laptop 15-F002187U",
+      "serial_no": "SCD344G5P",
+      "notes": null,
+      "_sourceBils": "218",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 218
+    },
+    {
+      "id": "8c64d2b6-2372-408e-aeaa-16c747bd22fc",
+      "asset_type": "Credit card machine Charger",
+      "description": "Power Adapter",
+      "serial_no": "HB-01A2000",
+      "notes": null,
+      "_sourceBils": "219",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 219
+    },
+    {
+      "id": "37cfd13c-ef44-4afa-b975-7f32c2ab50b0",
+      "asset_type": "Unit Credit card machine",
+      "description": "Card machine X990 Plus M",
+      "serial_no": "V9E0195514",
+      "notes": null,
+      "_sourceBils": "220",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 220
+    },
+    {
+      "id": "2ff794f2-5b2b-46b2-9994-ac42ac7b4364",
+      "asset_type": "Handphone",
+      "description": "Iphone",
+      "serial_no": "CCQ203204W2",
+      "notes": null,
+      "_sourceBils": "223",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 223
+    },
+    {
+      "id": "42a9b4c1-9349-48d0-a937-8ffd16603211",
+      "asset_type": "Handphone",
+      "description": "Oppo (Black Color)\nModel: PH1923",
+      "serial_no": "29LBY5HQS7UGMFGA",
+      "notes": null,
+      "_sourceBils": "224",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 224
+    },
+    {
+      "id": "a4b47eda-a3d0-459d-9226-d81a658e4f21",
+      "asset_type": "Laptop",
+      "description": "NA",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "225",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 225
+    },
+    {
+      "id": "e351be4b-eb0f-4501-9039-73c9b76b0c0e",
+      "asset_type": "Simcard",
+      "description": "012-7770028",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "226",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 226
+    },
+    {
+      "id": "3d307e33-aca4-4b31-9964-dc62e6c2950d",
+      "asset_type": "Simcard",
+      "description": "016-9567861",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "227",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 227
+    },
+    {
+      "id": "f8f499eb-ffac-471f-858b-214223ccfeb4",
+      "asset_type": "Phone",
+      "description": "Redmi 13c Phone",
+      "serial_no": "23106RNODA",
+      "notes": null,
+      "_sourceBils": "228",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 228
+    },
+    {
+      "id": "05a46c00-ddd6-4422-b4a4-31b9c83a8bb0",
+      "asset_type": "Laptop",
+      "description": "HP Laptop\nModel: NG9JSL22",
+      "serial_no": "H5LD34365LM",
+      "notes": null,
+      "_sourceBils": "229",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 229
+    },
+    {
+      "id": "2b1fcbb8-3c2e-47bb-a6e2-0186b45088f5",
+      "asset_type": "Laptop Adapter",
+      "description": "AC Adapter\nModel: TPN-LA15",
+      "serial_no": "HPL25296-001",
+      "notes": null,
+      "_sourceBils": "230",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 230
+    },
+    {
+      "id": "b120aaa3-ccea-489f-b11f-b9a5f1b82541",
+      "asset_type": "Simcard",
+      "description": "Broadband\nPhone No.: 012-5800287",
+      "serial_no": "Maxis",
+      "notes": null,
+      "_sourceBils": "232",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 232
+    },
+    {
+      "id": "dac129ce-4c3d-4d17-bfcd-802ea58d7bca",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7200501",
+      "serial_no": "SN: 89601621081606454542",
+      "notes": null,
+      "_sourceBils": "233",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 233
+    },
+    {
+      "id": "771e4af6-bb8f-4aeb-8c50-689013312b74",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-5682100",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "234",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 234
+    },
+    {
+      "id": "d9eef0c4-ed22-45c0-a238-b49f3afb94bb",
+      "asset_type": "Wifi",
+      "description": "TP-Link Wifi Modem",
+      "serial_no": "219B982001938",
+      "notes": null,
+      "_sourceBils": "238",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 238
+    },
+    {
+      "id": "a598bc3e-0df2-4080-aa47-cdd1f8394461",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\n(TP-Link Wifi)",
+      "serial_no": "162012020456530864K",
+      "notes": null,
+      "_sourceBils": "239",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 239
+    },
+    {
+      "id": "e9ea7605-6a2b-46f8-b28d-a283b627e3d5",
+      "asset_type": "PC",
+      "description": "HP",
+      "serial_no": "CNC1430KOL",
+      "notes": null,
+      "_sourceBils": "240",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 240
+    },
+    {
+      "id": "af2c65c7-e8b7-4eaf-b68d-9a2d6431b2c4",
+      "asset_type": "Keyboard",
+      "description": "HP Keyboard",
+      "serial_no": "PN: 539130-L31",
+      "notes": null,
+      "_sourceBils": "241",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 241
+    },
+    {
+      "id": "6760a653-589c-48e0-88af-4897e09ebe6e",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse",
+      "serial_no": "MN: M-40026",
+      "notes": null,
+      "_sourceBils": "242",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 242
+    },
+    {
+      "id": "0da8bffe-fe37-431a-bd44-75301e5b0ba9",
+      "asset_type": "Monitor",
+      "description": "Asus Monitor",
+      "serial_no": null,
+      "notes": null,
+      "_sourceBils": "243",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 243
+    },
+    {
+      "id": "689426b4-ecaa-4dc1-8344-6b16bdac8b9b",
+      "asset_type": "Printer",
+      "description": "Mini Thermal Printer with charger",
+      "serial_no": "2J-8003\n2L-F018W0901600",
+      "notes": null,
+      "_sourceBils": "244",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 244
+    },
+    {
+      "id": "f18d7981-fabe-4fc8-a15c-91e5873719d7",
+      "asset_type": "Monitor",
+      "description": "Lenovo Monitor",
+      "serial_no": "154434HB1V1A5126",
+      "notes": null,
+      "_sourceBils": "245",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 245
+    },
+    {
+      "id": "4ded7ca6-bb32-4879-9efd-19849baa04a6",
+      "asset_type": "Printer",
+      "description": "Brother Printer",
+      "serial_no": "E78287G1B425442",
+      "notes": null,
+      "_sourceBils": "246",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 246
+    },
+    {
+      "id": "51b8497b-7788-4993-970e-251034b781ee",
+      "asset_type": "Keyboard",
+      "description": "Logitech Keyboard",
+      "serial_no": "1838SC527PE8",
+      "notes": null,
+      "_sourceBils": "247",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 247
+    },
+    {
+      "id": "c34f8d7a-18ac-4b8e-840e-8294f1135eec",
+      "asset_type": "Laptop",
+      "description": "Huawei Laptop\nModel: BOM-NFP9",
+      "serial_no": "FGTPM24123000379",
+      "notes": null,
+      "_sourceBils": "248",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 248
+    },
+    {
+      "id": "ac229e5b-313c-4fcf-9a23-3bc28b4731b5",
+      "asset_type": "Laptop Adapter",
+      "description": "Power Adapter",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "249",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 249
+    },
+    {
+      "id": "39d322d0-4bfe-4aca-ba41-07f019b1c46f",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse\nModel: B175",
+      "serial_no": "2345LZX7",
+      "notes": null,
+      "_sourceBils": "250",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 250
+    },
+    {
+      "id": "03e7e58a-21ab-4086-84bd-de47185ff206",
+      "asset_type": "Router",
+      "description": "Telephony Router (CelcomDigi)",
+      "serial_no": "224C359000301\n(NX510V)",
+      "notes": null,
+      "_sourceBils": "251",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 251
+    },
+    {
+      "id": "f5e4ba1e-8401-45d9-b6a3-9d7d0dbe9a7b",
+      "asset_type": "Simcard",
+      "description": "CelcomDigi Simcard\nNo.: 015-91221899",
+      "serial_no": null,
+      "notes": null,
+      "_sourceBils": "252",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 252
+    },
+    {
+      "id": "5146d028-1004-4fc9-98ef-db96976b5ce9",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-3611200",
+      "serial_no": "SN: 89601621081606454831",
+      "notes": null,
+      "_sourceBils": "253",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 253
+    },
+    {
+      "id": "2b959d77-b0ce-4ec7-bf2f-18dc209e8b3a",
+      "asset_type": "Handphone",
+      "description": "Oppo A71K",
+      "serial_no": "PH1801",
+      "notes": null,
+      "_sourceBils": "254",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 254
+    },
+    {
+      "id": "6371082c-9c95-4683-8f82-f364d9b2393b",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.:",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "255",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 255
+    },
+    {
+      "id": "8dfb07ed-aeae-4913-8a7c-5359114b4649",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7119660",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "256",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 256
+    },
+    {
+      "id": "a4dad1cb-bb9e-498d-ad64-9cd8e28774a1",
+      "asset_type": "Printer",
+      "description": "Model: 2J-8003",
+      "serial_no": "IMEI: 180813023000027",
+      "notes": null,
+      "_sourceBils": "257",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 257
+    },
+    {
+      "id": "334edee2-a13e-4a32-a822-3beaa1a06284",
+      "asset_type": "Handphone",
+      "description": "",
+      "serial_no": "IMEI: 865498046579454",
+      "notes": null,
+      "_sourceBils": "258",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 258
+    },
+    {
+      "id": "eb27c399-63ad-4b90-98f8-bc0aa33101f6",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7919722",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "259",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 259
+    },
+    {
+      "id": "f1cc549e-6d04-45aa-a1ce-12c57c33300c",
+      "asset_type": "Printer",
+      "description": "Model: 2J-8003",
+      "serial_no": "IMEI: 180813023000028",
+      "notes": null,
+      "_sourceBils": "260",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 260
+    },
+    {
+      "id": "64798dc6-9847-4600-8b66-d5c17efcbba5",
+      "asset_type": "Handphone",
+      "description": "",
+      "serial_no": "IMEI: 865498046657615",
+      "notes": null,
+      "_sourceBils": "261",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 261
+    },
+    {
+      "id": "4d55ba08-ed95-4543-824e-c20089723df7",
+      "asset_type": "Printer",
+      "description": "Model: 2J-8003",
+      "serial_no": "IMEI: 18081302300006",
+      "notes": null,
+      "_sourceBils": "262",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 262
+    },
+    {
+      "id": "5b842327-e395-43e9-a01c-bbbb5ca7c852",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7588159",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "263",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 263
+    },
+    {
+      "id": "e3d389a6-047c-4f26-ad47-101b343880ec",
+      "asset_type": "Handphone",
+      "description": "",
+      "serial_no": "IMEI: 865498046579512",
+      "notes": null,
+      "_sourceBils": "264",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 264
+    },
+    {
+      "id": "870596d9-9b9d-4ffc-9aa7-8400fce83bff",
+      "asset_type": "Printer",
+      "description": "Mini Thermal Printer with charger\nModel: ZJ-8003",
+      "serial_no": "SN: 1808130023000040",
+      "notes": null,
+      "_sourceBils": "265",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 265
+    },
+    {
+      "id": "6c84001b-99dc-4c98-871a-2805175facfb",
+      "asset_type": "Simcard",
+      "description": "Digi Number\nPhone No.: 012-7701003",
+      "serial_no": "SN: 89601621081606454898",
+      "notes": null,
+      "_sourceBils": "266",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 266
+    },
+    {
+      "id": "789dc515-b675-4792-8029-0092c4b7fe2c",
+      "asset_type": "Handphone",
+      "description": "Oppo CPH 1923",
+      "serial_no": "IMEI: 865498047241336",
+      "notes": null,
+      "_sourceBils": "267",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 267
+    },
+    {
+      "id": "be56d91a-0b39-4365-a6a1-59ba81d8d624",
+      "asset_type": "Mouse",
+      "description": "Logitech Wireless Mouse\nModel: B175",
+      "serial_no": "2345LZX73WY9",
+      "notes": null,
+      "_sourceBils": "268,276",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 268
+    },
+    {
+      "id": "ca6f9037-3df2-4e77-ab93-de8740854726",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D16",
+      "serial_no": "27FBB24327800142",
+      "notes": null,
+      "_sourceBils": "269,277",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 269
+    },
+    {
+      "id": "0bfda914-9378-42c3-969e-fcb99be4a329",
+      "asset_type": "Handphone",
+      "description": "Oppo CPH 1923 (Black Color)",
+      "serial_no": "KRFMJNJBLN7HNR9P",
+      "notes": null,
+      "_sourceBils": "271,279",
+      "_typeMismatch": false,
+      "_groupRowCount": 2,
+      "_firstBil": 271
+    },
+    {
+      "id": "08806e78-9e91-49d3-b8cc-6b2261f0d356",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7662911",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "272",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 272
+    },
+    {
+      "id": "95ae29a2-d5d5-45b8-95ed-4b1d6419e46e",
+      "asset_type": "Laptop",
+      "description": "Huawei MateBook D16",
+      "serial_no": "9PFPM21001382",
+      "notes": null,
+      "_sourceBils": "273",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 273
+    },
+    {
+      "id": "88e85c2d-ab07-4a46-806b-551286ead3ae",
+      "asset_type": "Mouse",
+      "description": "Logitech Mouse M220",
+      "serial_no": "2134L2M87K68",
+      "notes": null,
+      "_sourceBils": "274",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 274
+    },
+    {
+      "id": "c4a1e742-c11c-4fd6-9398-64d9f96a897f",
+      "asset_type": "Laptop Adapter",
+      "description": "Huawei Adapter",
+      "serial_no": "HW-200325NP0",
+      "notes": null,
+      "_sourceBils": "275",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 275
+    },
+    {
+      "id": "ed562643-b791-49a3-a2b2-e9a2d5f80624",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7662911",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "280",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 280
+    },
+    {
+      "id": "76229dfa-27c5-4a2b-af95-7588f62a9af3",
+      "asset_type": "Printer",
+      "description": "Mini Thermal Printer \nQty: 3",
+      "serial_no": "NA",
+      "notes": null,
+      "_sourceBils": "281",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 281
+    },
+    {
+      "id": "9ad579d6-6353-41cf-b813-d0af3150d790",
+      "asset_type": "Printer",
+      "description": "Mini Thermal Printer with charger\nModel: ZJ-8003",
+      "serial_no": "SN: 1808130023000022",
+      "notes": null,
+      "_sourceBils": "282",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 282
+    },
+    {
+      "id": "dfc2169a-27ed-4687-94a5-ba3f8babac1e",
+      "asset_type": "Simcard",
+      "description": "Digi Simcard\nPhone No.: 012-7299811",
+      "serial_no": "SN: 89601621081606454989",
+      "notes": null,
+      "_sourceBils": "283",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 283
+    },
+    {
+      "id": "0cda79f2-94a0-43bd-8220-39e0f7b527ca",
+      "asset_type": "Handphone",
+      "description": "Oppo PH1923\nWith Charger",
+      "serial_no": "IMEI: 865498047004437",
+      "notes": null,
+      "_sourceBils": "284",
+      "_typeMismatch": false,
+      "_groupRowCount": 1,
+      "_firstBil": 284
+    }
+  ],
+  "assignments": [
+    {
+      "id": "a6a44d3a-8767-45ca-9124-712ff165b103",
+      "asset_id": "ac9f097d-1161-4e70-a676-b28f02f98466",
+      "employee_id": "e4074f9c-b2fd-4e5f-b41f-1d9af6c19d89",
+      "date_issued": "2025-04-04",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "1"
+    },
+    {
+      "id": "d8c35544-5a05-4251-a4db-5baebfa8f622",
+      "asset_id": "1d9537f4-3101-4107-8866-5197623e7c83",
+      "employee_id": "e4074f9c-b2fd-4e5f-b41f-1d9af6c19d89",
+      "date_issued": "2025-04-04",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "2"
+    },
+    {
+      "id": "af471632-ca36-4aa1-966c-a8b4d2eb0ccf",
+      "asset_id": "6f572fe4-b3ac-47ee-80a5-4b70fa6d21d2",
+      "employee_id": "e4074f9c-b2fd-4e5f-b41f-1d9af6c19d89",
+      "date_issued": "2023-10-30",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "3"
+    },
+    {
+      "id": "bdc530df-9f21-428b-8beb-8c8305e117e0",
+      "asset_id": "48ed8457-407d-4e26-be91-68cbda87628a",
+      "employee_id": "e4074f9c-b2fd-4e5f-b41f-1d9af6c19d89",
+      "date_issued": "2024-06-05",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "4"
+    },
+    {
+      "id": "31fdf39f-7bfc-4d1e-8e10-5e482097553b",
+      "asset_id": "ff335e62-fa38-46ea-be0d-962a856f32a5",
+      "employee_id": "e4074f9c-b2fd-4e5f-b41f-1d9af6c19d89",
+      "date_issued": "2024-06-05",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "5"
+    },
+    {
+      "id": "6c20c898-7df4-4a85-8b15-5f2a478585e3",
+      "asset_id": "f905a5d7-d5fc-40c0-97e8-e2bec8bedbcd",
+      "employee_id": "fa8cb445-079b-46d5-89fd-73d360671cfd",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-10",
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "6"
+    },
+    {
+      "id": "9c156fa6-73ed-45f3-8314-43c5b6170e3d",
+      "asset_id": "c116987e-ae91-4ebd-95aa-96f665c979e7",
+      "employee_id": "fa8cb445-079b-46d5-89fd-73d360671cfd",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-10",
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "7"
+    },
+    {
+      "id": "30cdba6f-a6e4-402d-808b-0a46d3dfe484",
+      "asset_id": "c116987e-ae91-4ebd-95aa-96f665c979e7",
+      "employee_id": "165975e5-3450-43e6-b1eb-13532ab18674",
+      "date_issued": "2026-01-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "14"
+    },
+    {
+      "id": "7faa84f8-c127-4f9f-bb84-6e3e230194d6",
+      "asset_id": "c116987e-ae91-4ebd-95aa-96f665c979e7",
+      "employee_id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "date_issued": "2025-11-06",
+      "date_returned": "2026-01-13",
+      "remark": null,
+      "_bil": "17"
+    },
+    {
+      "id": "4f2fbdeb-ba63-42a7-9620-27559f683155",
+      "asset_id": "46ed0561-2f25-4f5e-9cda-28ea8886e385",
+      "employee_id": "fa8cb445-079b-46d5-89fd-73d360671cfd",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-10",
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "8"
+    },
+    {
+      "id": "26829a3a-0370-4c1c-9899-56739d241340",
+      "asset_id": "38e03885-5b86-4caa-b4b5-202811c1f32c",
+      "employee_id": "fa8cb445-079b-46d5-89fd-73d360671cfd",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-10",
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "9"
+    },
+    {
+      "id": "3a0c3204-73bc-4637-af43-fcc58ed94a04",
+      "asset_id": "354f61b4-82fd-488d-b067-21315015802b",
+      "employee_id": "fa8cb445-079b-46d5-89fd-73d360671cfd",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-10",
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "10"
+    },
+    {
+      "id": "4422e5ad-eaa4-4958-9128-a8842cd98ac5",
+      "asset_id": "b5ccb272-126b-461a-843f-9369f6bfba02",
+      "employee_id": "165975e5-3450-43e6-b1eb-13532ab18674",
+      "date_issued": "2025-08-04",
+      "date_returned": null,
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "11"
+    },
+    {
+      "id": "9a91f7ec-8484-4af5-a319-d08539d4c8ed",
+      "asset_id": "b5ccb272-126b-461a-843f-9369f6bfba02",
+      "employee_id": "d3f8a969-396e-4fcb-bd8a-a7ab8eaf8114",
+      "date_issued": "2025-08-04",
+      "date_returned": "2025-08-27",
+      "remark": "Claimed to be used by Dalihah",
+      "_bil": "49"
+    },
+    {
+      "id": "50124d0e-51ee-4d65-8f5e-1ca586c43d60",
+      "asset_id": "b5ccb272-126b-461a-843f-9369f6bfba02",
+      "employee_id": "cf18cd34-61ee-46bc-a109-231796ebcdae",
+      "date_issued": "2025-08-14",
+      "date_returned": "2025-09-19",
+      "remark": "Claimed to be used by PAVIN",
+      "_bil": "79"
+    },
+    {
+      "id": "1731f02e-a15a-44fa-8a7c-d85dd28d26eb",
+      "asset_id": "16e571a6-efdd-41f2-8175-a947aa73ad12",
+      "employee_id": "165975e5-3450-43e6-b1eb-13532ab18674",
+      "date_issued": "2025-11-06",
+      "date_returned": null,
+      "remark": "Claimed to be used by Fatin",
+      "_bil": "12"
+    },
+    {
+      "id": "272d44da-dcfa-430e-b5dc-757ec818a540",
+      "asset_id": "16e571a6-efdd-41f2-8175-a947aa73ad12",
+      "employee_id": "11b66e6b-5341-44d4-8926-01c6ab0c8e9a",
+      "date_issued": "2025-10-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "200"
+    },
+    {
+      "id": "5fbeb7e4-937c-4a01-8917-89f53506d464",
+      "asset_id": "820938d8-85f0-4635-9c2a-0292cf9a875c",
+      "employee_id": "165975e5-3450-43e6-b1eb-13532ab18674",
+      "date_issued": "2026-01-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "13"
+    },
+    {
+      "id": "84d669d7-6e6f-4a74-8cc1-d4b6a098a511",
+      "asset_id": "820938d8-85f0-4635-9c2a-0292cf9a875c",
+      "employee_id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "date_issued": "2025-11-06",
+      "date_returned": "2026-01-13",
+      "remark": null,
+      "_bil": "20"
+    },
+    {
+      "id": "c80a3a08-a11c-4022-9765-a0bbee62d88e",
+      "asset_id": "9059722f-f7c7-4493-8d7a-3292dd8de53c",
+      "employee_id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "date_issued": "2025-11-06",
+      "date_returned": "2026-01-13",
+      "remark": null,
+      "_bil": "15"
+    },
+    {
+      "id": "776d88fd-3cf1-4f2b-8f1f-7bc611e7fc90",
+      "asset_id": "ae172fb0-538c-4b01-927a-5a66a6497aed",
+      "employee_id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "date_issued": "2025-11-06",
+      "date_returned": "2026-01-13",
+      "remark": null,
+      "_bil": "16"
+    },
+    {
+      "id": "3e26f81b-e075-4024-86cd-14ce118b3384",
+      "asset_id": "c4c81729-399e-4199-aec8-d6eb6d005be3",
+      "employee_id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "date_issued": "2025-12-15",
+      "date_returned": "2026-01-13",
+      "remark": null,
+      "_bil": "18"
+    },
+    {
+      "id": "676747a4-da6a-4be0-8f8c-168a9b758b69",
+      "asset_id": "c4c81729-399e-4199-aec8-d6eb6d005be3",
+      "employee_id": "e6b0c0f7-573a-4f1c-bce8-0ce3781ed4ad",
+      "date_issued": "2023-10-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "35"
+    },
+    {
+      "id": "d981820f-7a92-4055-a392-3cf518916b9e",
+      "asset_id": "022a502c-8050-4f81-9a13-be1325b3e5a2",
+      "employee_id": "99a90db0-115f-499c-a817-bee74817bdb0",
+      "date_issued": "2025-11-20",
+      "date_returned": "2026-01-13",
+      "remark": null,
+      "_bil": "19"
+    },
+    {
+      "id": "79145895-eee3-44ee-a1d3-467045ae09b2",
+      "asset_id": "60e3cfaf-4f60-41f0-9ff6-957e1ffb1bda",
+      "employee_id": "44b809e7-0f45-4eb0-a049-2b706a6a6469",
+      "date_issued": "2025-11-10",
+      "date_returned": "2025-12-02",
+      "remark": "NEW LAPTOP",
+      "_bil": "21"
+    },
+    {
+      "id": "7fbd8cdb-287f-450f-b1cf-9a2f3516f018",
+      "asset_id": "60e3cfaf-4f60-41f0-9ff6-957e1ffb1bda",
+      "employee_id": "a9e9c1f4-ddb5-4a8f-aa10-4497c58d927b",
+      "date_issued": "2026-01-16",
+      "date_returned": "2026-02-13",
+      "remark": "Laptop From Ms Hoo",
+      "_bil": "24"
+    },
+    {
+      "id": "f5b5cb87-d86b-42c0-8fce-5565695d44e6",
+      "asset_id": "60e3cfaf-4f60-41f0-9ff6-957e1ffb1bda",
+      "employee_id": "a874feef-1941-448a-8334-1116989c7dda",
+      "date_issued": "2024-05-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "221"
+    },
+    {
+      "id": "9b42b447-7a56-4034-ad29-ee90b83a996e",
+      "asset_id": "62de1036-6a30-4eca-9ac4-99d0ada652ea",
+      "employee_id": "44b809e7-0f45-4eb0-a049-2b706a6a6469",
+      "date_issued": "2025-11-10",
+      "date_returned": "2025-12-02",
+      "remark": "NEW LAPTOP",
+      "_bil": "22"
+    },
+    {
+      "id": "e86e03d0-22f7-4163-bd30-e04af2ad57a1",
+      "asset_id": "62de1036-6a30-4eca-9ac4-99d0ada652ea",
+      "employee_id": "a9e9c1f4-ddb5-4a8f-aa10-4497c58d927b",
+      "date_issued": "2026-01-16",
+      "date_returned": "2026-02-13",
+      "remark": "Laptop From Ms Hoo",
+      "_bil": "25"
+    },
+    {
+      "id": "706a28f4-f212-493c-bf32-d3c908434b40",
+      "asset_id": "15e883f9-bf30-4e76-92b9-243ce0a23252",
+      "employee_id": "44b809e7-0f45-4eb0-a049-2b706a6a6469",
+      "date_issued": "2025-11-10",
+      "date_returned": "2025-12-02",
+      "remark": "NEW LAPTOP",
+      "_bil": "23"
+    },
+    {
+      "id": "c34a7823-5f5b-4a6f-8d7b-2b1c85d77df9",
+      "asset_id": "15e883f9-bf30-4e76-92b9-243ce0a23252",
+      "employee_id": "a9e9c1f4-ddb5-4a8f-aa10-4497c58d927b",
+      "date_issued": "2026-01-16",
+      "date_returned": "2026-02-13",
+      "remark": "Laptop From Ms Hoo",
+      "_bil": "26"
+    },
+    {
+      "id": "e6a166cb-4c74-4e0c-a665-793a35a04385",
+      "asset_id": "6e02965f-df48-42d8-b676-01b47cea7696",
+      "employee_id": "8cf193df-ffdd-48a3-866e-876bc8a04aa6",
+      "date_issued": "2023-10-27",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "27"
+    },
+    {
+      "id": "f0e68560-c408-451e-bc1d-7addd5c2e6cb",
+      "asset_id": "72b27a4a-8af0-46d0-b0e3-c4ee51add9fb",
+      "employee_id": "8cf193df-ffdd-48a3-866e-876bc8a04aa6",
+      "date_issued": "2023-01-27",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "28"
+    },
+    {
+      "id": "67ec3b46-7d59-4665-aeab-2a5d3994359f",
+      "asset_id": "5a641419-70fb-4584-a5bd-d67336da0815",
+      "employee_id": "8cf193df-ffdd-48a3-866e-876bc8a04aa6",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "29"
+    },
+    {
+      "id": "9fa54d30-420d-4111-b137-f7524e66aa81",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "8cf193df-ffdd-48a3-866e-876bc8a04aa6",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "30"
+    },
+    {
+      "id": "6e4b4818-8391-4325-8be4-5c584292b53c",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "date_issued": "2025-02-07",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "67"
+    },
+    {
+      "id": "7ff3a9dc-6270-4b28-8752-6c3b0692de2a",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-04-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "85"
+    },
+    {
+      "id": "7c16c96b-3f09-46c6-9b4e-b97214c59fa8",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "22f1aa1d-9544-42d4-b198-77b96851279a",
+      "date_issued": "2024-11-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "179"
+    },
+    {
+      "id": "96fc0437-2b39-4669-8104-d58d30c026b7",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "dc510d68-26ce-41b2-bf97-a626bb2488da",
+      "date_issued": "2024-10-01",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "197"
+    },
+    {
+      "id": "98ef6781-6979-498b-b6b9-2a5db4f81267",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "206"
+    },
+    {
+      "id": "b2af2d86-7875-4941-9cba-35a2cf1110dd",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "39dfce77-f006-42f2-961c-164878445c80",
+      "date_issued": "2024-10-01",
+      "date_returned": "2025-05-02",
+      "remark": "RESIGNED\nClaimed to be used by Mr laii",
+      "_bil": "270"
+    },
+    {
+      "id": "68470186-3d0c-413f-b1f4-04b714175eca",
+      "asset_id": "380e3389-1da5-4f8d-a476-3c440307f4b2",
+      "employee_id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "date_issued": "2025-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "278"
+    },
+    {
+      "id": "4b4afa90-6a8c-4717-80d3-241e610c1d4d",
+      "asset_id": "7cb27fea-3e3f-433c-87ba-240e505985de",
+      "employee_id": "8cf193df-ffdd-48a3-866e-876bc8a04aa6",
+      "date_issued": "2025-06-04",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "31"
+    },
+    {
+      "id": "9e2fe4c7-c459-4436-8a5f-1c98627ba014",
+      "asset_id": "b6f24d11-591d-47ac-9170-37bd1c889536",
+      "employee_id": "e6b0c0f7-573a-4f1c-bce8-0ce3781ed4ad",
+      "date_issued": "2023-10-30",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "32"
+    },
+    {
+      "id": "b11b60bb-00f1-426d-b344-55221a564a34",
+      "asset_id": "d67647e9-1b21-4831-81cb-9872ef5cfc9c",
+      "employee_id": "e6b0c0f7-573a-4f1c-bce8-0ce3781ed4ad",
+      "date_issued": "2023-10-30",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "33"
+    },
+    {
+      "id": "75533879-7530-4a6f-bcd1-6662c8fc772f",
+      "asset_id": "b7ec0764-e1a1-431d-9b9a-7aa5427270cf",
+      "employee_id": "e6b0c0f7-573a-4f1c-bce8-0ce3781ed4ad",
+      "date_issued": "2023-10-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "34"
+    },
+    {
+      "id": "800ef01b-05ba-4cd2-b588-951a47b327b9",
+      "asset_id": "a57a1c8c-164a-4b71-942b-4b32133494f6",
+      "employee_id": "e6b0c0f7-573a-4f1c-bce8-0ce3781ed4ad",
+      "date_issued": "2023-10-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "36"
+    },
+    {
+      "id": "a920186a-e5c6-4199-babb-7ba73f450151",
+      "asset_id": "2bea437d-f71d-46d0-af51-c3574bd9b52e",
+      "employee_id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-11",
+      "remark": "RESIGNED ( All things with HR )",
+      "_bil": "37"
+    },
+    {
+      "id": "056b615b-c401-4f84-ad7d-fe7def2ae0c0",
+      "asset_id": "ebdeee5e-a324-413d-ae6f-2519d75b0c1b",
+      "employee_id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-11",
+      "remark": "RESIGNED ( All things with HR )",
+      "_bil": "38"
+    },
+    {
+      "id": "00e61dde-f8ca-427e-a879-9bb9cdd65faa",
+      "asset_id": "73b3517f-ffee-4418-b8b5-2de43cfb70f7",
+      "employee_id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "date_issued": "2024-11-11",
+      "date_returned": "2025-07-11",
+      "remark": "RESIGNED ( All things with HR )",
+      "_bil": "39"
+    },
+    {
+      "id": "7b30158c-5c2f-4397-9457-7a6e30cd7f0b",
+      "asset_id": "284b28da-226b-44af-a64c-9697806345e8",
+      "employee_id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "date_issued": "2025-02-20",
+      "date_returned": "2025-07-11",
+      "remark": "RESIGNED ( All things with HR )",
+      "_bil": "40"
+    },
+    {
+      "id": "6699eb03-8426-4876-abaa-c40d4007d35b",
+      "asset_id": "6ff6a55a-8a91-47ee-b47a-3e18871920bb",
+      "employee_id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "date_issued": "2025-02-20",
+      "date_returned": "2025-07-11",
+      "remark": "RESIGNED ( All things with HR )",
+      "_bil": "41"
+    },
+    {
+      "id": "94b239f6-fd36-417e-81ff-1c4ee2dfb4aa",
+      "asset_id": "48ef9b61-8bce-4037-b112-5659fa51cb28",
+      "employee_id": "66fb41f2-d5d7-4fb9-87a5-c6ddb913df44",
+      "date_issued": "2025-02-20",
+      "date_returned": "2025-07-11",
+      "remark": "RESIGNED ( All things with HR )",
+      "_bil": "42"
+    },
+    {
+      "id": "1c0e0021-b56a-412f-b871-b5064699bf99",
+      "asset_id": "5f2dbb19-5d97-48a9-937d-90c18e58fdea",
+      "employee_id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "date_issued": "2025-06-16",
+      "date_returned": null,
+      "remark": "From Mr soo",
+      "_bil": "43"
+    },
+    {
+      "id": "852b82d8-e348-421e-ae30-215bb5c9c1df",
+      "asset_id": "340a29c5-4f3b-4896-b09f-b7d8051a1f31",
+      "employee_id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "date_issued": "2025-06-16",
+      "date_returned": null,
+      "remark": "From Mr soo",
+      "_bil": "44"
+    },
+    {
+      "id": "339b4ef6-7bf3-4c30-982c-71c19bd18a8b",
+      "asset_id": "7acc2c8e-1386-46e7-8fc0-a52cd9ed1fb3",
+      "employee_id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "date_issued": "2025-06-16",
+      "date_returned": null,
+      "remark": "From Mr soo",
+      "_bil": "45"
+    },
+    {
+      "id": "1435b5db-7d7a-4594-b6d5-e3d29c62a8a4",
+      "asset_id": "e2ca0451-ebb2-446e-9633-5d2436f93caf",
+      "employee_id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "date_issued": "2025-06-16",
+      "date_returned": null,
+      "remark": "From Mr soo",
+      "_bil": "46"
+    },
+    {
+      "id": "f816070d-4080-4d2f-a43d-0a049daaef82",
+      "asset_id": "d0f2fdf4-4a40-44c9-9337-12729564ef25",
+      "employee_id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "date_issued": "2025-01-08",
+      "date_returned": null,
+      "remark": "From Mr soo",
+      "_bil": "47"
+    },
+    {
+      "id": "c55c0e2f-05c7-4314-8633-56ff47b94d5e",
+      "asset_id": "9075d06f-3724-4824-ae6a-cc17b9b65eff",
+      "employee_id": "222d7047-1cb6-44ad-b68d-74c62de0a830",
+      "date_issued": "2025-01-08",
+      "date_returned": null,
+      "remark": "From Mr soo",
+      "_bil": "48"
+    },
+    {
+      "id": "a7508a27-63a6-4386-9dae-a52ea45b8b2c",
+      "asset_id": "e29e07fa-3079-4969-bd0b-b3b951446227",
+      "employee_id": "d3f8a969-396e-4fcb-bd8a-a7ab8eaf8114",
+      "date_issued": "2025-08-04",
+      "date_returned": "2025-08-27",
+      "remark": "Claimed to be used by Dalihah",
+      "_bil": "50"
+    },
+    {
+      "id": "0784029d-d9e3-441c-ab9e-ceb47e899442",
+      "asset_id": "e29e07fa-3079-4969-bd0b-b3b951446227",
+      "employee_id": "cf18cd34-61ee-46bc-a109-231796ebcdae",
+      "date_issued": "2025-08-15",
+      "date_returned": "2025-09-20",
+      "remark": null,
+      "_bil": "80"
+    },
+    {
+      "id": "c0a75574-c7c8-4f7d-82d5-04975a9416ba",
+      "asset_id": "e29e07fa-3079-4969-bd0b-b3b951446227",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-12-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "99"
+    },
+    {
+      "id": "2e286cb8-2a2a-4f79-b2d6-f64ba7e19207",
+      "asset_id": "4c5dfb17-553b-4641-b0b2-93db9e324543",
+      "employee_id": "d3f8a969-396e-4fcb-bd8a-a7ab8eaf8114",
+      "date_issued": "2025-08-04",
+      "date_returned": "2025-08-27",
+      "remark": "Claimed to be used by Dalihah",
+      "_bil": "51"
+    },
+    {
+      "id": "a24e45c7-3aa1-4687-879f-87c44b2e3ef9",
+      "asset_id": "4c5dfb17-553b-4641-b0b2-93db9e324543",
+      "employee_id": "cf18cd34-61ee-46bc-a109-231796ebcdae",
+      "date_issued": "2025-08-16",
+      "date_returned": "2025-09-21",
+      "remark": null,
+      "_bil": "81"
+    },
+    {
+      "id": "da29057e-80d7-4812-a420-10732966fc1b",
+      "asset_id": "aae8a71f-1bde-4701-a024-53513cf63b40",
+      "employee_id": "d3f8a969-396e-4fcb-bd8a-a7ab8eaf8114",
+      "date_issued": "2025-08-04",
+      "date_returned": "2025-08-27",
+      "remark": "Claimed to be used by Dalihah",
+      "_bil": "52"
+    },
+    {
+      "id": "6105f4b3-132e-45e2-9275-516925695915",
+      "asset_id": "fa109bd1-120e-4d9a-a2cd-41f20a135393",
+      "employee_id": "d3f8a969-396e-4fcb-bd8a-a7ab8eaf8114",
+      "date_issued": "2025-08-04",
+      "date_returned": "2025-08-27",
+      "remark": "Claimed to be used by Dalihah",
+      "_bil": "53"
+    },
+    {
+      "id": "e8a647f9-a3b8-465d-aaad-a52b194b43a2",
+      "asset_id": "fa109bd1-120e-4d9a-a2cd-41f20a135393",
+      "employee_id": "cf18cd34-61ee-46bc-a109-231796ebcdae",
+      "date_issued": "2025-08-18",
+      "date_returned": "2025-09-23",
+      "remark": null,
+      "_bil": "83"
+    },
+    {
+      "id": "bae59bcc-1c27-46f7-9684-684d2d8c4cf3",
+      "asset_id": "fa109bd1-120e-4d9a-a2cd-41f20a135393",
+      "employee_id": "6de20df7-3e11-4eb6-a274-a7aa747b2dc9",
+      "date_issued": "2025-11-21",
+      "date_returned": "2026-02-20",
+      "remark": null,
+      "_bil": "92"
+    },
+    {
+      "id": "44d6872d-8239-4e85-a57a-c216efa304ef",
+      "asset_id": "fa109bd1-120e-4d9a-a2cd-41f20a135393",
+      "employee_id": "b9c1fb00-303a-42ad-be29-e808454f3737",
+      "date_issued": "2025-12-11",
+      "date_returned": "2026-03-09",
+      "remark": null,
+      "_bil": "95"
+    },
+    {
+      "id": "e2cdd435-cc6e-407f-88f9-3c0f0c5f5ae1",
+      "asset_id": "a67bcddc-578e-48ab-adce-025d2c7cf86f",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2023-11-16",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "54"
+    },
+    {
+      "id": "57461170-fee6-41fe-8696-0f94247ea553",
+      "asset_id": "538b0583-1a0d-4ddf-88fb-b403b94323b9",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2023-11-16",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "55"
+    },
+    {
+      "id": "7a19e3c0-b698-4da6-a669-b623dfe80c79",
+      "asset_id": "3b9c2685-cb52-433e-b892-9ffaf495cdee",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2024-03-18",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "56"
+    },
+    {
+      "id": "1c3daf72-11a3-46f1-8c93-02d695c0de3d",
+      "asset_id": "3b9c2685-cb52-433e-b892-9ffaf495cdee",
+      "employee_id": "b9c1fb00-303a-42ad-be29-e808454f3737",
+      "date_issued": "2025-12-11",
+      "date_returned": "2026-03-09",
+      "remark": null,
+      "_bil": "96"
+    },
+    {
+      "id": "f01015a8-a9f0-407c-a4ac-406def1b6ebe",
+      "asset_id": "e2a750e7-2f80-42c3-ad31-d9d4c2d7c3db",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2024-03-18",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "57"
+    },
+    {
+      "id": "e72411fd-974e-46fc-9916-59bc03c8e773",
+      "asset_id": "318e66bb-f2e9-4c54-bcb8-11de868565a0",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2024-03-18",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "58"
+    },
+    {
+      "id": "62899910-fe24-4fda-9698-96cccecfce77",
+      "asset_id": "318e66bb-f2e9-4c54-bcb8-11de868565a0",
+      "employee_id": "a874feef-1941-448a-8334-1116989c7dda",
+      "date_issued": "2024-05-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "222"
+    },
+    {
+      "id": "13026394-03c9-491f-a79f-467b6e74a3f9",
+      "asset_id": "318e66bb-f2e9-4c54-bcb8-11de868565a0",
+      "employee_id": "971f48f9-0402-44ec-ab27-1b94e9ead91d",
+      "date_issued": "2025-01-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "231"
+    },
+    {
+      "id": "8429add3-d194-43a1-8aff-10b854fa413c",
+      "asset_id": "afb331ba-f75a-4f5c-816b-a6aa84f33b74",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2024-12-19",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "59"
+    },
+    {
+      "id": "5ded7289-4566-4079-b6b1-034bffa92271",
+      "asset_id": "c4f4c341-a04e-48d7-986b-f1fd6519a932",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2024-12-19",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "60"
+    },
+    {
+      "id": "c3ec4399-4998-4f80-99ec-d3fc2b5c5cee",
+      "asset_id": "f45dd45e-ea29-4c95-b8b4-941dd213774b",
+      "employee_id": "c727be35-8910-4a9d-9e15-20e64b9ecf1c",
+      "date_issued": "2024-12-19",
+      "date_returned": "2025-12-31",
+      "remark": null,
+      "_bil": "61"
+    },
+    {
+      "id": "438e6b8d-f634-42b9-b25e-ddcc8e572772",
+      "asset_id": "3e10d7ae-c4d4-4bf5-b685-f145d3a0a033",
+      "employee_id": "f8d760c4-325e-4ce5-8c86-64231287da22",
+      "date_issued": "2024-03-18",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "62"
+    },
+    {
+      "id": "e2ef38f9-9bb7-462b-a06d-da311b44e20b",
+      "asset_id": "f7cfa95f-bede-4a40-9552-087a8a15c06c",
+      "employee_id": "f8d760c4-325e-4ce5-8c86-64231287da22",
+      "date_issued": "2024-03-18",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "63"
+    },
+    {
+      "id": "01906d70-dcf0-4ff9-a146-9d2e0d61bf94",
+      "asset_id": "64c3e52f-beb9-4019-9be9-19333044d944",
+      "employee_id": "f8d760c4-325e-4ce5-8c86-64231287da22",
+      "date_issued": "2024-03-18",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "64"
+    },
+    {
+      "id": "5dbd3bb3-14ab-46fa-802f-4a17bbd3bd56",
+      "asset_id": "454c33e9-480b-4d35-9e5e-35143f7904c1",
+      "employee_id": "f8d760c4-325e-4ce5-8c86-64231287da22",
+      "date_issued": "2024-03-18",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "65"
+    },
+    {
+      "id": "237e3312-f9bd-4e7b-9f5f-6770c442d52c",
+      "asset_id": "bdf26bc2-32ec-4545-a4af-5618ac8226d9",
+      "employee_id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "date_issued": "2025-02-07",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "66"
+    },
+    {
+      "id": "599ebfb3-1f79-4fe9-8012-f7b230f06450",
+      "asset_id": "bdf26bc2-32ec-4545-a4af-5618ac8226d9",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-04-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "84"
+    },
+    {
+      "id": "7f43d570-ca29-4b06-b4c4-33fe296fab9e",
+      "asset_id": "c106a73d-cc90-48b7-ad13-f97d7128c504",
+      "employee_id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "date_issued": "2025-02-07",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "68"
+    },
+    {
+      "id": "ed15ea60-9626-4abc-be66-a498ea9a6bc3",
+      "asset_id": "695374e5-f960-4126-89bf-d8949fc38b99",
+      "employee_id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "date_issued": "2025-02-07",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "69"
+    },
+    {
+      "id": "3e64b394-d348-4ca1-a4c7-4d0dba9e5115",
+      "asset_id": "da27f547-fb71-4455-8522-f31be66c0e25",
+      "employee_id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "date_issued": "2025-02-07",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "70"
+    },
+    {
+      "id": "f2a4db6e-225b-4b6a-882e-c58ef10e35ec",
+      "asset_id": "cfa4318c-8f7c-458f-bf75-89f7b0e99ff2",
+      "employee_id": "36a52d7e-6ce7-45a9-a615-67cd1c08add7",
+      "date_issued": "2025-02-13",
+      "date_returned": null,
+      "remark": "RESIGNED",
+      "_bil": "71"
+    },
+    {
+      "id": "feda7fcb-e720-448c-b8b6-1aca88f5bbf7",
+      "asset_id": "fb2ab86d-ff9b-4c49-b670-eb2b72ce20ed",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-10",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "72"
+    },
+    {
+      "id": "6c62e3b8-0913-4f28-9e53-e156315cd3db",
+      "asset_id": "fb2ab86d-ff9b-4c49-b670-eb2b72ce20ed",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-21",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "110"
+    },
+    {
+      "id": "3d9489f1-ff0d-4401-80a9-bd5ed7f05c57",
+      "asset_id": "3da64617-47e4-4d2d-84f8-a73014d19815",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-10",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "73"
+    },
+    {
+      "id": "e30dbd13-9a0c-4118-a6f9-efd4008eb6e7",
+      "asset_id": "3da64617-47e4-4d2d-84f8-a73014d19815",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-21",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "111"
+    },
+    {
+      "id": "38e38bdb-3293-4468-a50f-c36ec045011f",
+      "asset_id": "3caa3398-5f6e-4a53-b835-771dd8a3a5e8",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-10",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "74"
+    },
+    {
+      "id": "e3976bb9-87b2-43d6-83fd-9ceb11121607",
+      "asset_id": "df465385-103a-48ad-9a36-31169bd95830",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-17",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "75"
+    },
+    {
+      "id": "1b6292ed-de9d-42ad-8632-7277fbbe81a7",
+      "asset_id": "df465385-103a-48ad-9a36-31169bd95830",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-04-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "87"
+    },
+    {
+      "id": "1faddd7e-7f84-45c8-b4bb-c96b33f0606b",
+      "asset_id": "f61ead36-e878-4dff-b05c-9c53225773e3",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-18",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "76"
+    },
+    {
+      "id": "2b75e099-c9da-4d43-a9ce-fa84b3f2215b",
+      "asset_id": "6ebb3281-938e-45a1-96ca-d755ffd89c93",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-22",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "77"
+    },
+    {
+      "id": "39732c46-c6eb-488b-b5dc-7f136c5b709f",
+      "asset_id": "e689f7f8-42b5-4f68-b098-8cedc0475f92",
+      "employee_id": "87335bd1-0936-43f1-a593-59f504c80a96",
+      "date_issued": "2025-02-22",
+      "date_returned": "2025-04-10",
+      "remark": "RESIGNED\nClaimed to be used by  Shahrifah /  Suguna",
+      "_bil": "78"
+    },
+    {
+      "id": "f94511e8-48ba-45b0-90c4-cdaabe4d8092",
+      "asset_id": "8a50897b-e38e-417a-9400-c5291dd07601",
+      "employee_id": "cf18cd34-61ee-46bc-a109-231796ebcdae",
+      "date_issued": "2025-08-17",
+      "date_returned": "2025-09-22",
+      "remark": null,
+      "_bil": "82"
+    },
+    {
+      "id": "b77146a4-4ab2-4073-b098-2403c3d06839",
+      "asset_id": "0cccb09f-684a-495d-a264-f50541331713",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-04-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "86"
+    },
+    {
+      "id": "cb30fea2-1d65-414e-931c-45f83737a85f",
+      "asset_id": "f220bb3c-af2e-4ef1-8f5f-baefdc3a2fb4",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-04-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "88"
+    },
+    {
+      "id": "3e935ffb-1a6b-490e-95e8-18138396ebaf",
+      "asset_id": "54db39d9-284d-4b8c-ae41-c19b173657f5",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-04-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "89"
+    },
+    {
+      "id": "955b83da-a80b-47e0-bcd1-d17c64eef194",
+      "asset_id": "8c90d793-8023-4945-a3f4-27598038981c",
+      "employee_id": "cb06c6a1-02b1-4bbc-aff5-17425932446c",
+      "date_issued": "2025-06-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "90"
+    },
+    {
+      "id": "7f0c816f-dda7-4d83-80bc-2a853d60fb6b",
+      "asset_id": "a4dca511-349a-49ba-9718-7ce9f1b064a0",
+      "employee_id": "6de20df7-3e11-4eb6-a274-a7aa747b2dc9",
+      "date_issued": "2025-11-21",
+      "date_returned": "2026-02-20",
+      "remark": null,
+      "_bil": "91"
+    },
+    {
+      "id": "e72f4dee-5707-4353-a5c8-71ed6ee2fdb3",
+      "asset_id": "f9a312ed-2a96-48bb-99a6-3b4981b89399",
+      "employee_id": "6de20df7-3e11-4eb6-a274-a7aa747b2dc9",
+      "date_issued": "2025-11-21",
+      "date_returned": "2026-02-20",
+      "remark": null,
+      "_bil": "93"
+    },
+    {
+      "id": "049c3bca-dcab-40b8-8d25-64c6b10a698f",
+      "asset_id": "2c3a7327-2245-484f-8af1-8a7ba71841c4",
+      "employee_id": "6de20df7-3e11-4eb6-a274-a7aa747b2dc9",
+      "date_issued": "2025-11-21",
+      "date_returned": "2026-02-20",
+      "remark": null,
+      "_bil": "94"
+    },
+    {
+      "id": "c5403fb1-cafb-4217-b046-d8f9664fddfa",
+      "asset_id": "8f824399-8290-439a-b4e0-82f5cc416737",
+      "employee_id": "b9c1fb00-303a-42ad-be29-e808454f3737",
+      "date_issued": "2025-12-11",
+      "date_returned": "2026-03-09",
+      "remark": null,
+      "_bil": "97"
+    },
+    {
+      "id": "714e4678-8c69-459c-8110-99de8d8dd4f4",
+      "asset_id": "22518381-048b-47b2-a145-e40c9f9298fa",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-11-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "98"
+    },
+    {
+      "id": "a3abbcc8-ac78-4bf3-958d-a2b95a2a453a",
+      "asset_id": "54cfc36e-a21d-4169-8ef7-83d81015f9c8",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-12-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "100"
+    },
+    {
+      "id": "8870ccad-3c54-49ed-9cbf-e68d9077fdd4",
+      "asset_id": "31e03bef-5037-41c1-876d-e1661a40436f",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-12-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "101"
+    },
+    {
+      "id": "b30522cc-1f27-4d37-b69c-a629131b1107",
+      "asset_id": "1d5b2a84-9349-466e-a846-3e370e5a3921",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-12-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "102"
+    },
+    {
+      "id": "fb5885b5-590f-42af-a350-bd8c2f7ed653",
+      "asset_id": "1202d28c-ebb3-451f-b2d6-b5530f1065a9",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-12-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "103"
+    },
+    {
+      "id": "bf998eb3-d9b2-4dbe-9d97-2b195199c11c",
+      "asset_id": "c46f020b-11f0-479f-8e43-c35161e958bc",
+      "employee_id": "3e331b4c-c69e-4920-9f6e-05250538dbb2",
+      "date_issued": "2025-12-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "104"
+    },
+    {
+      "id": "c698a53b-ce19-4b9c-ae55-bd4448da87ea",
+      "asset_id": "7c8ff106-9756-40ea-b328-d7b25659ebf9",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-17",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "105"
+    },
+    {
+      "id": "a4f83446-dda4-475c-8a34-6091b4dfec50",
+      "asset_id": "76cc6883-e9ad-4b0f-9854-1d3f1e502191",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-17",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "106"
+    },
+    {
+      "id": "4303d028-6d6f-4d8d-b6ce-c8de58ff87c1",
+      "asset_id": "2202d945-0b9c-4f9d-bb40-87fc23680da8",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-17",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "107"
+    },
+    {
+      "id": "1e2a44db-abfe-4def-beb3-d9c2709c97e9",
+      "asset_id": "1a6be229-f887-406c-b578-f4468f525f46",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-21",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "108"
+    },
+    {
+      "id": "e9ac75cf-07b7-4c02-8878-7e05383247a2",
+      "asset_id": "85bf5d57-5c0c-473d-a06d-8e48acae0b9b",
+      "employee_id": "b64cbff8-97e4-4856-948c-f40acceb2073",
+      "date_issued": "2025-04-21",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "109"
+    },
+    {
+      "id": "f4174d06-c1cb-445c-8450-d17050d5635d",
+      "asset_id": "87bcdf59-1e96-4d6f-9ff6-6d73fcac1a2c",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2024-11-28",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "112"
+    },
+    {
+      "id": "de4b5ac9-1e59-43a9-91d5-e22882dd3c87",
+      "asset_id": "87bcdf59-1e96-4d6f-9ff6-6d73fcac1a2c",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "131"
+    },
+    {
+      "id": "5995f9c5-1dd3-46db-b3ce-90e19294cb19",
+      "asset_id": "0bfe63b0-b55c-4902-8fea-42ecd685ad8e",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2024-11-28",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "113"
+    },
+    {
+      "id": "da5e99c9-ba9a-46c3-ac9e-00d48b803a54",
+      "asset_id": "0bfe63b0-b55c-4902-8fea-42ecd685ad8e",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "135"
+    },
+    {
+      "id": "7cfea777-4670-4341-99b3-c5fc8c0d7d8c",
+      "asset_id": "d826d250-d190-4ee7-8c8a-78efc02602e2",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "114"
+    },
+    {
+      "id": "f88c9a61-b9b7-4c5e-af26-5139f99c7da3",
+      "asset_id": "76ca2d27-c9dd-43d7-a874-0d82a2b17b8e",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "115"
+    },
+    {
+      "id": "921e23ae-9ee9-4455-93a3-6e6f3b991cf5",
+      "asset_id": "c7e2d9f1-b641-4715-a09e-9139dd2c19b9",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "116"
+    },
+    {
+      "id": "22a27d1b-e8c4-4ad0-bff8-37be9469da1c",
+      "asset_id": "ddd551a1-4885-43fa-a103-8c80dd5dcb45",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "117"
+    },
+    {
+      "id": "b1c289eb-9a56-4b56-b1ee-98b5069a884f",
+      "asset_id": "344b1bb5-385e-43ca-b99c-aed8632c2c54",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "118"
+    },
+    {
+      "id": "f277dab9-7878-4326-bd4d-dc6b3af9e5d9",
+      "asset_id": "864d0c92-2ab2-48ea-85e6-3b022da757dd",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "119"
+    },
+    {
+      "id": "092314d2-a2d7-4cec-8a67-9c861d36d59e",
+      "asset_id": "2b900a3b-05c9-431c-bcbd-6a66fa935903",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "120"
+    },
+    {
+      "id": "eb5618c3-4ac4-4bb1-ab82-313cc55afb3c",
+      "asset_id": "c3d2ddde-bd77-4f56-abe5-03a4391fbe23",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "121"
+    },
+    {
+      "id": "a45dd31b-9cfd-4fef-a839-2c49ae8e58db",
+      "asset_id": "91b94e64-121f-4e59-910a-875307b6a6bf",
+      "employee_id": "d8389973-d420-4ae5-b35f-37aee9fc6556",
+      "date_issued": "2025-02-19",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "122"
+    },
+    {
+      "id": "f75e8160-75fc-48b3-a7c5-9e794f0cd863",
+      "asset_id": "e5533c0f-af33-4d9f-88ce-23b8a95fc70d",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-06",
+      "date_returned": "2025-07-31",
+      "remark": "nnn",
+      "_bil": "123"
+    },
+    {
+      "id": "f16d54a4-15aa-4977-ac28-6880e4b0dd78",
+      "asset_id": "e5533c0f-af33-4d9f-88ce-23b8a95fc70d",
+      "employee_id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "187"
+    },
+    {
+      "id": "e897669e-6468-48ad-a27e-4d33e8ff77d8",
+      "asset_id": "a6ff8eb1-87ed-4731-8880-e2c9a10bf9ab",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-06",
+      "date_returned": "2025-07-23",
+      "remark": "Claimed to be used by  Sarah (AA)",
+      "_bil": "124"
+    },
+    {
+      "id": "249c4c6f-3898-4324-9ac7-39786a026930",
+      "asset_id": "a6ff8eb1-87ed-4731-8880-e2c9a10bf9ab",
+      "employee_id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "188"
+    },
+    {
+      "id": "3e2c8392-30cd-4cf2-9b1c-17bf378a9bbd",
+      "asset_id": "f6b80496-c4d9-4b7b-ae0b-ca8421ca4cf0",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-06",
+      "date_returned": "2025-07-23",
+      "remark": "Claimed to be used by  Sarah (AA)",
+      "_bil": "125"
+    },
+    {
+      "id": "d9d7a6a6-877d-4979-9569-783ccbe0ac3c",
+      "asset_id": "4557ed16-afab-49da-95e7-3524e0fa3756",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-07-23",
+      "remark": "Claimed to be used by  Sarah (AA)",
+      "_bil": "126"
+    },
+    {
+      "id": "cf24c30b-e2d2-4daf-8471-e1d09571fbea",
+      "asset_id": "4557ed16-afab-49da-95e7-3524e0fa3756",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "130"
+    },
+    {
+      "id": "ed85b8d4-426e-453f-a89f-07ad6a23fad8",
+      "asset_id": "9e658b0a-0ce0-4dce-bfcd-356ec50ced22",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-07-23",
+      "remark": "Claimed to be used by  Sarah (AA)",
+      "_bil": "127"
+    },
+    {
+      "id": "81cc0337-6249-4445-827b-1a663af56e96",
+      "asset_id": "9e658b0a-0ce0-4dce-bfcd-356ec50ced22",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "134"
+    },
+    {
+      "id": "3ee0134a-ff78-4d7c-bfd9-8adeb0bd8771",
+      "asset_id": "02f8d622-f71f-446a-84ef-03e92e912e9c",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-07-23",
+      "remark": "Claimed to be used by  Sarah (AA)",
+      "_bil": "128"
+    },
+    {
+      "id": "d107d3ce-eded-40a4-8bcd-a733a865fc28",
+      "asset_id": "02f8d622-f71f-446a-84ef-03e92e912e9c",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "132"
+    },
+    {
+      "id": "5e9dc2b2-c0ac-4e1f-a135-5f26cff590d2",
+      "asset_id": "81ea76f8-796f-43ac-8fc2-a4ee9c3be215",
+      "employee_id": "643d1533-9316-444b-b852-8bb2d67938f0",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-07-23",
+      "remark": "Claimed to be used by  Sarah (AA)",
+      "_bil": "129"
+    },
+    {
+      "id": "6cece42f-9bfb-4b16-bee2-75bc8f5bfbea",
+      "asset_id": "81ea76f8-796f-43ac-8fc2-a4ee9c3be215",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "133"
+    },
+    {
+      "id": "1d6ce82f-a800-4a9d-ae2b-45ebd90b0083",
+      "asset_id": "798dec86-5ab1-491a-a593-2cb0f9319b90",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "136"
+    },
+    {
+      "id": "cec5fb63-d7fc-43c5-925c-4e13fea1fa3a",
+      "asset_id": "a9fc11ed-704e-4d68-b8b5-ba0edfb8378f",
+      "employee_id": "e99c213f-a7c8-422c-a586-6e07507c2302",
+      "date_issued": "2026-01-06",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "137"
+    },
+    {
+      "id": "9195b315-68ae-443f-bbff-b5485748e43c",
+      "asset_id": "813bd919-8f6f-4841-bbe0-fbe7020ff889",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-11-29",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "139"
+    },
+    {
+      "id": "c6c2754c-06c2-488e-b88a-a67725985ae7",
+      "asset_id": "a020d7ea-5e5b-4f81-a1bf-c32a239a5601",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2024-06-19",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "140"
+    },
+    {
+      "id": "0c5b33df-0313-44e5-b93b-c21f0ce69a30",
+      "asset_id": "46a6717e-4074-4158-a3eb-4341a9ef112c",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-11-29",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "141"
+    },
+    {
+      "id": "c3bc1e78-9a04-4893-af00-e82cb284ac8d",
+      "asset_id": "54547547-2f95-4f87-b7d1-db8ea04b7d26",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-11-29",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "142"
+    },
+    {
+      "id": "b275c139-5b02-41d3-8115-27152b7a094b",
+      "asset_id": "b5e6b4ce-92ce-4fd0-b090-b29522f64ee5",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-11-30",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "143"
+    },
+    {
+      "id": "55cfd020-5ed0-4caa-aefa-6282a165a61e",
+      "asset_id": "188091f0-41c9-4995-aa26-12579e208c17",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-12-01",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "144"
+    },
+    {
+      "id": "7aa2a03a-655c-429b-ab63-c7147acb4265",
+      "asset_id": "188091f0-41c9-4995-aa26-12579e208c17",
+      "employee_id": "d41aaa5c-e0a9-4c13-8a53-208f39eba2e9",
+      "date_issued": "2026-02-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "158"
+    },
+    {
+      "id": "54400252-f59f-4414-8b49-c4e1c0f23a3f",
+      "asset_id": "188091f0-41c9-4995-aa26-12579e208c17",
+      "employee_id": "57ceec5b-7741-4962-ae7b-6b8ee675d0d0",
+      "date_issued": "2025-12-30",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "163"
+    },
+    {
+      "id": "8019cfd0-322f-438a-b0f1-e93ed445683e",
+      "asset_id": "66ad9efb-434a-405f-9cf8-59364d00680d",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-12-02",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "145"
+    },
+    {
+      "id": "434fb896-ad25-4235-b319-444b87d6664e",
+      "asset_id": "66ad9efb-434a-405f-9cf8-59364d00680d",
+      "employee_id": "bd883ea0-0842-48f6-80af-f78a6d8d1e4d",
+      "date_issued": "2026-02-11",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "172"
+    },
+    {
+      "id": "cd945b33-6478-4307-82e4-875025e7b860",
+      "asset_id": "66ad9efb-434a-405f-9cf8-59364d00680d",
+      "employee_id": "442d4463-79d7-4bfd-a4f2-f4c2ba3ab16f",
+      "date_issued": "2026-08-26",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "176"
+    },
+    {
+      "id": "70dd6a7c-8b39-4c5f-a293-8b36560bf0d8",
+      "asset_id": "a8bbf87f-384f-4874-9996-7424da52090a",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-12-03",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "146"
+    },
+    {
+      "id": "1b6176f3-9b7a-493e-adcc-bd21cc6416b6",
+      "asset_id": "15ea3b8e-bd55-4f9a-a91c-ad879af98e54",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-11-29",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "147"
+    },
+    {
+      "id": "bd28bc3f-e336-47d5-aa81-4b542f60d6d7",
+      "asset_id": "77ae3b75-bf81-4347-a9c0-f86d3088043a",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2023-11-29",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "148"
+    },
+    {
+      "id": "d1a14fce-2e1d-43f6-889e-ca18b789b914",
+      "asset_id": "091b55d7-d990-4edf-b00c-885f2c99c8e6",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": "2024-06-19",
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "149"
+    },
+    {
+      "id": "ae59cc60-b344-4ca9-a9a0-b00e061970f2",
+      "asset_id": "27174be0-41f0-4953-94ba-edda204d879d",
+      "employee_id": "dbe37935-d96d-4233-877e-b252df2b79ba",
+      "date_issued": null,
+      "date_returned": "2025-12-30",
+      "remark": null,
+      "_bil": "150"
+    },
+    {
+      "id": "ee771386-e118-4412-9530-d0f202886a7f",
+      "asset_id": "5461101d-c532-4ce4-bb84-fa8e676699b0",
+      "employee_id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "date_issued": "2023-08-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "151"
+    },
+    {
+      "id": "29a8d0d1-0121-4473-a507-4bde8ae07eba",
+      "asset_id": "41706f80-0450-40c3-9971-7a20a9e818a4",
+      "employee_id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "date_issued": "2023-08-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "152"
+    },
+    {
+      "id": "8bad80e5-922e-4f2c-a186-b9349170524b",
+      "asset_id": "ecfc9606-9cdf-466e-bd05-fffa0f8af1e7",
+      "employee_id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "date_issued": "2023-08-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "153"
+    },
+    {
+      "id": "39932cec-5e65-457f-9305-076d778a1d18",
+      "asset_id": "dd72b45e-a543-4d2d-9d50-62f68c72dc3c",
+      "employee_id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "date_issued": "2023-08-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "154"
+    },
+    {
+      "id": "d73f09d0-778a-4158-a2b7-8f8284b3036b",
+      "asset_id": "ba7d3fef-e82b-4741-b579-2cf77073203a",
+      "employee_id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "date_issued": "2023-08-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "155"
+    },
+    {
+      "id": "2b58cd34-0331-49fd-b37b-73477caecec3",
+      "asset_id": "0b7244ec-d496-41be-af44-4c462121583b",
+      "employee_id": "a3d6f750-8a7d-4699-a499-25c8d240092a",
+      "date_issued": "2023-10-24",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "156"
+    },
+    {
+      "id": "75ae83fb-e1b9-41c9-bb01-8916a6c15c3a",
+      "asset_id": "c486f967-d34e-4c09-a1cf-6380c7f4d4d0",
+      "employee_id": "d41aaa5c-e0a9-4c13-8a53-208f39eba2e9",
+      "date_issued": "2026-02-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "157"
+    },
+    {
+      "id": "75ddfca2-749f-428f-87dd-cb32c6a033f1",
+      "asset_id": "c486f967-d34e-4c09-a1cf-6380c7f4d4d0",
+      "employee_id": "57ceec5b-7741-4962-ae7b-6b8ee675d0d0",
+      "date_issued": "2025-12-30",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "162"
+    },
+    {
+      "id": "9c132ec5-c168-4724-b679-9d6cdc855110",
+      "asset_id": "06bcc825-1a11-4bab-8425-3e92532f3f3f",
+      "employee_id": "d41aaa5c-e0a9-4c13-8a53-208f39eba2e9",
+      "date_issued": "2026-02-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "159"
+    },
+    {
+      "id": "85894353-2676-482d-8f98-527b550dd64c",
+      "asset_id": "06bcc825-1a11-4bab-8425-3e92532f3f3f",
+      "employee_id": "57ceec5b-7741-4962-ae7b-6b8ee675d0d0",
+      "date_issued": "2025-10-01",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "164"
+    },
+    {
+      "id": "2d91e0a6-1958-498d-96e7-313b7028c66e",
+      "asset_id": "06bcc825-1a11-4bab-8425-3e92532f3f3f",
+      "employee_id": "90f19282-a15e-42e9-b69c-74733347d67f",
+      "date_issued": "2025-07-21",
+      "date_returned": "2025-09-30",
+      "remark": null,
+      "_bil": "167"
+    },
+    {
+      "id": "9867b244-2c2c-4681-879a-d7bc047aa578",
+      "asset_id": "06bcc825-1a11-4bab-8425-3e92532f3f3f",
+      "employee_id": "bda0f99f-7f59-4d16-adda-d0b908ce127e",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-04-06",
+      "remark": "Claimed to be used by Winne",
+      "_bil": "235"
+    },
+    {
+      "id": "ccbd1c43-f077-48e8-b657-76aecf12226a",
+      "asset_id": "96c26fa6-baf6-4a13-9184-a164950459ee",
+      "employee_id": "d41aaa5c-e0a9-4c13-8a53-208f39eba2e9",
+      "date_issued": "2026-02-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "160"
+    },
+    {
+      "id": "8d338f30-05ff-4234-9eef-94e69945f01f",
+      "asset_id": "96c26fa6-baf6-4a13-9184-a164950459ee",
+      "employee_id": "57ceec5b-7741-4962-ae7b-6b8ee675d0d0",
+      "date_issued": "2025-10-01",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "165"
+    },
+    {
+      "id": "f6ee9d2a-3fc1-46f6-abda-32bac9e3e4dc",
+      "asset_id": "96c26fa6-baf6-4a13-9184-a164950459ee",
+      "employee_id": "90f19282-a15e-42e9-b69c-74733347d67f",
+      "date_issued": "2025-07-21",
+      "date_returned": "2025-09-30",
+      "remark": null,
+      "_bil": "168"
+    },
+    {
+      "id": "0245f625-9d93-4937-924e-7a4beb351e93",
+      "asset_id": "96c26fa6-baf6-4a13-9184-a164950459ee",
+      "employee_id": "bda0f99f-7f59-4d16-adda-d0b908ce127e",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-04-06",
+      "remark": "Claimed to be used by Winne",
+      "_bil": "236"
+    },
+    {
+      "id": "257149b5-45b4-41b7-920b-70be0fcb2f51",
+      "asset_id": "76492053-b262-4a9f-a4e0-50a6c8b64224",
+      "employee_id": "d41aaa5c-e0a9-4c13-8a53-208f39eba2e9",
+      "date_issued": "2026-02-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "161"
+    },
+    {
+      "id": "d588b98c-d100-4ba5-9d75-01668c886b01",
+      "asset_id": "76492053-b262-4a9f-a4e0-50a6c8b64224",
+      "employee_id": "57ceec5b-7741-4962-ae7b-6b8ee675d0d0",
+      "date_issued": "2025-10-01",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "166"
+    },
+    {
+      "id": "4a69c602-cb85-4b2b-a963-62558bf0a39b",
+      "asset_id": "76492053-b262-4a9f-a4e0-50a6c8b64224",
+      "employee_id": "90f19282-a15e-42e9-b69c-74733347d67f",
+      "date_issued": "2025-07-21",
+      "date_returned": "2025-09-30",
+      "remark": null,
+      "_bil": "169"
+    },
+    {
+      "id": "2b3f7a21-7fa3-4dd2-8084-25fb6d5a35b9",
+      "asset_id": "76492053-b262-4a9f-a4e0-50a6c8b64224",
+      "employee_id": "bda0f99f-7f59-4d16-adda-d0b908ce127e",
+      "date_issued": "2025-01-14",
+      "date_returned": "2025-04-06",
+      "remark": "Claimed to be used by Winne",
+      "_bil": "237"
+    },
+    {
+      "id": "22ff3875-4cee-45e8-ac00-d777fc4babdd",
+      "asset_id": "8eacc2f9-0d48-479b-863f-0496f4f45eb4",
+      "employee_id": "bd883ea0-0842-48f6-80af-f78a6d8d1e4d",
+      "date_issued": "2026-02-11",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "170"
+    },
+    {
+      "id": "f7c37a45-afa3-4a9a-82f2-625e855b45b9",
+      "asset_id": "8eacc2f9-0d48-479b-863f-0496f4f45eb4",
+      "employee_id": "442d4463-79d7-4bfd-a4f2-f4c2ba3ab16f",
+      "date_issued": "2026-08-26",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "173"
+    },
+    {
+      "id": "7ec1c591-84d9-4043-bfef-d98bbd084a31",
+      "asset_id": "d75654be-1867-4aeb-9615-97090e32c293",
+      "employee_id": "bd883ea0-0842-48f6-80af-f78a6d8d1e4d",
+      "date_issued": "2026-02-11",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "171"
+    },
+    {
+      "id": "7b67e973-9f07-47b4-9ace-689203d96057",
+      "asset_id": "d75654be-1867-4aeb-9615-97090e32c293",
+      "employee_id": "442d4463-79d7-4bfd-a4f2-f4c2ba3ab16f",
+      "date_issued": "2026-08-26",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "174"
+    },
+    {
+      "id": "95de5fa4-4a1b-47ea-804d-bcf03a698a65",
+      "asset_id": "0cd990a7-7802-4089-a1cd-43f804ac0e4b",
+      "employee_id": "442d4463-79d7-4bfd-a4f2-f4c2ba3ab16f",
+      "date_issued": "2026-08-26",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "175"
+    },
+    {
+      "id": "971beb4c-5026-43bd-b7b2-ec138c6da33d",
+      "asset_id": "898c8d2e-96d6-4848-9f55-d8b440b88498",
+      "employee_id": "22f1aa1d-9544-42d4-b198-77b96851279a",
+      "date_issued": "2024-11-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "177"
+    },
+    {
+      "id": "915fd77b-81b2-40a9-a102-e6d060db071d",
+      "asset_id": "1184314b-487b-4222-a761-7d891005c994",
+      "employee_id": "22f1aa1d-9544-42d4-b198-77b96851279a",
+      "date_issued": "2024-11-07",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "178"
+    },
+    {
+      "id": "70389b85-92dd-4e7f-bcd0-e8181d798480",
+      "asset_id": "7a992cb9-3b9e-48de-98b5-20d320f86e8d",
+      "employee_id": "50a62df2-0c92-4b52-afd6-425f1703ab04",
+      "date_issued": "2025-06-23",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "180"
+    },
+    {
+      "id": "c1a82544-7fce-4973-ab69-4640963e802d",
+      "asset_id": "1f2636c2-a6f6-4f2c-ad2a-fb25d72c5aa3",
+      "employee_id": "50a62df2-0c92-4b52-afd6-425f1703ab04",
+      "date_issued": "2025-06-23",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "181"
+    },
+    {
+      "id": "b9fa1a71-7853-477f-8c18-2d2452c6f02a",
+      "asset_id": "aea34cfa-8782-4eee-9a20-91ed46abba3b",
+      "employee_id": "50a62df2-0c92-4b52-afd6-425f1703ab04",
+      "date_issued": "2025-06-23",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "182"
+    },
+    {
+      "id": "f19c4061-63b0-489e-a1d3-b2701940958d",
+      "asset_id": "50ce99b5-1e04-4a7a-9cfe-28898b288773",
+      "employee_id": "50a62df2-0c92-4b52-afd6-425f1703ab04",
+      "date_issued": "2025-06-23",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "183"
+    },
+    {
+      "id": "eae8d045-58c0-4dc6-aaeb-c93004022a64",
+      "asset_id": "81be1a33-6cb3-406e-9e61-ad0de06a4c2a",
+      "employee_id": "f48e18a6-4ac6-4510-a135-9d21a4d1eb61",
+      "date_issued": "2024-08-24",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "184"
+    },
+    {
+      "id": "650b2231-1f5d-44cb-9c2e-b9fe8303b4af",
+      "asset_id": "5c5b3a4b-fcb3-40cf-ae7e-7f13b6b23d56",
+      "employee_id": "f48e18a6-4ac6-4510-a135-9d21a4d1eb61",
+      "date_issued": "2024-08-24",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "185"
+    },
+    {
+      "id": "7ca488d4-6a4c-4615-bca7-b1079984e893",
+      "asset_id": "e04b86ca-44eb-45b8-bcfd-25468ede66f2",
+      "employee_id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "date_issued": "2020-02-21",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "186"
+    },
+    {
+      "id": "85fc1fce-0fa4-4702-a554-c6667a98bd9f",
+      "asset_id": "0e137c8f-6ee4-4fe4-afce-11f8aaed6555",
+      "employee_id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "date_issued": "2023-05-25",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "189"
+    },
+    {
+      "id": "a30ae7d3-6ed4-470e-920f-a5b2eb3ff426",
+      "asset_id": "494ad197-dcbd-4402-b9d8-12ab5f133a1d",
+      "employee_id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "date_issued": "2023-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "190"
+    },
+    {
+      "id": "3e0db76a-84c0-4f06-9e75-c312392d6d10",
+      "asset_id": "b6e76e86-26e7-4b4e-b4e2-7f15c64a4dec",
+      "employee_id": "9ea29d09-37bb-4ea9-b4f0-a50484dc35cc",
+      "date_issued": "2023-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "191"
+    },
+    {
+      "id": "78a5f7c0-660f-4245-b732-4edbd07a95a9",
+      "asset_id": "ba8d52ec-5a72-4931-8df8-0b71c182cc32",
+      "employee_id": "7b8d1114-29a0-4d65-a14d-512a543465cd",
+      "date_issued": "2019-02-28",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "192"
+    },
+    {
+      "id": "ae75c8cd-3b97-4830-b2f0-a71b2ef6bc34",
+      "asset_id": "8bd20178-cb5b-4d34-a463-24be17042976",
+      "employee_id": "7b8d1114-29a0-4d65-a14d-512a543465cd",
+      "date_issued": "2021-07-23",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "193"
+    },
+    {
+      "id": "3f57cbc5-ab57-4254-bdf1-882063b212b4",
+      "asset_id": "bfa18b18-8a6e-44cd-8d81-aafd519777d3",
+      "employee_id": "7b8d1114-29a0-4d65-a14d-512a543465cd",
+      "date_issued": "2021-09-28",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "194"
+    },
+    {
+      "id": "103ec7fe-2fee-424d-9d11-06c432c14552",
+      "asset_id": "c67449ac-9a2d-486c-81b1-1a6caccd66a5",
+      "employee_id": "7b8d1114-29a0-4d65-a14d-512a543465cd",
+      "date_issued": "2024-02-26",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "195"
+    },
+    {
+      "id": "1e84e95c-f5db-4c77-9565-11b894e73ca0",
+      "asset_id": "80aa5444-09b8-49ac-b4f1-a5050989723f",
+      "employee_id": "dc510d68-26ce-41b2-bf97-a626bb2488da",
+      "date_issued": "2024-10-01",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "196"
+    },
+    {
+      "id": "d8777972-fdc9-4bbc-b024-d9119043b777",
+      "asset_id": "42db8aed-2061-47b2-8fc1-3c8cd64872c7",
+      "employee_id": "dc510d68-26ce-41b2-bf97-a626bb2488da",
+      "date_issued": "2024-10-01",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "198"
+    },
+    {
+      "id": "06e61eaf-56ba-423b-a7b4-6df1c51c919c",
+      "asset_id": "54a50b8d-be41-4bcf-9fa9-2ab9eae9d0c3",
+      "employee_id": "11b66e6b-5341-44d4-8926-01c6ab0c8e9a",
+      "date_issued": "2025-10-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "199"
+    },
+    {
+      "id": "f596a3dd-b0e6-485b-a78d-c80b2b050a72",
+      "asset_id": "d2e67bd4-2465-4e9e-bd0b-19b4769bdce7",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "201"
+    },
+    {
+      "id": "3a31b336-6ada-4975-8531-1c9ea31c8809",
+      "asset_id": "d2e67bd4-2465-4e9e-bd0b-19b4769bdce7",
+      "employee_id": "db67b0d9-cba9-4327-b928-54b0b6b90de4",
+      "date_issued": "2026-03-16",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "208"
+    },
+    {
+      "id": "92ec8e13-200a-4726-aeac-4e790b1e0101",
+      "asset_id": "12a7d450-3410-4970-b7f3-6d3473151e9c",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "202"
+    },
+    {
+      "id": "acd0c50a-6623-4417-936d-87fd84eab54d",
+      "asset_id": "0a9e32d3-5831-413f-811d-6b92db220e6d",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "203"
+    },
+    {
+      "id": "238abaa1-34f3-4ebc-bc7a-fbe7c77c6d0b",
+      "asset_id": "0a9e32d3-5831-413f-811d-6b92db220e6d",
+      "employee_id": "db67b0d9-cba9-4327-b928-54b0b6b90de4",
+      "date_issued": "2026-03-16",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "210"
+    },
+    {
+      "id": "15568ba0-5d02-4bba-b84d-cb04ae101c7d",
+      "asset_id": "c51e8306-58a1-4bc1-a3ef-79cf8a589d6e",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "204"
+    },
+    {
+      "id": "4cea45aa-474f-4d17-a9e6-c3a8ee4d3182",
+      "asset_id": "c51e8306-58a1-4bc1-a3ef-79cf8a589d6e",
+      "employee_id": "db67b0d9-cba9-4327-b928-54b0b6b90de4",
+      "date_issued": "2026-03-16",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "211"
+    },
+    {
+      "id": "13d0be0b-ca8f-44c5-a8e9-846fa72c357a",
+      "asset_id": "8b882ac8-3fc4-433f-8093-a95044d3afbe",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "205"
+    },
+    {
+      "id": "3fa12363-421c-41b1-b611-1a1dec67470d",
+      "asset_id": "ef866e1a-7233-4d94-88b4-c2e17f9f7edc",
+      "employee_id": "e2a5efd7-6201-40f2-8297-25bcf33a6b85",
+      "date_issued": "2025-08-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "207"
+    },
+    {
+      "id": "55726547-92e1-4273-8132-10df5e8f866b",
+      "asset_id": "b543ea17-cd14-48b8-b09c-f2e36536c260",
+      "employee_id": "db67b0d9-cba9-4327-b928-54b0b6b90de4",
+      "date_issued": "2026-03-16",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "209"
+    },
+    {
+      "id": "4cc47f72-e2d8-4a5b-9dab-e6006e38ce28",
+      "asset_id": "ca7631c6-e5db-4836-8068-1ab61ee53ba6",
+      "employee_id": "f78fdefb-86e4-48ef-8113-d09ff0d2ea65",
+      "date_issued": "2023-02-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "212"
+    },
+    {
+      "id": "ef11848a-e195-4c96-9acd-eaf6e3f4dc5f",
+      "asset_id": "a0e1b52d-ec54-4f26-8717-e69b16588419",
+      "employee_id": "f78fdefb-86e4-48ef-8113-d09ff0d2ea65",
+      "date_issued": "2023-02-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "213"
+    },
+    {
+      "id": "5f4e9ff1-be64-4fe3-86eb-83eb4d7dbc11",
+      "asset_id": "1e5e568a-6efa-4368-8364-63b2221b7545",
+      "employee_id": "f78fdefb-86e4-48ef-8113-d09ff0d2ea65",
+      "date_issued": "2023-02-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "214"
+    },
+    {
+      "id": "a2a5a618-e1c9-42ce-a4bf-1865c3d38346",
+      "asset_id": "ca57de53-9e31-4674-8804-23c070429a66",
+      "employee_id": "f78fdefb-86e4-48ef-8113-d09ff0d2ea65",
+      "date_issued": "2023-02-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "215"
+    },
+    {
+      "id": "d5fc9fe0-e27c-449f-8a0c-b5fcb859389d",
+      "asset_id": "20c2b54c-3877-470a-9239-2194466bc13f",
+      "employee_id": "f78fdefb-86e4-48ef-8113-d09ff0d2ea65",
+      "date_issued": "2023-02-12",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "216"
+    },
+    {
+      "id": "58d5fd80-3a63-457b-bd14-feed84ef5877",
+      "asset_id": "0297d2f5-9d83-4ef5-b1b2-17857be84ef9",
+      "employee_id": "a874feef-1941-448a-8334-1116989c7dda",
+      "date_issued": "2024-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "217"
+    },
+    {
+      "id": "308217d1-0f0a-473e-9531-770e12793d1a",
+      "asset_id": "4a0cd781-63f2-4af1-b8ad-8bc561fc6646",
+      "employee_id": "a874feef-1941-448a-8334-1116989c7dda",
+      "date_issued": "2024-05-10",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "218"
+    },
+    {
+      "id": "a3292937-a3e3-4c61-9fbb-1bc973bb6a34",
+      "asset_id": "8c64d2b6-2372-408e-aeaa-16c747bd22fc",
+      "employee_id": "a874feef-1941-448a-8334-1116989c7dda",
+      "date_issued": null,
+      "date_returned": null,
+      "remark": null,
+      "_bil": "219"
+    },
+    {
+      "id": "deb26b86-8e0c-4535-af7e-dca493838d2f",
+      "asset_id": "37cfd13c-ef44-4afa-b975-7f32c2ab50b0",
+      "employee_id": "a874feef-1941-448a-8334-1116989c7dda",
+      "date_issued": null,
+      "date_returned": null,
+      "remark": null,
+      "_bil": "220"
+    },
+    {
+      "id": "bcb4aedb-5d5d-4600-8cf1-4a57872a787c",
+      "asset_id": "2ff794f2-5b2b-46b2-9994-ac42ac7b4364",
+      "employee_id": "0b54d3f5-f4ae-42c6-b776-29582c90c0b7",
+      "date_issued": "2023-06-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "223"
+    },
+    {
+      "id": "936129ac-74e3-46e0-8e1b-1667d13bcb70",
+      "asset_id": "42a9b4c1-9349-48d0-a937-8ffd16603211",
+      "employee_id": "0b54d3f5-f4ae-42c6-b776-29582c90c0b7",
+      "date_issued": "2023-11-27",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "224"
+    },
+    {
+      "id": "a0f6194a-c249-425a-bb50-e5c1394ccc23",
+      "asset_id": "a4b47eda-a3d0-459d-9226-d81a658e4f21",
+      "employee_id": "0b54d3f5-f4ae-42c6-b776-29582c90c0b7",
+      "date_issued": "2017-10-17",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "225"
+    },
+    {
+      "id": "1a59475e-d2e0-4441-b3e1-8db31e5e6f42",
+      "asset_id": "e351be4b-eb0f-4501-9039-73c9b76b0c0e",
+      "employee_id": "0b54d3f5-f4ae-42c6-b776-29582c90c0b7",
+      "date_issued": "2019-12-17",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "226"
+    },
+    {
+      "id": "28287bbe-b750-463b-b516-da9b83238b1d",
+      "asset_id": "3d307e33-aca4-4b31-9964-dc62e6c2950d",
+      "employee_id": "0b54d3f5-f4ae-42c6-b776-29582c90c0b7",
+      "date_issued": "2024-12-24",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "227"
+    },
+    {
+      "id": "afac4fe0-a69f-403b-aa8d-e6ee0b529b32",
+      "asset_id": "f8f499eb-ffac-471f-858b-214223ccfeb4",
+      "employee_id": "971f48f9-0402-44ec-ab27-1b94e9ead91d",
+      "date_issued": "2025-05-21",
+      "date_returned": "2025-07-14",
+      "remark": null,
+      "_bil": "228"
+    },
+    {
+      "id": "1f57975d-123e-43e7-9d57-5dba6d3a3c43",
+      "asset_id": "05a46c00-ddd6-4422-b4a4-31b9c83a8bb0",
+      "employee_id": "971f48f9-0402-44ec-ab27-1b94e9ead91d",
+      "date_issued": "2025-01-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "229"
+    },
+    {
+      "id": "dd9af60e-52fc-46a7-8171-778fb2e4e909",
+      "asset_id": "2b1fcbb8-3c2e-47bb-a6e2-0186b45088f5",
+      "employee_id": "971f48f9-0402-44ec-ab27-1b94e9ead91d",
+      "date_issued": "2025-01-13",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "230"
+    },
+    {
+      "id": "50b25f52-42c4-438c-98c4-c786f82d0254",
+      "asset_id": "b120aaa3-ccea-489f-b11f-b9a5f1b82541",
+      "employee_id": "84794121-775c-470b-a6f6-90a6d208d2fd",
+      "date_issued": "2021-07-21",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "232"
+    },
+    {
+      "id": "8f19569a-0b88-4752-b34b-f5f8b94df262",
+      "asset_id": "dac129ce-4c3d-4d17-bfcd-802ea58d7bca",
+      "employee_id": "84794121-775c-470b-a6f6-90a6d208d2fd",
+      "date_issued": "2022-03-29",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "233"
+    },
+    {
+      "id": "ec2bb575-f73c-4107-9ffc-5c0585123205",
+      "asset_id": "771e4af6-bb8f-4aeb-8c50-689013312b74",
+      "employee_id": "7996e538-f96f-4662-af7f-3082c8634478",
+      "date_issued": "2022-10-11",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "234"
+    },
+    {
+      "id": "02a4b1d9-0565-4ea7-9319-e1d64acf15ae",
+      "asset_id": "d9eef0c4-ed22-45c0-a238-b49f3afb94bb",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "238"
+    },
+    {
+      "id": "7116052f-3a26-4772-9218-30de92dc6185",
+      "asset_id": "a598bc3e-0df2-4080-aa47-cdd1f8394461",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "239"
+    },
+    {
+      "id": "a3061d27-dcd9-44ab-93a6-f0c843658823",
+      "asset_id": "e9ea7605-6a2b-46f8-b28d-a283b627e3d5",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "240"
+    },
+    {
+      "id": "aa3b568d-e738-470f-ae86-0ca6fcf071c7",
+      "asset_id": "af2c65c7-e8b7-4eaf-b68d-9a2d6431b2c4",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "241"
+    },
+    {
+      "id": "d2681e0e-5615-4608-98d7-f95cf678911c",
+      "asset_id": "6760a653-589c-48e0-88af-4897e09ebe6e",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "242"
+    },
+    {
+      "id": "a60b9698-f5ea-4cc2-9ccd-f3a027cfb64d",
+      "asset_id": "0da8bffe-fe37-431a-bd44-75301e5b0ba9",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "243"
+    },
+    {
+      "id": "e71cdaee-2f62-4943-b84f-864d0c29d466",
+      "asset_id": "689426b4-ecaa-4dc1-8344-6b16bdac8b9b",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2024-02-29",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "244"
+    },
+    {
+      "id": "aa843903-59db-4ab2-8800-307d1a8850b4",
+      "asset_id": "f18d7981-fabe-4fc8-a15c-91e5873719d7",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "245"
+    },
+    {
+      "id": "1c104854-7eda-448c-9784-dc6aed8d6c0d",
+      "asset_id": "4ded7ca6-bb32-4879-9efd-19849baa04a6",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "246"
+    },
+    {
+      "id": "9f96f474-3fbc-424a-98aa-1076d56b5bd9",
+      "asset_id": "51b8497b-7788-4993-970e-251034b781ee",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "247"
+    },
+    {
+      "id": "13517e69-6fca-4e6e-b394-b16ca8654894",
+      "asset_id": "c34f8d7a-18ac-4b8e-840e-8294f1135eec",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2024-12-28",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "248"
+    },
+    {
+      "id": "3759cb91-fea2-4841-a8db-b05925a9c3b7",
+      "asset_id": "ac229e5b-313c-4fcf-9a23-3bc28b4731b5",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2024-12-28",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "249"
+    },
+    {
+      "id": "2eb06d3b-b8bd-4eeb-9733-2cc85a0abd23",
+      "asset_id": "39d322d0-4bfe-4aca-ba41-07f019b1c46f",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2024-12-28",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "250"
+    },
+    {
+      "id": "e3afd607-8b00-4e59-8097-c2fa58238fb5",
+      "asset_id": "03e7e58a-21ab-4086-84bd-de47185ff206",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2025-05-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "251"
+    },
+    {
+      "id": "130b9f4b-8b0c-4a5c-a811-902b50757c59",
+      "asset_id": "f5e4ba1e-8401-45d9-b6a3-9d7d0dbe9a7b",
+      "employee_id": "c26b2f12-2f86-4d88-9c5d-3e25a9715312",
+      "date_issued": "2025-05-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "252"
+    },
+    {
+      "id": "db525be7-f6ca-4038-8d32-fe2d4f914bdb",
+      "asset_id": "5146d028-1004-4fc9-98ef-db96976b5ce9",
+      "employee_id": "667f402b-25b2-491d-88a1-2cfec251e8f4",
+      "date_issued": "2022-03-24",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "253"
+    },
+    {
+      "id": "b5a82596-e25b-4ada-85a8-93f1e9b72bce",
+      "asset_id": "2b959d77-b0ce-4ec7-bf2f-18dc209e8b3a",
+      "employee_id": "667f402b-25b2-491d-88a1-2cfec251e8f4",
+      "date_issued": "2023-06-14",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "254"
+    },
+    {
+      "id": "dae0a8c9-160c-4661-ad65-f2070b385214",
+      "asset_id": "6371082c-9c95-4683-8f82-f364d9b2393b",
+      "employee_id": "2be5f5c4-7c69-4f9d-b3e0-154d1f013a56",
+      "date_issued": "2015-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "255"
+    },
+    {
+      "id": "ab03fc20-f20d-4871-bdc0-1d7e551de597",
+      "asset_id": "8dfb07ed-aeae-4913-8a7c-5359114b4649",
+      "employee_id": "2475599f-1bf4-4cbc-92c9-7875c257cc37",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "256"
+    },
+    {
+      "id": "dc650e05-9bc3-49f6-997d-b1435739c8af",
+      "asset_id": "a4dad1cb-bb9e-498d-ad64-9cd8e28774a1",
+      "employee_id": "2475599f-1bf4-4cbc-92c9-7875c257cc37",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "257"
+    },
+    {
+      "id": "e0860efe-a207-4fab-8e4c-83189f625d77",
+      "asset_id": "334edee2-a13e-4a32-a822-3beaa1a06284",
+      "employee_id": "2475599f-1bf4-4cbc-92c9-7875c257cc37",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "258"
+    },
+    {
+      "id": "f45f8153-dcc0-4d35-9127-2c7874473949",
+      "asset_id": "eb27c399-63ad-4b90-98f8-bc0aa33101f6",
+      "employee_id": "93125cc0-e404-4fcf-afca-2ef652f7287d",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "259"
+    },
+    {
+      "id": "f6bf7229-a486-49f6-a4b1-37f0e4a55c70",
+      "asset_id": "f1cc549e-6d04-45aa-a1ce-12c57c33300c",
+      "employee_id": "93125cc0-e404-4fcf-afca-2ef652f7287d",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "260"
+    },
+    {
+      "id": "a4e2e4e9-316c-4b99-8468-434ab9ab2f75",
+      "asset_id": "64798dc6-9847-4600-8b66-d5c17efcbba5",
+      "employee_id": "93125cc0-e404-4fcf-afca-2ef652f7287d",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "261"
+    },
+    {
+      "id": "15fecc36-d7f8-4723-9aeb-1724f07a46db",
+      "asset_id": "4d55ba08-ed95-4543-824e-c20089723df7",
+      "employee_id": "8fa04d17-f97f-4fac-b6dd-95ab29166649",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "262"
+    },
+    {
+      "id": "dbd0baa9-a470-4d4c-9832-407e4402bdf5",
+      "asset_id": "5b842327-e395-43e9-a01c-bbbb5ca7c852",
+      "employee_id": "8fa04d17-f97f-4fac-b6dd-95ab29166649",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "263"
+    },
+    {
+      "id": "3f8d0219-e9ba-4b64-9b7f-5cf4da83c618",
+      "asset_id": "e3d389a6-047c-4f26-ad47-101b343880ec",
+      "employee_id": "8fa04d17-f97f-4fac-b6dd-95ab29166649",
+      "date_issued": "2019-11-22",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "264"
+    },
+    {
+      "id": "809296bf-e8a8-4fcd-a0ac-0b9a50b83fd4",
+      "asset_id": "870596d9-9b9d-4ffc-9aa7-8400fce83bff",
+      "employee_id": "7713a7e2-f9ca-4f5f-931a-3303004ab930",
+      "date_issued": "2020-02-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "265"
+    },
+    {
+      "id": "286206f6-7c73-49c4-9f27-25176346a6ed",
+      "asset_id": "6c84001b-99dc-4c98-871a-2805175facfb",
+      "employee_id": "7713a7e2-f9ca-4f5f-931a-3303004ab930",
+      "date_issued": "2020-02-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "266"
+    },
+    {
+      "id": "9ca56dd9-252f-47c2-9b43-91f3b57ed122",
+      "asset_id": "789dc515-b675-4792-8029-0092c4b7fe2c",
+      "employee_id": "7713a7e2-f9ca-4f5f-931a-3303004ab930",
+      "date_issued": "2020-02-03",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "267"
+    },
+    {
+      "id": "8903657d-a996-4310-9cee-737a2c9385ba",
+      "asset_id": "be56d91a-0b39-4365-a6a1-59ba81d8d624",
+      "employee_id": "39dfce77-f006-42f2-961c-164878445c80",
+      "date_issued": "2024-10-01",
+      "date_returned": "2025-05-02",
+      "remark": "RESIGNED\nClaimed to be used by Mr laii",
+      "_bil": "268"
+    },
+    {
+      "id": "4234e287-1e68-4774-890a-b6ace3b30743",
+      "asset_id": "be56d91a-0b39-4365-a6a1-59ba81d8d624",
+      "employee_id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "date_issued": "2025-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "276"
+    },
+    {
+      "id": "aff951ac-694a-4aaa-bd81-aac821189eae",
+      "asset_id": "ca6f9037-3df2-4e77-ab93-de8740854726",
+      "employee_id": "39dfce77-f006-42f2-961c-164878445c80",
+      "date_issued": "2024-10-01",
+      "date_returned": "2025-05-02",
+      "remark": "RESIGNED\nClaimed to be used by Mr laii",
+      "_bil": "269"
+    },
+    {
+      "id": "daf7cff6-594f-42cd-a9c7-f48522e127ab",
+      "asset_id": "ca6f9037-3df2-4e77-ab93-de8740854726",
+      "employee_id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "date_issued": "2025-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "277"
+    },
+    {
+      "id": "a4f680c6-177a-4fff-987c-b740001a9582",
+      "asset_id": "0bfda914-9378-42c3-969e-fcb99be4a329",
+      "employee_id": "39dfce77-f006-42f2-961c-164878445c80",
+      "date_issued": "2024-10-03",
+      "date_returned": "2025-05-02",
+      "remark": "RESIGNED\nClaimed to be used by Mr laii",
+      "_bil": "271"
+    },
+    {
+      "id": "2eb8686c-1f2e-4cf1-84da-6c5cef5dc976",
+      "asset_id": "0bfda914-9378-42c3-969e-fcb99be4a329",
+      "employee_id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "date_issued": "2025-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "279"
+    },
+    {
+      "id": "9fa43171-8397-47e9-9607-a680d9f7d2cf",
+      "asset_id": "08806e78-9e91-49d3-b8cc-6b2261f0d356",
+      "employee_id": "39dfce77-f006-42f2-961c-164878445c80",
+      "date_issued": "2024-10-03",
+      "date_returned": "2025-05-02",
+      "remark": "RESIGNED\nClaimed to be used by Mr laii",
+      "_bil": "272"
+    },
+    {
+      "id": "6d834dd0-06af-4c16-b217-7d5f1897f2c8",
+      "asset_id": "95ae29a2-d5d5-45b8-95ed-4b1d6419e46e",
+      "employee_id": "f679bd8d-1fb8-4656-a370-6ad91868ced7",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "273"
+    },
+    {
+      "id": "c6a98fdb-daa5-4f47-bde9-0e109890bd3a",
+      "asset_id": "88e85c2d-ab07-4a46-806b-551286ead3ae",
+      "employee_id": "f679bd8d-1fb8-4656-a370-6ad91868ced7",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "274"
+    },
+    {
+      "id": "71f5e8ce-7143-4aad-b5e5-1e20acec7516",
+      "asset_id": "c4a1e742-c11c-4fd6-9398-64d9f96a897f",
+      "employee_id": "f679bd8d-1fb8-4656-a370-6ad91868ced7",
+      "date_issued": "2024-09-09",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "275"
+    },
+    {
+      "id": "c90349cc-ccce-4719-853b-40ff52de7a48",
+      "asset_id": "ed562643-b791-49a3-a2b2-e9a2d5f80624",
+      "employee_id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "date_issued": "2025-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "280"
+    },
+    {
+      "id": "2cb36691-9466-462b-b592-1420bc32d4ef",
+      "asset_id": "76229dfa-27c5-4a2b-af95-7588f62a9af3",
+      "employee_id": "06e0ddb6-7885-4e6f-9631-638155bbc36b",
+      "date_issued": "2025-05-02",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "281"
+    },
+    {
+      "id": "12338b71-dc86-4d72-b8d0-f29d0d843735",
+      "asset_id": "9ad579d6-6353-41cf-b813-d0af3150d790",
+      "employee_id": "eae4278b-a442-473e-85bd-aa4b921d715e",
+      "date_issued": null,
+      "date_returned": null,
+      "remark": null,
+      "_bil": "282"
+    },
+    {
+      "id": "46aa6c97-0691-421b-a204-99d232f596da",
+      "asset_id": "dfc2169a-27ed-4687-94a5-ba3f8babac1e",
+      "employee_id": "eae4278b-a442-473e-85bd-aa4b921d715e",
+      "date_issued": "2022-03-23",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "283"
+    },
+    {
+      "id": "2041be6f-c9bf-4723-b29b-45ce9a7e793f",
+      "asset_id": "0cda79f2-94a0-43bd-8220-39e0f7b527ca",
+      "employee_id": "eae4278b-a442-473e-85bd-aa4b921d715e",
+      "date_issued": "2022-03-24",
+      "date_returned": null,
+      "remark": null,
+      "_bil": "284"
+    }
+  ]
+}
