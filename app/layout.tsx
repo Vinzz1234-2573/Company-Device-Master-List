@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Asset Manager',
-  description: 'IT Asset Management System',
+  title: 'GamutPro Asset Manager',
+  description: 'IT Asset Management System for GamutPro',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

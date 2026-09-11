@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { PrintButton } from '@/components/print-button';
@@ -18,7 +19,10 @@ export default async function HandoverFormPage({ params }: { params: { assignmen
         <PrintButton />
       </div>
       <div className="border border-slate-300 p-8 space-y-6 text-sm">
-        <h1 className="text-xl font-bold text-center">Asset Handover Form</h1>
+        <div className="flex flex-col items-center gap-2">
+          <Image src="/gamutpro-logo.png" alt="GamutPro" width={140} height={50} />
+          <h1 className="text-xl font-bold text-center">Asset Handover Form</h1>
+        </div>
 
         <table className="w-full">
           <tbody>

@@ -83,6 +83,7 @@ export default async function DashboardPage() {
   return (
     <div className="space-y-6 animate-in">
       <div>
+        <span className="eyebrow-badge mb-2">Overview</span>
         <h1 className="text-xl font-bold text-slate-900">📊 Asset Overview</h1>
         <p className="text-sm text-slate-500">Track all company equipment and inventory</p>
       </div>

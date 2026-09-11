@@ -27,8 +27,8 @@ export function Sidebar({ role, className = '' }: { role: UserRole; className?: 
           <Link
             key={item.href}
             href={item.href}
-            className={`flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition-all duration-150 ${
-              active ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white hover:translate-x-0.5'
+            className={`flex items-center gap-2.5 rounded-full px-3.5 py-2 text-sm font-medium transition-all duration-150 ${
+              active ? 'bg-brand-600 text-white shadow-sm' : 'text-navy-100 hover:bg-navy-700 hover:text-white hover:translate-x-0.5'
             }`}
           >
             <span aria-hidden="true">{item.icon}</span>
