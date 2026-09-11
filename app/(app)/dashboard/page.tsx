@@ -56,7 +56,7 @@ export default async function DashboardPage() {
   const buckets = { inUse: 0, available: 0, inStock: 0, other: 0 };
 
   for (const asset of allAssets || []) {
-    byStatus[asset.status]++;
+    byStatus[asset.status as AssetStatus]++;
     if (asset.status === 'assigned') {
       buckets.inUse++;
     } else if (asset.status === 'available') {

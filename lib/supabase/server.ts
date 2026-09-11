@@ -1,11 +1,12 @@
-import { createServerClient } from '@supabase/ssr';
+import { createServerClient, type CookieOptions } from '@supabase/ssr';
 import { cookies } from 'next/headers';
-import type { Database } from '@/lib/types';
 
+// See the note in lib/supabase/client.ts: deliberately not parameterized with
+// the hand-written Database type.
 export function createClient() {
   const cookieStore = cookies();
 
-  return createServerClient<Database>(
+  return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
@@ -13,7 +14,7 @@ export function createClient() {
         getAll() {
           return cookieStore.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: { name: string; value: string; options: CookieOptions }[]) {
           try {
             cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options));
           } catch {

@@ -7,7 +7,11 @@ import type { EmploymentStatus } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
-export default async function EmployeesPage({ searchParams }: { searchParams: { q?: string; department?: string; status?: string } }) {
+export default async function EmployeesPage({
+  searchParams,
+}: {
+  searchParams: { q?: string; department?: string; status?: string; filter?: string };
+}) {
   const supabase = createClient();
   const profile = await getCurrentProfile();
 
@@ -15,8 +19,9 @@ export default async function EmployeesPage({ searchParams }: { searchParams: { 
   if (searchParams.q) query = query.ilike('name', `%${searchParams.q}%`);
   if (searchParams.department) query = query.eq('department_id', searchParams.department);
   if (searchParams.status) query = query.eq('employment_status', searchParams.status as EmploymentStatus);
+  if (searchParams.filter === 'resigned-outstanding') query = query.eq('employment_status', 'resigned');
 
-  const { data: employees } = await query.order('name');
+  let { data: employees } = await query.order('name');
   const { data: departments } = await supabase.from('departments').select('id, code, name').order('name');
 
   const employeeIds = (employees || []).map(e => e.id);
@@ -26,6 +31,10 @@ export default async function EmployeesPage({ searchParams }: { searchParams: { 
   const outstandingCount = new Map<string, number>();
   for (const a of openAssignments || []) {
     outstandingCount.set(a.employee_id, (outstandingCount.get(a.employee_id) || 0) + 1);
+  }
+
+  if (searchParams.filter === 'resigned-outstanding') {
+    employees = (employees || []).filter(e => (outstandingCount.get(e.id) || 0) > 0);
   }
 
   return (

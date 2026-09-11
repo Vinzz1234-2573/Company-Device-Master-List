@@ -202,10 +202,12 @@ alter table asset_assignments enable row level security;
 alter table audit_logs enable row level security;
 
 -- profiles
+-- Note: there is deliberately no "update own profile" policy. Role, employee
+-- link and active status must only ever change via an admin (through
+-- profiles_admin_all below, or the set_user_role() function) — letting a
+-- user update their own row would let them grant themselves admin.
 create policy profiles_select_self_or_admin on profiles for select
   using (id = auth.uid() or is_admin());
-create policy profiles_update_self on profiles for update
-  using (id = auth.uid()) with check (id = auth.uid());
 create policy profiles_admin_all on profiles for all
   using (is_admin()) with check (is_admin());
 

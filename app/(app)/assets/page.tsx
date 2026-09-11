@@ -54,6 +54,7 @@ export default async function AssetsPage({
         .select('asset_id, employee:employees(id, name)')
         .in('asset_id', assetIds)
         .is('returned_date', null)
+        .returns<{ asset_id: string; employee: { id: string; name: string } | null }[]>()
     : { data: [] as { asset_id: string; employee: { id: string; name: string } | null }[] };
 
   const holderByAsset = new Map((openAssignments || []).map(a => [a.asset_id, a.employee]));

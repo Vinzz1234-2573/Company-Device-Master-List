@@ -16,7 +16,7 @@ export default async function ReturnAssetPage({ params }: { params: { id: string
     .select('id, employee:employees(name)')
     .eq('asset_id', params.id)
     .is('returned_date', null)
-    .maybeSingle();
+    .maybeSingle<{ id: string; employee: { name: string } | null }>();
 
   if (!assignment) redirect(`/assets/${params.id}`);
 

@@ -1,8 +1,7 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { Database } from '@/lib/types';
 
 export async function logAudit(
-  supabase: SupabaseClient<Database>,
+  supabase: SupabaseClient,
   entry: {
     action: string;
     entity_type: string;

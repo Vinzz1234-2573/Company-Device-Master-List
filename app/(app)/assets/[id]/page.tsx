@@ -135,6 +135,7 @@ export default async function AssetDetailPage({ params }: { params: { id: string
                 <th>Date Issued</th>
                 <th>Date Returned</th>
                 <th>Remarks</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -152,11 +153,21 @@ export default async function AssetDetailPage({ params }: { params: { id: string
                     <div className="whitespace-pre-wrap">{h.remarks || '—'}</div>
                     <VerificationBadge show={h.needs_verification} />
                   </td>
+                  <td className="whitespace-nowrap text-xs space-x-2">
+                    <Link href={`/print/handover/${h.id}`} target="_blank" className="text-brand-600 hover:underline">
+                      Handover
+                    </Link>
+                    {h.returned_date && (
+                      <Link href={`/print/return/${h.id}`} target="_blank" className="text-brand-600 hover:underline">
+                        Return
+                      </Link>
+                    )}
+                  </td>
                 </tr>
               ))}
               {(!history || history.length === 0) && (
                 <tr>
-                  <td colSpan={5} className="text-center text-slate-400 py-6">
+                  <td colSpan={6} className="text-center text-slate-400 py-6">
                     No assignment history recorded for this asset yet.
                   </td>
                 </tr>
