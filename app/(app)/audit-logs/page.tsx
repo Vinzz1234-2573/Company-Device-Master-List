@@ -30,7 +30,7 @@ export default async function AuditLogsPage({
         <ExportButtons rows={logs || []} filename="audit-logs" />
       </div>
 
-      <form className="card p-4 grid grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
+      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
         <div>
           <label className="label">Entity Type</label>
           <select name="entity_type" defaultValue={searchParams.entity_type || ''} className="input">

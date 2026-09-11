@@ -79,7 +79,7 @@ export default async function AssetsPage({
         </div>
       </div>
 
-      <form className="card p-4 grid grid-cols-2 md:grid-cols-5 gap-3 items-end" method="get">
+      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 items-end" method="get">
         <div className="col-span-2 md:col-span-1">
           <label className="label">Search</label>
           <input name="q" defaultValue={searchParams.q} className="input" placeholder="Type, brand, serial, IMEI…" />

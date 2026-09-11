@@ -39,7 +39,7 @@ export default async function AssignmentsPage({
         <ExportButtons rows={assignments || []} filename="asset-movement" />
       </div>
 
-      <form className="card p-4 grid grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
+      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
         <div>
           <label className="label">Issued From</label>
           <input type="date" name="from" defaultValue={searchParams.from} className="input" />

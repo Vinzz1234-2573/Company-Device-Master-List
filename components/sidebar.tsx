@@ -4,16 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { UserRole } from '@/lib/types';
 
-const NAV: { href: string; label: string; roles: UserRole[] }[] = [
-  { href: '/dashboard', label: 'Dashboard', roles: ['admin', 'manager', 'staff'] },
-  { href: '/assets', label: 'Assets', roles: ['admin', 'manager', 'staff'] },
-  { href: '/employees', label: 'Employees', roles: ['admin', 'manager', 'staff'] },
-  { href: '/departments', label: 'Departments', roles: ['admin'] },
-  { href: '/assignments', label: 'Assignments', roles: ['admin', 'manager', 'staff'] },
-  { href: '/reports', label: 'Reports', roles: ['admin', 'manager', 'staff'] },
-  { href: '/verification', label: 'Data Verification', roles: ['admin'] },
-  { href: '/audit-logs', label: 'Audit Logs', roles: ['admin'] },
-  { href: '/users', label: 'Users', roles: ['admin'] },
+const NAV: { href: string; label: string; icon: string; roles: UserRole[] }[] = [
+  { href: '/dashboard', label: 'Dashboard', icon: '📊', roles: ['admin', 'manager', 'staff'] },
+  { href: '/assets', label: 'Assets', icon: '💻', roles: ['admin', 'manager', 'staff'] },
+  { href: '/employees', label: 'Employees', icon: '👥', roles: ['admin', 'manager', 'staff'] },
+  { href: '/departments', label: 'Departments', icon: '🏢', roles: ['admin'] },
+  { href: '/assignments', label: 'Assignments', icon: '🔄', roles: ['admin', 'manager', 'staff'] },
+  { href: '/reports', label: 'Reports', icon: '📈', roles: ['admin', 'manager', 'staff'] },
+  { href: '/verification', label: 'Data Verification', icon: '⚠️', roles: ['admin'] },
+  { href: '/audit-logs', label: 'Audit Logs', icon: '📜', roles: ['admin'] },
+  { href: '/users', label: 'Users', icon: '👤', roles: ['admin'] },
 ];
 
 export function Sidebar({ role, className = '' }: { role: UserRole; className?: string }) {
@@ -27,10 +27,11 @@ export function Sidebar({ role, className = '' }: { role: UserRole; className?: 
           <Link
             key={item.href}
             href={item.href}
-            className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-              active ? 'bg-brand-600 text-white' : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+            className={`flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition-all duration-150 ${
+              active ? 'bg-brand-600 text-white shadow-sm' : 'text-slate-300 hover:bg-slate-800 hover:text-white hover:translate-x-0.5'
             }`}
           >
+            <span aria-hidden="true">{item.icon}</span>
             {item.label}
           </Link>
         );
