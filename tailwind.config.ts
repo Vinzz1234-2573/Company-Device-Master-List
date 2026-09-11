@@ -38,9 +38,6 @@ const config: Config = {
           600: '#b9852a',
         },
       },
-      backgroundImage: {
-        'gamut-accent': 'linear-gradient(90deg, #f472b6 0%, #a78bfa 35%, #60a5fa 65%, #34d399 100%)',
-      },
     },
   },
   plugins: [],
