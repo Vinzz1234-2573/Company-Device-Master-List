@@ -1,7 +1,7 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
-const PUBLIC_PATHS = ['/login', '/deactivated'];
+const PUBLIC_PATHS = ['/login', '/deactivated', '/no-profile'];
 const ADMIN_ONLY_PREFIXES = ['/departments', '/users', '/audit-logs'];
 
 export async function updateSession(request: NextRequest) {
@@ -31,36 +31,47 @@ export async function updateSession(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const isPublic = path === '/' || PUBLIC_PATHS.some(p => path.startsWith(p));
 
-  if (!user && !isPublic) {
+  function redirectTo(pathname: string, extra?: (url: URL) => void) {
     const url = request.nextUrl.clone();
-    url.pathname = '/login';
-    url.searchParams.set('next', path);
-    return NextResponse.redirect(url);
-  }
-
-  if (user && path === '/login') {
-    const url = request.nextUrl.clone();
-    url.pathname = '/dashboard';
+    url.pathname = pathname;
     url.search = '';
+    extra?.(url);
     return NextResponse.redirect(url);
   }
 
-  if (user && !isPublic) {
-    const { data: profile } = await supabase.from('profiles').select('role, is_active').eq('id', user.id).single();
+  if (!user && !isPublic) {
+    return redirectTo('/login', url => url.searchParams.set('next', path));
+  }
 
-    if (profile && profile.is_active === false) {
-      const url = request.nextUrl.clone();
-      url.pathname = '/deactivated';
-      url.search = '';
-      return NextResponse.redirect(url);
-    }
+  // Fetch the profile once per request — everything below depends on it, and
+  // fetching it multiple times (once per rule) is exactly what caused the
+  // earlier login<->dashboard infinite redirect: this route would bounce an
+  // authenticated-but-profile-less user to /dashboard, which would then bounce
+  // them straight back to /login, forever.
+  let profile: { role: string; is_active: boolean } | null = null;
+  if (user) {
+    const { data } = await supabase.from('profiles').select('role, is_active').eq('id', user.id).maybeSingle();
+    profile = data;
+  }
 
-    if (ADMIN_ONLY_PREFIXES.some(p => path.startsWith(p)) && profile?.role !== 'admin') {
-      const url = request.nextUrl.clone();
-      url.pathname = '/dashboard';
-      url.search = '';
-      return NextResponse.redirect(url);
-    }
+  // Authenticated, but no matching profiles row (or it errored out) — this is
+  // a broken/incomplete account, not a normal "logged out" state. Send it to a
+  // dedicated page exactly once instead of looping between /login and
+  // /dashboard forever.
+  if (user && !profile && path !== '/no-profile') {
+    return redirectTo('/no-profile');
+  }
+
+  if (user && profile && path === '/login') {
+    return redirectTo('/dashboard');
+  }
+
+  if (user && profile?.is_active === false && path !== '/deactivated') {
+    return redirectTo('/deactivated');
+  }
+
+  if (user && profile && ADMIN_ONLY_PREFIXES.some(p => path.startsWith(p)) && profile.role !== 'admin') {
+    return redirectTo('/dashboard');
   }
 
   return response;
