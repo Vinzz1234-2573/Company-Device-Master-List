@@ -19,6 +19,8 @@ flagging anything ambiguous for review rather than guessing.
 
 ## 2. Load the schema and the existing masterlist
 
+**Option A — SQL Editor (simplest, no CLI needed):**
+
 In the Supabase dashboard, open **SQL Editor → New query**:
 
 1. Paste the contents of [supabase/schema.sql](supabase/schema.sql) and run it.
@@ -28,6 +30,22 @@ In the Supabase dashboard, open **SQL Editor → New query**:
    This imports the 283 original records as 222 distinct physical assets (grouped
    by serial number so an asset that moved between employees keeps one history,
    not duplicate rows), 58 employees and 12 departments.
+
+**Option B — Supabase CLI** (this repo is already set up for it —
+`supabase/config.toml` and `supabase/migrations/` exist):
+
+```bash
+npx supabase login                                      # opens your browser once
+npx supabase link --project-ref sjgtifodzqyzbcysyzld     # asks for your DB password
+npx supabase db push                                     # applies supabase/migrations/*.sql (the schema)
+npx supabase db query --linked -f supabase/seed.sql       # loads the 283 imported records, once
+```
+
+Only run the seed command once — it's a plain one-time `INSERT` script wrapped in a
+transaction, so running it twice will fail cleanly on the unique-serial constraint
+rather than duplicating data, but there's no need to repeat it. Going forward, any
+future schema change should be added as a new file in `supabase/migrations/` and
+applied with `supabase db push`.
 
 The seed script prints an import summary as SQL comments at the bottom of the file:
 counts of records created and how many were flagged `needs_verification` (missing
