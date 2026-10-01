@@ -677,3 +677,15 @@ from asset_type_brands atb
 join asset_types old_mouse on old_mouse.id = atb.asset_type_id and old_mouse.name = 'Mouse'
 join asset_types wired on wired.name = 'Wired Mouse'
 on conflict do nothing;
+
+-- ============================================================
+-- Finalize canonical Asset Type names (see
+-- supabase/migrations/20261006000000_finalize_type_names.sql
+-- for the authoritative, independently-applied version of this change)
+-- ============================================================
+update asset_types set name = 'PC' where name = 'Desktop / PC';
+update asset_types set name = 'SIM Card' where name = 'Simcard';
+update asset_types set name = 'Credit Card Machine' where name = 'Machine';
+
+insert into asset_types (name, sort_order) values ('Credit Card Machine Charger', 211)
+on conflict (name) do nothing;
