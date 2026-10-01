@@ -660,3 +660,20 @@ from (values
 join asset_types t on t.name = x.type_name
 join brands b on b.name = x.brand_name
 on conflict do nothing;
+
+-- ============================================================
+-- Consolidate Mouse categories, retire Wifi Modem (see
+-- supabase/migrations/20261005000000_consolidate_mouse_types.sql
+-- for the authoritative, independently-applied version of this change)
+-- ============================================================
+update asset_types set is_active = false where name in ('Mouse', 'Bluetooth Mouse', 'Wifi Modem');
+
+insert into asset_types (name, sort_order) values ('Wired Mouse', 101)
+on conflict (name) do nothing;
+
+insert into asset_type_brands (asset_type_id, brand_id)
+select wired.id, atb.brand_id
+from asset_type_brands atb
+join asset_types old_mouse on old_mouse.id = atb.asset_type_id and old_mouse.name = 'Mouse'
+join asset_types wired on wired.name = 'Wired Mouse'
+on conflict do nothing;
