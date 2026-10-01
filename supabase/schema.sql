@@ -689,3 +689,30 @@ update asset_types set name = 'Credit Card Machine' where name = 'Machine';
 
 insert into asset_types (name, sort_order) values ('Credit Card Machine Charger', 211)
 on conflict (name) do nothing;
+
+-- ============================================================
+-- Brands discovered from the real data (see
+-- supabase/migrations/20261007000000_brands_from_real_data.sql
+-- for the authoritative, independently-applied version of this change)
+-- ============================================================
+insert into brands (name) values
+  ('Philips'), ('PRISM+'), ('Probex'), ('Salpido'), ('TP-Link'), ('Segotep'),
+  ('SIRUI'), ('COMICA'), ('Viloso')
+on conflict (name) do nothing;
+
+insert into asset_type_brands (asset_type_id, brand_id)
+select t.id, b.id
+from (values
+  ('Monitor', 'Philips'), ('Monitor', 'PRISM+'),
+  ('Keyboard', 'Probex'),
+  ('Wireless Mouse', 'Salpido'), ('Wireless Mouse', 'Gigabyte'), ('Wired Mouse', 'Gigabyte'),
+  ('Router', 'TP-Link'),
+  ('PC', 'Segotep'),
+  ('Camera Tripod', 'SIRUI'),
+  ('Camera Mic', 'COMICA'),
+  ('Camera Battery Charger', 'Viloso'),
+  ('Handphone', 'Honor')
+) as x(type_name, brand_name)
+join asset_types t on t.name = x.type_name
+join brands b on b.name = x.brand_name
+on conflict do nothing;
