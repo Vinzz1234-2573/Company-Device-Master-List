@@ -6,7 +6,7 @@ import { MobileNav } from './mobile-nav';
 
 export function Topbar({ profile }: { profile: Profile }) {
   return (
-    <header className="sticky top-0 z-10 flex h-14 items-center justify-between gap-3 border-b border-slate-200 bg-white px-3 md:px-4">
+    <header className="sticky top-0 z-10 flex h-14 items-center justify-between gap-3 border-b border-slate-200/80 bg-white/85 px-3 shadow-sm backdrop-blur-md md:px-6">
       <MobileNav role={profile.role} />
       <GlobalSearchForm />
       <div className="flex items-center gap-3">

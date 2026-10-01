@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { AssetSummaryCards, AssetDistributionBar } from '@/components/asset-summary-cards';
+import { DashboardIcon, BellIcon, TagIcon, FolderIcon, DepartmentsIcon, ClockIcon } from '@/components/icons';
 import type { AssetStatus } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -82,17 +83,24 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-6 animate-in">
-      <div>
-        <span className="eyebrow-badge mb-2">Overview</span>
-        <h1 className="text-xl font-bold text-slate-900">📊 Asset Overview</h1>
-        <p className="text-sm text-slate-500">Track all company equipment and inventory</p>
+      <div className="flex items-center gap-3">
+        <span className="icon-chip h-11 w-11 rounded-xl">
+          <DashboardIcon className="h-5 w-5" />
+        </span>
+        <div>
+          <span className="eyebrow-badge mb-1">Overview</span>
+          <h1 className="text-xl font-bold text-slate-900">Asset Overview</h1>
+          <p className="text-sm text-slate-500">Track all company equipment and inventory</p>
+        </div>
       </div>
 
       <AssetSummaryCards counts={buckets} total={total} />
 
       {((outstanding && outstanding.length > 0) || (verifyAssets || 0) > 0 || (verifyAssignments || 0) > 0) && (
-        <section className="card p-4 border-amber-300 bg-amber-50">
-          <h2 className="text-sm font-semibold text-amber-800 mb-2">🔔 Administrative Alerts</h2>
+        <section className="card border-amber-200/80 bg-amber-50/70 p-4">
+          <h2 className="mb-2 flex items-center gap-2 text-sm font-semibold text-amber-800">
+            <BellIcon className="h-4 w-4" /> Administrative Alerts
+          </h2>
           <ul className="space-y-1 text-sm text-amber-900">
             {outstanding && outstanding.length > 0 && (
               <li>
@@ -114,13 +122,17 @@ export default async function DashboardPage() {
       )}
 
       <section className="card p-5">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">📊 Asset Distribution</h2>
+        <h2 className="section-title">
+          <DashboardIcon className="h-4 w-4 text-slate-400" /> Asset Distribution
+        </h2>
         <AssetDistributionBar counts={buckets} total={total} />
       </section>
 
       <div className="grid lg:grid-cols-3 gap-6">
         <section className="card p-4">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">🏷️ Asset Status</h2>
+          <h2 className="section-title">
+            <TagIcon className="h-4 w-4 text-slate-400" /> Asset Status
+          </h2>
           <ul className="space-y-1.5 text-sm">
             {(Object.keys(byStatus) as AssetStatus[]).map(status => (
               <li key={status} className="flex items-center justify-between">
@@ -132,7 +144,9 @@ export default async function DashboardPage() {
         </section>
 
         <section className="card p-4">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">🗂️ Asset Categories</h2>
+          <h2 className="section-title">
+            <FolderIcon className="h-4 w-4 text-slate-400" /> Asset Categories
+          </h2>
           <ul className="space-y-1.5 text-sm">
             {topTypes.map(([type, count]) => (
               <li key={type} className="flex items-center justify-between">
@@ -144,7 +158,9 @@ export default async function DashboardPage() {
         </section>
 
         <section className="card p-4">
-          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">🏢 Department Summary</h2>
+          <h2 className="section-title">
+            <DepartmentsIcon className="h-4 w-4 text-slate-400" /> Department Summary
+          </h2>
           <ul className="space-y-1.5 text-sm">
             {[...deptCounts.entries()].sort((a, b) => b[1] - a[1]).map(([id, count]) => (
               <li key={id} className="flex items-center justify-between">
@@ -157,7 +173,9 @@ export default async function DashboardPage() {
       </div>
 
       <section className="card p-4">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">🕒 Recent Activity</h2>
+        <h2 className="section-title">
+          <ClockIcon className="h-4 w-4 text-slate-400" /> Recent Activity
+        </h2>
         <div className="overflow-x-auto">
           <table className="table-base">
             <thead>

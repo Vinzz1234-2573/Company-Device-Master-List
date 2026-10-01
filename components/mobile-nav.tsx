@@ -24,7 +24,7 @@ export function MobileNav({ role }: { role: UserRole }) {
       {open && (
         <div className="fixed inset-0 z-50 flex">
           <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
-          <div className="relative flex w-64 max-w-[80vw] flex-col bg-navy-800">
+          <div className="relative flex w-64 max-w-[80vw] flex-col bg-gradient-to-b from-navy-800 to-navy-900 shadow-2xl">
             <div className="gamut-accent-bar" />
             <div className="flex-1 p-4">
               <div className="mb-6 flex items-center justify-between">
