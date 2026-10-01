@@ -716,3 +716,10 @@ from (values
 join asset_types t on t.name = x.type_name
 join brands b on b.name = x.brand_name
 on conflict do nothing;
+
+-- ============================================================
+-- Money Counting Machine correction (see
+-- supabase/migrations/20261008000000_money_counting_machine.sql)
+-- ============================================================
+insert into asset_types (name, sort_order) values ('Money Counting Machine', 212)
+on conflict (name) do nothing;
