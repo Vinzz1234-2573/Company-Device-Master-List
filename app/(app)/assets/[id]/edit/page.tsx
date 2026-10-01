@@ -2,6 +2,8 @@ import { notFound, redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { getCurrentProfile, isAdmin } from '@/lib/current-user';
 import { updateAsset } from '@/lib/actions/assets';
+import { PageHeader } from '@/components/page-header';
+import { AssetsIcon } from '@/components/icons';
 import { AssetForm } from '../../asset-form';
 
 export default async function EditAssetPage({ params }: { params: { id: string } }) {
@@ -18,8 +20,8 @@ export default async function EditAssetPage({ params }: { params: { id: string }
   const action = updateAsset.bind(null, params.id);
 
   return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-bold text-slate-900">Edit Asset — {asset.asset_code}</h1>
+    <div className="space-y-5">
+      <PageHeader icon={AssetsIcon} eyebrow="Editing" title={`Edit Asset — ${asset.asset_code}`} />
       <AssetForm action={action} asset={asset} departments={departments || []} />
     </div>
   );

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { StatusBadge } from '@/components/badge';
 import { ExportButtons } from '@/components/export-buttons';
+import { PageHeader } from '@/components/page-header';
+import { ReportsIcon } from '@/components/icons';
 import type { Asset, AssetStatus } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -15,6 +17,7 @@ const REPORTS = [
   { key: 'missing', label: 'Missing / Lost Asset Report' },
   { key: 'maintenance', label: 'Maintenance Report' },
   { key: 'clearance', label: 'Employee Clearance Report' },
+  { key: 'donations', label: 'Donation in Kind Report' },
 ] as const;
 
 type ReportKey = (typeof REPORTS)[number]['key'];
@@ -113,6 +116,23 @@ export default async function ReportsPage({
       { key: 'serial_no', label: 'Serial No.' },
       { key: 'remarks', label: 'Remarks' },
     ];
+  } else if (type === 'donations') {
+    const { data } = await supabase
+      .from('assets')
+      .select('*, department:departments(code)')
+      .eq('acquisition_type', 'donation_in_kind')
+      .order('donation_received_date', { ascending: false, nullsFirst: false });
+    rows = data || [];
+    columns = [
+      { key: 'asset_code', label: 'Asset Code' },
+      { key: 'asset_type', label: 'Type' },
+      { key: 'description', label: 'Description' },
+      { key: 'quantity', label: 'Qty' },
+      { key: 'donor_name', label: 'Donor' },
+      { key: 'donation_value', label: 'Est. Value (RM)' },
+      { key: 'donation_received_date', label: 'Date Received' },
+      { key: 'department', label: 'Dept' },
+    ];
   } else if (type === 'clearance') {
     const { data } = await supabase
       .from('asset_assignments')
@@ -129,15 +149,15 @@ export default async function ReportsPage({
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-bold text-slate-900">Reports</h1>
+      <PageHeader icon={ReportsIcon} eyebrow="Insights" title="Reports" subtitle="Generate and export ready-made reports for audits and reviews." />
 
       <div className="flex flex-wrap gap-2">
         {REPORTS.map(r => (
           <Link
             key={r.key}
             href={`/reports?type=${r.key}`}
-            className={`rounded-full px-3 py-1.5 text-sm font-medium ${
-              type === r.key ? 'bg-brand-600 text-white' : 'bg-white border border-slate-300 text-slate-600'
+            className={`rounded-full px-3 py-2 text-sm font-medium transition-colors ${
+              type === r.key ? 'bg-brand-600 text-white' : 'bg-white border border-slate-300 text-slate-600 hover:bg-slate-50'
             }`}
           >
             {r.label}
@@ -202,7 +222,9 @@ export default async function ReportsPage({
             {rows.map((row, i) => (
               <tr key={i}>
                 {columns.map(c => (
-                  <td key={c.key}>{renderCell(row, c.key)}</td>
+                  <td key={c.key} data-label={c.label}>
+                    {renderCell(row, c.key)}
+                  </td>
                 ))}
               </tr>
             ))}
@@ -223,6 +245,7 @@ export default async function ReportsPage({
 function renderCell(row: Record<string, unknown>, key: string) {
   const value = row[key];
   if (key === 'status') return <StatusBadge status={value as AssetStatus} />;
+  if (key === 'donation_value' && typeof value === 'number') return `RM ${value.toLocaleString('en-MY', { minimumFractionDigits: 2 })}`;
   if (key === 'department' && value && typeof value === 'object') return (value as { code?: string }).code || '—';
   if (key === 'asset' && value && typeof value === 'object') {
     const a = value as Partial<Asset>;

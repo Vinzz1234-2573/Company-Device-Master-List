@@ -1,3 +1,4 @@
+import { GiftIcon } from '@/components/icons';
 import type { AssetStatus, EmploymentStatus, UserRole } from '@/lib/types';
 
 const STATUS_STYLES: Record<AssetStatus, string> = {
@@ -70,6 +71,15 @@ export function VerificationBadge({ show }: { show: boolean }) {
   return (
     <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium bg-purple-50 text-purple-700 ring-1 ring-inset ring-purple-600/20">
       ⚠ Needs Verification
+    </span>
+  );
+}
+
+export function DonationBadge({ show }: { show: boolean }) {
+  if (!show) return null;
+  return (
+    <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium bg-gold-400/10 text-gold-600 ring-1 ring-inset ring-gold-500/30">
+      <GiftIcon className="h-3 w-3" /> Donation in Kind
     </span>
   );
 }

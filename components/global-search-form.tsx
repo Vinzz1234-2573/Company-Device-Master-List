@@ -6,7 +6,7 @@ export function GlobalSearchForm() {
   const router = useRouter();
   return (
     <form
-      className="flex-1 max-w-md"
+      className="min-w-0 flex-1 max-w-md"
       onSubmit={e => {
         e.preventDefault();
         const q = new FormData(e.currentTarget).get('q');
@@ -16,7 +16,7 @@ export function GlobalSearchForm() {
       <input
         name="q"
         type="search"
-        placeholder="Search assets by type, brand, serial, IMEI, employee…"
+        placeholder="Search assets by type, brand, serial…"
         className="input"
       />
     </form>

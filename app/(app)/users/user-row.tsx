@@ -17,12 +17,12 @@ export function UserRow({
 
   return (
     <tr>
-      <td className="font-medium">
+      <td data-label="Name" className="font-medium">
         {profile.full_name || '—'}
         {isSelf && <span className="text-xs text-slate-400 ml-1">(you)</span>}
       </td>
-      <td>{profile.email}</td>
-      <td>
+      <td data-label="Email">{profile.email}</td>
+      <td data-label="Role">
         <select
           defaultValue={profile.role}
           disabled={isPending || isSelf}
@@ -39,11 +39,13 @@ export function UserRow({
           <option value="admin">Administrator</option>
         </select>
       </td>
-      <td>{profile.is_active ? <span className="text-emerald-600">Active</span> : <span className="text-slate-400">Deactivated</span>}</td>
-      <td className="whitespace-nowrap text-slate-500">
+      <td data-label="Status">
+        {profile.is_active ? <span className="text-emerald-600">Active</span> : <span className="text-slate-400">Deactivated</span>}
+      </td>
+      <td data-label="Last Login" className="whitespace-nowrap text-slate-500">
         {lastSignInAt ? new Date(lastSignInAt).toLocaleString() : <span className="text-slate-300">Never signed in</span>}
       </td>
-      <td>
+      <td data-label="">
         <button
           className="text-sm text-slate-500 hover:underline disabled:opacity-50"
           disabled={isPending || isSelf}

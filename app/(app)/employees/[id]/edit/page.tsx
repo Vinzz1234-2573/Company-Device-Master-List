@@ -2,6 +2,8 @@ import { notFound, redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { getCurrentProfile, isAdmin } from '@/lib/current-user';
 import { updateEmployee } from '@/lib/actions/employees';
+import { PageHeader } from '@/components/page-header';
+import { EmployeesIcon } from '@/components/icons';
 import { EmployeeForm } from '../../employee-form';
 
 export default async function EditEmployeePage({ params }: { params: { id: string } }) {
@@ -18,8 +20,8 @@ export default async function EditEmployeePage({ params }: { params: { id: strin
   const action = updateEmployee.bind(null, params.id);
 
   return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-bold text-slate-900">Edit Employee — {employee.name}</h1>
+    <div className="space-y-5">
+      <PageHeader icon={EmployeesIcon} eyebrow="Editing" title={`Edit Employee — ${employee.name}`} />
       <EmployeeForm action={action} employee={employee} departments={departments || []} />
     </div>
   );

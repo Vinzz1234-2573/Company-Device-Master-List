@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { resolveAssetVerification, resolveAssignmentVerification } from '@/lib/actions/verification';
+import { PageHeader } from '@/components/page-header';
+import { VerificationIcon } from '@/components/icons';
 import { ResolveForm } from './resolve-form';
 
 export const dynamic = 'force-dynamic';
@@ -40,10 +42,12 @@ export default async function VerificationPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-xl font-bold text-slate-900">Data Verification</h1>
-        <p className="text-sm text-slate-500">{total} record{total === 1 ? '' : 's'} awaiting review</p>
-      </div>
+      <PageHeader
+        icon={VerificationIcon}
+        eyebrow="Data Quality"
+        title="Data Verification"
+        subtitle={`${total} record${total === 1 ? '' : 's'} awaiting review`}
+      />
 
       <section className="card p-4">
         <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">

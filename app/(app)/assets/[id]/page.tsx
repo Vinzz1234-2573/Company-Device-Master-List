@@ -2,8 +2,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { getCurrentProfile, isAdmin } from '@/lib/current-user';
-import { StatusBadge, VerificationBadge } from '@/components/badge';
+import { StatusBadge, VerificationBadge, DonationBadge } from '@/components/badge';
+import { GiftIcon, PaperclipIcon } from '@/components/icons';
+import { ConfirmSubmitButton } from '@/components/confirm-submit-button';
+import { deleteAssetDocument } from '@/lib/actions/assets';
 import { StatusChangeForm } from './status-change-form';
+import { DocumentUploadForm } from './document-upload-form';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,11 +25,25 @@ export default async function AssetDetailPage({ params }: { params: { id: string
     .order('issued_date', { ascending: false, nullsFirst: false })
     .order('created_at', { ascending: false });
 
+  const { data: documents } = await supabase
+    .from('asset_documents')
+    .select('*')
+    .eq('asset_id', params.id)
+    .order('created_at', { ascending: false });
+
+  const documentsWithUrls = await Promise.all(
+    (documents || []).map(async doc => {
+      const { data } = await supabase.storage.from('asset-documents').createSignedUrl(doc.storage_path, 300);
+      return { ...doc, url: data?.signedUrl ?? null };
+    })
+  );
+
   const activeAssignment = (history || []).find(h => !h.returned_date) || null;
   const admin = isAdmin(profile);
+  const isDonation = asset.acquisition_type === 'donation_in_kind';
 
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w-5xl">
       <div className="flex items-start justify-between flex-wrap gap-2">
         <div>
           <p className="text-xs text-slate-400">{asset.asset_code}</p>
@@ -35,6 +53,7 @@ export default async function AssetDetailPage({ params }: { params: { id: string
           </h1>
           <div className="mt-1 flex gap-2">
             <StatusBadge status={asset.status} />
+            <DonationBadge show={isDonation} />
             <VerificationBadge show={asset.needs_verification} />
           </div>
         </div>
@@ -71,6 +90,20 @@ export default async function AssetDetailPage({ params }: { params: { id: string
             </Link>
           )}
         </div>
+      )}
+
+      {isDonation && (
+        <section className="card p-4 border-gold-200 bg-gold-50/40">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-gold-700">
+            <GiftIcon className="h-4 w-4" /> Donation Details
+          </h2>
+          <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+            <Row label="Donor" value={asset.donor_name} />
+            <Row label="Quantity" value={asset.quantity} />
+            <Row label="Estimated Value" value={asset.donation_value != null ? `RM ${Number(asset.donation_value).toLocaleString('en-MY', { minimumFractionDigits: 2 })}` : null} />
+            <Row label="Date Received" value={asset.donation_received_date} />
+          </dl>
+        </section>
       )}
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -141,19 +174,23 @@ export default async function AssetDetailPage({ params }: { params: { id: string
             <tbody>
               {(history || []).map(h => (
                 <tr key={h.id}>
-                  <td>
+                  <td data-label="Employee">
                     <Link href={`/employees/${h.employee?.id}`} className="text-brand-600 hover:underline">
                       {h.employee?.name}
                     </Link>
                   </td>
-                  <td>{h.department?.code || '—'}</td>
-                  <td className="whitespace-nowrap">{h.issued_date || '—'}</td>
-                  <td className="whitespace-nowrap">{h.returned_date || (!h.returned_date && <span className="text-blue-600 font-medium">Current</span>)}</td>
-                  <td className="max-w-sm">
+                  <td data-label="Department">{h.department?.code || '—'}</td>
+                  <td data-label="Date Issued" className="whitespace-nowrap">
+                    {h.issued_date || '—'}
+                  </td>
+                  <td data-label="Date Returned" className="whitespace-nowrap">
+                    {h.returned_date || (!h.returned_date && <span className="text-blue-600 font-medium">Current</span>)}
+                  </td>
+                  <td data-label="Remarks" className="td-block max-w-sm">
                     <div className="whitespace-pre-wrap">{h.remarks || '—'}</div>
                     <VerificationBadge show={h.needs_verification} />
                   </td>
-                  <td className="whitespace-nowrap text-xs space-x-2">
+                  <td data-label="" className="whitespace-nowrap text-xs space-x-2">
                     <Link href={`/print/handover/${h.id}`} target="_blank" className="text-brand-600 hover:underline">
                       Handover
                     </Link>
@@ -176,6 +213,40 @@ export default async function AssetDetailPage({ params }: { params: { id: string
           </table>
         </div>
       </section>
+
+      {isDonation && (
+        <section className="card p-4">
+          <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            <PaperclipIcon className="h-4 w-4" /> Supporting Documents
+          </h2>
+          <ul className="space-y-2 text-sm">
+            {documentsWithUrls.map(doc => (
+              <li key={doc.id} className="flex items-center justify-between gap-2 rounded-lg border border-slate-100 px-3 py-2">
+                {doc.url ? (
+                  <a href={doc.url} target="_blank" rel="noreferrer" className="text-brand-600 hover:underline truncate">
+                    {doc.file_name}
+                  </a>
+                ) : (
+                  <span className="text-slate-400 truncate">{doc.file_name} (unavailable)</span>
+                )}
+                {admin && (
+                  <form action={deleteAssetDocument.bind(null, asset.id, doc.id)}>
+                    <ConfirmSubmitButton confirmMessage={`Delete "${doc.file_name}"? This cannot be undone.`} className="btn-ghost text-red-600 text-xs">
+                      Delete
+                    </ConfirmSubmitButton>
+                  </form>
+                )}
+              </li>
+            ))}
+            {documentsWithUrls.length === 0 && <li className="text-slate-400">No supporting documents uploaded yet.</li>}
+          </ul>
+          {admin && (
+            <div className="mt-4 pt-4 border-t border-slate-100">
+              <DocumentUploadForm assetId={asset.id} />
+            </div>
+          )}
+        </section>
+      )}
     </div>
   );
 }

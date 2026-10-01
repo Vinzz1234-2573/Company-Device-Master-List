@@ -135,6 +135,26 @@ export function ClockIcon({ className = 'h-5 w-5' }: IconProps) {
   );
 }
 
+export function GiftIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <rect x="3.5" y="9.5" width="17" height="4" rx="0.75" />
+      <rect x="4.5" y="13.5" width="15" height="7" rx="0.75" />
+      <path d="M12 9.5V20.5" />
+      <path d="M12 9.5C12 9.5 8.5 9.5 7.75 7.5C7.2 6 8.3 4.5 9.75 4.5C11.2 4.5 12 6.5 12 9.5Z" />
+      <path d="M12 9.5C12 9.5 15.5 9.5 16.25 7.5C16.8 6 15.7 4.5 14.25 4.5C12.8 4.5 12 6.5 12 9.5Z" />
+    </svg>
+  );
+}
+
+export function PaperclipIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <path d="M17.5 8.25 9.75 16a2.75 2.75 0 1 1-3.89-3.89l8-8a1.95 1.95 0 1 1 2.76 2.76l-7.65 7.65a1.1 1.1 0 1 1-1.56-1.56l6.9-6.9" />
+    </svg>
+  );
+}
+
 export function ChevronRightIcon({ className = 'h-4 w-4' }: IconProps) {
   return (
     <svg {...base} className={className} aria-hidden="true">

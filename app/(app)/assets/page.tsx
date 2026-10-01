@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { getCurrentProfile, isAdmin } from '@/lib/current-user';
-import { StatusBadge, VerificationBadge } from '@/components/badge';
+import { StatusBadge, VerificationBadge, DonationBadge } from '@/components/badge';
 import { Pagination } from '@/components/pagination';
+import { PageHeader } from '@/components/page-header';
+import { AssetsIcon } from '@/components/icons';
 import type { AssetStatus } from '@/lib/types';
 import { ExportButtons } from '@/components/export-buttons';
 
@@ -24,7 +26,15 @@ const STATUS_OPTIONS: AssetStatus[] = [
 export default async function AssetsPage({
   searchParams,
 }: {
-  searchParams: { q?: string; type?: string; department?: string; status?: string; verification?: string; page?: string };
+  searchParams: {
+    q?: string;
+    type?: string;
+    department?: string;
+    status?: string;
+    verification?: string;
+    acquisition?: string;
+    page?: string;
+  };
 }) {
   const supabase = createClient();
   const profile = await getCurrentProfile();
@@ -44,6 +54,7 @@ export default async function AssetsPage({
   if (searchParams.department) query = query.eq('department_id', searchParams.department);
   if (searchParams.status) query = query.eq('status', searchParams.status as AssetStatus);
   if (searchParams.verification === '1') query = query.eq('needs_verification', true);
+  if (searchParams.acquisition) query = query.eq('acquisition_type', searchParams.acquisition);
 
   const { data: assets, count } = await query.order('asset_code', { ascending: true }).range(from, to);
 
@@ -67,19 +78,24 @@ export default async function AssetsPage({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between flex-wrap gap-2">
-        <h1 className="text-xl font-bold text-slate-900">Assets ({count || 0})</h1>
-        <div className="flex gap-2">
-          <ExportButtons rows={assets || []} filename="assets" />
-          {isAdmin(profile) && (
-            <Link href="/assets/new" className="btn-primary">
-              Add Asset
-            </Link>
-          )}
-        </div>
-      </div>
+      <PageHeader
+        icon={AssetsIcon}
+        eyebrow="Inventory"
+        title={`Assets (${count || 0})`}
+        subtitle="Search, filter, and manage every tracked device and item."
+        actions={
+          <>
+            <ExportButtons rows={assets || []} filename="assets" />
+            {isAdmin(profile) && (
+              <Link href="/assets/new" className="btn-primary">
+                + Add Asset
+              </Link>
+            )}
+          </>
+        }
+      />
 
-      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 items-end" method="get">
+      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-3 items-end" method="get">
         <div className="col-span-2 md:col-span-1">
           <label className="label">Search</label>
           <input name="q" defaultValue={searchParams.q} className="input" placeholder="Type, brand, serial, IMEI…" />
@@ -117,6 +133,14 @@ export default async function AssetsPage({
             ))}
           </select>
         </div>
+        <div>
+          <label className="label">Acquisition</label>
+          <select name="acquisition" defaultValue={searchParams.acquisition || ''} className="input">
+            <option value="">All</option>
+            <option value="purchased">Purchased</option>
+            <option value="donation_in_kind">Donation in Kind</option>
+          </select>
+        </div>
         <div className="flex gap-2">
           <button type="submit" className="btn-primary w-full">
             Apply Filters
@@ -145,21 +169,24 @@ export default async function AssetsPage({
               const holder = holderByAsset.get(asset.id);
               return (
                 <tr key={asset.id}>
-                  <td className="font-medium text-slate-900 whitespace-nowrap">{asset.asset_code}</td>
-                  <td>{asset.asset_type}</td>
-                  <td className="max-w-xs">
+                  <td data-label="Asset Code" className="font-medium text-slate-900 whitespace-nowrap">
+                    {asset.asset_code}
+                  </td>
+                  <td data-label="Type">{asset.asset_type}</td>
+                  <td data-label="Description / Serial" className="td-block max-w-xs">
                     <div className="truncate">{[asset.brand, asset.model, asset.description].filter(Boolean).join(' — ') || '—'}</div>
                     <div className="text-xs text-slate-400">{asset.serial_no || 'No serial'}</div>
                   </td>
-                  <td>
-                    <div className="flex flex-col gap-1">
+                  <td data-label="Status">
+                    <div className="flex flex-col items-end gap-1 md:items-start">
                       <StatusBadge status={asset.status} />
+                      <DonationBadge show={asset.acquisition_type === 'donation_in_kind'} />
                       <VerificationBadge show={asset.needs_verification} />
                     </div>
                   </td>
-                  <td>{holder?.name || <span className="text-slate-400">Unassigned</span>}</td>
-                  <td>{asset.department?.code || '—'}</td>
-                  <td>
+                  <td data-label="Assigned To">{holder?.name || <span className="text-slate-400">Unassigned</span>}</td>
+                  <td data-label="Department">{asset.department?.code || '—'}</td>
+                  <td data-label="">
                     <Link href={`/assets/${asset.id}`} className="text-brand-600 hover:underline text-sm font-medium">
                       View
                     </Link>

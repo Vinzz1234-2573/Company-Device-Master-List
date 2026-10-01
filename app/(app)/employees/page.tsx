@@ -3,6 +3,8 @@ import { createClient } from '@/lib/supabase/server';
 import { getCurrentProfile, isAdmin } from '@/lib/current-user';
 import { EmploymentBadge } from '@/components/badge';
 import { ExportButtons } from '@/components/export-buttons';
+import { PageHeader } from '@/components/page-header';
+import { EmployeesIcon } from '@/components/icons';
 import type { EmploymentStatus } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -39,17 +41,22 @@ export default async function EmployeesPage({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between flex-wrap gap-2">
-        <h1 className="text-xl font-bold text-slate-900">Employees ({employees?.length || 0})</h1>
-        <div className="flex gap-2">
-          <ExportButtons rows={employees || []} filename="employees" />
-          {isAdmin(profile) && (
-            <Link href="/employees/new" className="btn-primary">
-              Add Employee
-            </Link>
-          )}
-        </div>
-      </div>
+      <PageHeader
+        icon={EmployeesIcon}
+        eyebrow="People"
+        title={`Employees (${employees?.length || 0})`}
+        subtitle="Who holds what — search, filter, and manage staff records."
+        actions={
+          <>
+            <ExportButtons rows={employees || []} filename="employees" />
+            {isAdmin(profile) && (
+              <Link href="/employees/new" className="btn-primary">
+                + Add Employee
+              </Link>
+            )}
+          </>
+        }
+      />
 
       <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
         <div>
@@ -104,20 +111,22 @@ export default async function EmployeesPage({
               const held = outstandingCount.get(emp.id) || 0;
               return (
                 <tr key={emp.id}>
-                  <td className="font-medium text-slate-900">{emp.name}</td>
-                  <td>{emp.job_title || '—'}</td>
-                  <td>{emp.department ? `${emp.department.code}` : '—'}</td>
-                  <td>
+                  <td data-label="Name" className="font-medium text-slate-900">
+                    {emp.name}
+                  </td>
+                  <td data-label="Job Title">{emp.job_title || '—'}</td>
+                  <td data-label="Department">{emp.department ? `${emp.department.code}` : '—'}</td>
+                  <td data-label="Status">
                     <EmploymentBadge status={emp.employment_status} />
                   </td>
-                  <td>
+                  <td data-label="Assets Held">
                     {held > 0 && emp.employment_status === 'resigned' ? (
                       <span className="font-semibold text-red-600">{held} (outstanding)</span>
                     ) : (
                       held
                     )}
                   </td>
-                  <td>
+                  <td data-label="">
                     <Link href={`/employees/${emp.id}`} className="text-brand-600 hover:underline text-sm font-medium">
                       View
                     </Link>

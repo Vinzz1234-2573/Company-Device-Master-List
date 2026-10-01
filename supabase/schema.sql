@@ -397,3 +397,53 @@ begin
       jsonb_build_object('role', p_role));
 end;
 $$;
+
+-- ============================================================
+-- Donation in Kind (see supabase/migrations/20261001000000_donation_in_kind.sql
+-- for the authoritative, independently-applied version of this change)
+-- ============================================================
+create type acquisition_type as enum ('purchased', 'donation_in_kind');
+
+alter table assets
+  add column acquisition_type acquisition_type not null default 'purchased',
+  add column quantity integer not null default 1,
+  add column donor_name text,
+  add column donation_value numeric(14, 2),
+  add column donation_received_date date;
+
+alter table assets
+  add constraint assets_quantity_positive check (quantity > 0),
+  add constraint assets_donation_requires_donor
+    check (acquisition_type <> 'donation_in_kind' or donor_name is not null);
+
+create index assets_acquisition_type_idx on assets (acquisition_type);
+
+create table asset_documents (
+  id uuid primary key default gen_random_uuid(),
+  asset_id uuid not null references assets(id) on delete cascade,
+  file_name text not null,
+  storage_path text not null unique,
+  file_size bigint,
+  content_type text,
+  uploaded_by uuid references profiles(id),
+  created_at timestamptz not null default now()
+);
+
+create index asset_documents_asset_idx on asset_documents (asset_id);
+
+alter table asset_documents enable row level security;
+
+create policy asset_documents_select on asset_documents for select using (auth.uid() is not null);
+create policy asset_documents_insert on asset_documents for insert with check (is_admin());
+create policy asset_documents_delete on asset_documents for delete using (is_admin());
+
+insert into storage.buckets (id, name, public)
+values ('asset-documents', 'asset-documents', false)
+on conflict (id) do nothing;
+
+create policy asset_documents_storage_select on storage.objects for select
+  using (bucket_id = 'asset-documents' and auth.uid() is not null);
+create policy asset_documents_storage_insert on storage.objects for insert
+  with check (bucket_id = 'asset-documents' and is_admin());
+create policy asset_documents_storage_delete on storage.objects for delete
+  using (bucket_id = 'asset-documents' and is_admin());

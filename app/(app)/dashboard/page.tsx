@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
+import { getCurrentProfile, isAdmin } from '@/lib/current-user';
 import { AssetSummaryCards, AssetDistributionBar } from '@/components/asset-summary-cards';
+import { PageHeader } from '@/components/page-header';
 import { DashboardIcon, BellIcon, TagIcon, FolderIcon, DepartmentsIcon, ClockIcon } from '@/components/icons';
 import type { AssetStatus } from '@/lib/types';
 
@@ -19,6 +21,8 @@ const STATUS_LABELS: Record<AssetStatus, string> = {
 
 export default async function DashboardPage() {
   const supabase = createClient();
+  const profile = await getCurrentProfile();
+  const admin = isAdmin(profile);
 
   const [{ data: allAssets }, { data: assignedAssetIdRows }, { data: typeRows }, { data: deptRows }, { data: departments }, { data: recentLogs }, { data: outstanding }, { count: verifyAssets }, { count: verifyAssignments }] =
     await Promise.all([
@@ -83,16 +87,24 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-6 animate-in">
-      <div className="flex items-center gap-3">
-        <span className="icon-chip h-11 w-11 rounded-xl">
-          <DashboardIcon className="h-5 w-5" />
-        </span>
-        <div>
-          <span className="eyebrow-badge mb-1">Overview</span>
-          <h1 className="text-xl font-bold text-slate-900">Asset Overview</h1>
-          <p className="text-sm text-slate-500">Track all company equipment and inventory</p>
-        </div>
-      </div>
+      <PageHeader
+        icon={DashboardIcon}
+        eyebrow="Overview"
+        title="Asset Overview"
+        subtitle="Track all company equipment and inventory"
+        actions={
+          admin && (
+            <>
+              <Link href="/assets/new" className="btn-primary">
+                + Add Asset
+              </Link>
+              <Link href="/employees/new" className="btn-secondary">
+                + Add Employee
+              </Link>
+            </>
+          )
+        }
+      />
 
       <AssetSummaryCards counts={buckets} total={total} />
 
@@ -189,10 +201,12 @@ export default async function DashboardPage() {
             <tbody>
               {(recentLogs || []).map(log => (
                 <tr key={log.id}>
-                  <td className="whitespace-nowrap">{new Date(log.created_at).toLocaleString()}</td>
-                  <td>{log.action.replace(/_/g, ' ')}</td>
-                  <td>{log.entity_type}</td>
-                  <td>{log.user_email || '—'}</td>
+                  <td data-label="When" className="whitespace-nowrap">
+                    {new Date(log.created_at).toLocaleString()}
+                  </td>
+                  <td data-label="Action">{log.action.replace(/_/g, ' ')}</td>
+                  <td data-label="Entity">{log.entity_type}</td>
+                  <td data-label="By">{log.user_email || '—'}</td>
                 </tr>
               ))}
               {(!recentLogs || recentLogs.length === 0) && (

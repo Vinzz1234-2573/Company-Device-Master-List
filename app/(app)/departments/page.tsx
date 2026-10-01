@@ -1,4 +1,6 @@
 import { createClient } from '@/lib/supabase/server';
+import { PageHeader } from '@/components/page-header';
+import { DepartmentsIcon } from '@/components/icons';
 import { NewDepartmentForm } from './new-department-form';
 import { DepartmentRow } from './department-row';
 
@@ -16,11 +18,11 @@ export default async function DepartmentsPage() {
   }
 
   return (
-    <div className="space-y-6 max-w-3xl">
-      <h1 className="text-xl font-bold text-slate-900">Departments</h1>
+    <div className="space-y-6">
+      <PageHeader icon={DepartmentsIcon} eyebrow="Structure" title="Departments" subtitle="Organizational units assets and employees belong to." />
 
-      <section className="card p-4">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Add Department</h2>
+      <section className="form-section max-w-xl">
+        <h2 className="form-section-title">Add Department</h2>
         <NewDepartmentForm />
       </section>
 

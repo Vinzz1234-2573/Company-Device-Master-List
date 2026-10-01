@@ -1,6 +1,8 @@
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { getCurrentProfile } from '@/lib/current-user';
+import { PageHeader } from '@/components/page-header';
+import { UsersIcon } from '@/components/icons';
 import { InviteUserForm } from './invite-user-form';
 import { UserRow } from './user-row';
 
@@ -20,15 +22,16 @@ export default async function UsersPage() {
   const lastSignInById = new Map((authUsers?.users || []).map(u => [u.id, u.last_sign_in_at]));
 
   return (
-    <div className="space-y-6 max-w-4xl">
-      <h1 className="text-xl font-bold text-slate-900">Users</h1>
-      <p className="text-sm text-slate-500">
-        Every account below has its own login. Nobody can view or change any asset without signing in, and every action
-        they take is recorded in the Audit Log with their email.
-      </p>
+    <div className="space-y-6">
+      <PageHeader
+        icon={UsersIcon}
+        eyebrow="Access"
+        title="Users"
+        subtitle="Every account below has its own login — every action they take is recorded in the Audit Log with their email."
+      />
 
-      <section className="card p-4">
-        <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Create User</h2>
+      <section className="form-section max-w-xl">
+        <h2 className="form-section-title">Create User</h2>
         <InviteUserForm />
       </section>
 

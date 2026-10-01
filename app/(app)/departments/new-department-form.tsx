@@ -9,9 +9,9 @@ export function NewDepartmentForm() {
 
   return (
     <form action={formAction} className="flex flex-wrap items-end gap-3">
-      <div>
+      <div className="w-32 shrink-0">
         <label className="label">Code *</label>
-        <input name="code" required maxLength={10} className="input w-32" placeholder="e.g. IT" />
+        <input name="code" required maxLength={10} className="input" placeholder="e.g. IT" />
       </div>
       <div className="flex-1 min-w-[12rem]">
         <label className="label">Name *</label>

@@ -1,5 +1,6 @@
 export type UserRole = 'admin' | 'manager' | 'staff';
 export type EmploymentStatus = 'active' | 'resigned' | 'inactive' | 'on_leave';
+export type AcquisitionType = 'purchased' | 'donation_in_kind';
 export type AssetStatus =
   | 'available'
   | 'assigned'
@@ -62,10 +63,26 @@ export interface Asset {
   remarks: string | null;
   needs_verification: boolean;
   verification_reason: string | null;
+  acquisition_type: AcquisitionType;
+  quantity: number;
+  donor_name: string | null;
+  donation_value: number | null;
+  donation_received_date: string | null;
   created_at: string;
   updated_at: string;
   created_by: string | null;
   updated_by: string | null;
+}
+
+export interface AssetDocument {
+  id: string;
+  asset_id: string;
+  file_name: string;
+  storage_path: string;
+  file_size: number | null;
+  content_type: string | null;
+  uploaded_by: string | null;
+  created_at: string;
 }
 
 export interface AssetAssignment {
@@ -114,6 +131,7 @@ export interface Database {
       profiles: TableDef<Profile, Partial<Profile> & { id: string; email: string }>;
       assets: TableDef<Asset, Partial<Asset> & { asset_type: string }>;
       asset_assignments: TableDef<AssetAssignment, Partial<AssetAssignment> & { asset_id: string; employee_id: string }>;
+      asset_documents: TableDef<AssetDocument, Partial<AssetDocument> & { asset_id: string; file_name: string; storage_path: string }>;
       audit_logs: TableDef<AuditLog, Partial<AuditLog> & { action: string; entity_type: string }>;
     };
     Views: Record<string, never>;
@@ -154,6 +172,7 @@ export interface Database {
       user_role: UserRole;
       employment_status: EmploymentStatus;
       asset_status: AssetStatus;
+      acquisition_type: AcquisitionType;
     };
   };
 }

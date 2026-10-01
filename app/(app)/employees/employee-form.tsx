@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useFormState } from 'react-dom';
 import { SubmitButton } from '@/components/submit-button';
 import type { Employee, Department } from '@/lib/types';
@@ -15,9 +16,10 @@ export function EmployeeForm({
   departments: Department[];
 }) {
   const [state, formAction] = useFormState(action, { error: null });
+  const cancelHref = employee ? `/employees/${employee.id}` : '/employees';
 
   return (
-    <form action={formAction} className="space-y-4 max-w-xl">
+    <form action={formAction} className="form-section max-w-2xl">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
           <label className="label">Full Name *</label>
@@ -59,8 +61,13 @@ export function EmployeeForm({
         <label className="label">Remarks</label>
         <textarea name="remarks" defaultValue={employee?.remarks || ''} rows={2} className="input" />
       </div>
-      {state?.error && <p className="text-sm text-red-600">{state.error}</p>}
-      <SubmitButton>{employee ? 'Save Changes' : 'Add Employee'}</SubmitButton>
+      {state?.error && <p className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-600">{state.error}</p>}
+      <div className="flex items-center gap-3">
+        <SubmitButton>{employee ? 'Save Changes' : 'Add Employee'}</SubmitButton>
+        <Link href={cancelHref} className="btn-secondary">
+          Cancel
+        </Link>
+      </div>
     </form>
   );
 }

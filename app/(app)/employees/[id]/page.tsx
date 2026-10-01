@@ -24,7 +24,7 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
   const admin = isAdmin(profile);
 
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w-5xl">
       <div className="flex items-start justify-between flex-wrap gap-2">
         <div>
           <h1 className="text-xl font-bold text-slate-900">{employee.name}</h1>
@@ -85,15 +85,19 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
             <tbody>
               {(history || []).map(h => (
                 <tr key={h.id}>
-                  <td>
+                  <td data-label="Asset">
                     <Link href={`/assets/${h.asset?.id}`} className="text-brand-600 hover:underline">
                       {h.asset?.asset_code} — {h.asset?.asset_type}
                     </Link>
                   </td>
-                  <td>{h.asset?.serial_no || '—'}</td>
-                  <td>{h.asset && <StatusBadge status={h.asset.status} />}</td>
-                  <td className="whitespace-nowrap">{h.issued_date || '—'}</td>
-                  <td className="whitespace-nowrap">{h.returned_date || <span className="text-blue-600 font-medium">Current</span>}</td>
+                  <td data-label="Serial">{h.asset?.serial_no || '—'}</td>
+                  <td data-label="Status">{h.asset && <StatusBadge status={h.asset.status} />}</td>
+                  <td data-label="Date Issued" className="whitespace-nowrap">
+                    {h.issued_date || '—'}
+                  </td>
+                  <td data-label="Date Returned" className="whitespace-nowrap">
+                    {h.returned_date || <span className="text-blue-600 font-medium">Current</span>}
+                  </td>
                 </tr>
               ))}
               {(!history || history.length === 0) && (

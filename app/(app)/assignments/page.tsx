@@ -3,6 +3,8 @@ import { createClient } from '@/lib/supabase/server';
 import { VerificationBadge } from '@/components/badge';
 import { Pagination } from '@/components/pagination';
 import { ExportButtons } from '@/components/export-buttons';
+import { PageHeader } from '@/components/page-header';
+import { AssignmentsIcon } from '@/components/icons';
 
 export const dynamic = 'force-dynamic';
 const PAGE_SIZE = 30;
@@ -34,10 +36,13 @@ export default async function AssignmentsPage({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between flex-wrap gap-2">
-        <h1 className="text-xl font-bold text-slate-900">Asset Movement ({count || 0})</h1>
-        <ExportButtons rows={assignments || []} filename="asset-movement" />
-      </div>
+      <PageHeader
+        icon={AssignmentsIcon}
+        eyebrow="Activity"
+        title={`Asset Movement (${count || 0})`}
+        subtitle="Every assign and return, in one timeline."
+        actions={<ExportButtons rows={assignments || []} filename="asset-movement" />}
+      />
 
       <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
         <div>
@@ -84,20 +89,24 @@ export default async function AssignmentsPage({
           <tbody>
             {(assignments || []).map(a => (
               <tr key={a.id}>
-                <td>
+                <td data-label="Asset">
                   <Link href={`/assets/${a.asset?.id}`} className="text-brand-600 hover:underline">
                     {a.asset?.asset_code} — {a.asset?.asset_type}
                   </Link>
                 </td>
-                <td>
+                <td data-label="Employee">
                   <Link href={`/employees/${a.employee?.id}`} className="text-brand-600 hover:underline">
                     {a.employee?.name}
                   </Link>
                 </td>
-                <td>{a.department?.code || '—'}</td>
-                <td className="whitespace-nowrap">{a.issued_date || '—'}</td>
-                <td className="whitespace-nowrap">{a.returned_date || <span className="text-blue-600 font-medium">Current</span>}</td>
-                <td className="max-w-xs">
+                <td data-label="Department">{a.department?.code || '—'}</td>
+                <td data-label="Issued" className="whitespace-nowrap">
+                  {a.issued_date || '—'}
+                </td>
+                <td data-label="Returned" className="whitespace-nowrap">
+                  {a.returned_date || <span className="text-blue-600 font-medium">Current</span>}
+                </td>
+                <td data-label="Remarks" className="td-block max-w-xs">
                   <div className="truncate">{a.remarks || '—'}</div>
                   <VerificationBadge show={a.needs_verification} />
                 </td>

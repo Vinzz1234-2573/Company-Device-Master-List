@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
 import { Pagination } from '@/components/pagination';
 import { ExportButtons } from '@/components/export-buttons';
+import { PageHeader } from '@/components/page-header';
+import { AuditLogsIcon } from '@/components/icons';
 
 export const dynamic = 'force-dynamic';
 const PAGE_SIZE = 40;
@@ -25,10 +27,13 @@ export default async function AuditLogsPage({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between flex-wrap gap-2">
-        <h1 className="text-xl font-bold text-slate-900">Audit Logs ({count || 0})</h1>
-        <ExportButtons rows={logs || []} filename="audit-logs" />
-      </div>
+      <PageHeader
+        icon={AuditLogsIcon}
+        eyebrow="History"
+        title={`Audit Logs (${count || 0})`}
+        subtitle="A permanent record of every change made in the system."
+        actions={<ExportButtons rows={logs || []} filename="audit-logs" />}
+      />
 
       <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
         <div>
@@ -70,14 +75,16 @@ export default async function AuditLogsPage({
           <tbody>
             {(logs || []).map(log => (
               <tr key={log.id}>
-                <td className="whitespace-nowrap">{new Date(log.created_at).toLocaleString()}</td>
-                <td>{log.user_email || '—'}</td>
-                <td>{log.action.replace(/_/g, ' ')}</td>
-                <td>
+                <td data-label="When" className="whitespace-nowrap">
+                  {new Date(log.created_at).toLocaleString()}
+                </td>
+                <td data-label="User">{log.user_email || '—'}</td>
+                <td data-label="Action">{log.action.replace(/_/g, ' ')}</td>
+                <td data-label="Entity">
                   {log.entity_type}
                   {log.entity_id ? ` (${log.entity_id.slice(0, 8)}…)` : ''}
                 </td>
-                <td className="max-w-sm">
+                <td data-label="Details" className="td-block max-w-sm">
                   <details>
                     <summary className="cursor-pointer text-brand-600 text-xs">View</summary>
                     <pre className="text-xs whitespace-pre-wrap bg-slate-50 p-2 rounded mt-1">
