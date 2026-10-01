@@ -128,7 +128,7 @@ export default async function EmployeesPage({
                   </td>
                   <td data-label="">
                     <Link href={`/employees/${emp.id}`} className="text-brand-600 hover:underline text-sm font-medium">
-                      View
+                      View Details
                     </Link>
                   </td>
                 </tr>

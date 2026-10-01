@@ -63,9 +63,9 @@ export function AssignmentsIcon({ className = 'h-5 w-5' }: IconProps) {
 export function ReportsIcon({ className = 'h-5 w-5' }: IconProps) {
   return (
     <svg {...base} className={className} aria-hidden="true">
-      <path d="M4 19V5" />
-      <path d="M4 19h16" />
-      <path d="M7.5 16V12M12 16V8.5M16.5 16v-5" />
+      <path d="M7 3.5h7l4 4V19.5a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z" />
+      <path d="M14 3.5V7.5a1 1 0 0 0 1 1H19" />
+      <path d="m8.5 14.5 2.25-2.5 2 1.75L16.5 10" />
     </svg>
   );
 }

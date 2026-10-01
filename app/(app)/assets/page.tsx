@@ -188,7 +188,7 @@ export default async function AssetsPage({
                   <td data-label="Department">{asset.department?.code || '—'}</td>
                   <td data-label="">
                     <Link href={`/assets/${asset.id}`} className="text-brand-600 hover:underline text-sm font-medium">
-                      View
+                      View Details
                     </Link>
                   </td>
                 </tr>

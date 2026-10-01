@@ -39,9 +39,9 @@ export default async function AssignmentsPage({
       <PageHeader
         icon={AssignmentsIcon}
         eyebrow="Activity"
-        title={`Asset Movement (${count || 0})`}
+        title={`Assignments (${count || 0})`}
         subtitle="Every assign and return, in one timeline."
-        actions={<ExportButtons rows={assignments || []} filename="asset-movement" />}
+        actions={<ExportButtons rows={assignments || []} filename="assignments" />}
       />
 
       <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 items-end" method="get">
