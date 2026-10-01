@@ -7,22 +7,19 @@ import { useState } from 'react';
 import { SubmitButton } from '@/components/submit-button';
 import { GiftIcon, PaperclipIcon } from '@/components/icons';
 import type { Asset, AcquisitionType, Department } from '@/lib/types';
+import type { AssetCatalog } from '@/lib/catalog';
 import type { ActionState } from '@/lib/actions/assets';
-
-const ASSET_TYPE_SUGGESTIONS = [
-  'Laptop', 'Laptop Adapter', 'Desktop / PC', 'Monitor', 'Monitor Adapter', 'Handphone', 'Handphone Charger',
-  'Simcard', 'Keyboard', 'Mouse', 'Printer', 'Camera', 'Camera Accessory', 'Tablet', 'HDMI Cable', 'Router',
-  'Wifi Modem', 'Other',
-];
 
 export function AssetForm({
   action,
   asset,
   departments,
+  catalog,
 }: {
   action: (state: ActionState, formData: FormData) => Promise<ActionState>;
   asset?: Asset;
   departments: Department[];
+  catalog: AssetCatalog;
 }) {
   const searchParams = useSearchParams();
   const [state, formAction] = useFormState(action, { error: null });
@@ -32,6 +29,15 @@ export function AssetForm({
   );
   const isDonation = acquisitionType === 'donation_in_kind';
   const cancelHref = asset ? `/assets/${asset.id}` : '/assets';
+
+  const knownType = asset?.asset_type && catalog.types.includes(asset.asset_type) ? asset.asset_type : asset?.asset_type ? 'Other' : '';
+  const [assetType, setAssetType] = useState(knownType);
+  const [assetTypeOther, setAssetTypeOther] = useState(knownType === 'Other' ? asset?.asset_type || '' : '');
+
+  const brandOptionsForType = assetType && assetType !== 'Other' ? catalog.brandsByType[assetType] || [] : catalog.allBrands;
+  const knownBrand = asset?.brand && brandOptionsForType.includes(asset.brand) ? asset.brand : asset?.brand ? 'Other' : '';
+  const [brand, setBrand] = useState(knownBrand);
+  const [brandOther, setBrandOther] = useState(knownBrand === 'Other' ? asset?.brand || '' : '');
 
   return (
     <form action={formAction} encType="multipart/form-data" className="space-y-5 pb-20 sm:pb-5">
@@ -43,20 +49,71 @@ export function AssetForm({
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="label">Asset Type *</label>
-                <input name="asset_type" list="asset-types" defaultValue={asset?.asset_type} required className="input" placeholder="e.g. Laptop" />
-                <datalist id="asset-types">
-                  {ASSET_TYPE_SUGGESTIONS.map(t => (
-                    <option key={t} value={t} />
+                <select
+                  name="asset_type_select"
+                  required
+                  value={assetType}
+                  onChange={e => {
+                    setAssetType(e.target.value);
+                    setBrand('');
+                    setBrandOther('');
+                  }}
+                  className="input"
+                >
+                  <option value="" disabled>
+                    Select asset type…
+                  </option>
+                  {catalog.types.map(t => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
                   ))}
-                </datalist>
+                </select>
+                {assetType === 'Other' && (
+                  <input
+                    name="asset_type_other"
+                    value={assetTypeOther}
+                    onChange={e => setAssetTypeOther(e.target.value)}
+                    required
+                    className="input mt-2"
+                    placeholder="Enter custom asset type"
+                  />
+                )}
               </div>
               <div>
                 <label className="label">Brand</label>
-                <input name="brand" defaultValue={asset?.brand || ''} className="input" placeholder="e.g. Dell, Apple" />
+                <select
+                  name="brand_select"
+                  value={brand}
+                  disabled={!assetType}
+                  onChange={e => {
+                    setBrand(e.target.value);
+                    setBrandOther('');
+                  }}
+                  className="input disabled:bg-slate-50 disabled:text-slate-400"
+                >
+                  <option value="">{assetType ? `Select ${assetType} brand…` : 'Select asset type first'}</option>
+                  {brandOptionsForType.map(b => (
+                    <option key={b} value={b}>
+                      {b}
+                    </option>
+                  ))}
+                  <option value="Other">Other</option>
+                </select>
+                {brand === 'Other' && (
+                  <input
+                    name="brand_other"
+                    value={brandOther}
+                    onChange={e => setBrandOther(e.target.value)}
+                    required
+                    className="input mt-2"
+                    placeholder="Enter custom brand"
+                  />
+                )}
               </div>
               <div>
                 <label className="label">Model</label>
-                <input name="model" defaultValue={asset?.model || ''} className="input" />
+                <input name="model" defaultValue={asset?.model || ''} className="input" placeholder="e.g. Latitude 5420, iPhone 15" />
               </div>
               <div>
                 <label className="label">Condition</label>

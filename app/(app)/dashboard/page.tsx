@@ -6,6 +6,8 @@ import { KpiCard } from '@/components/kpi-card';
 import { DonutChart } from '@/components/donut-chart';
 import { BarList } from '@/components/bar-list';
 import { TrendChart, type TrendPoint } from '@/components/trend-chart';
+import { TypeBrandFilter } from '@/components/type-brand-filter';
+import { getAssetCatalog } from '@/lib/catalog';
 import {
   DashboardIcon,
   AssetsIcon,
@@ -98,6 +100,7 @@ const ACTIVITY_LABELS: Record<string, { title: string; detail: string }> = {
 type Filters = {
   status: string;
   type: string;
+  brand: string;
   department: string;
   acquisition: string;
   location: string;
@@ -158,6 +161,7 @@ export default async function DashboardPage({
   searchParams: {
     status?: string;
     type?: string;
+    brand?: string;
     department?: string;
     acquisition?: string;
     location?: string;
@@ -173,6 +177,7 @@ export default async function DashboardPage({
   const f: Filters = {
     status: searchParams.status || '',
     type: searchParams.type || '',
+    brand: searchParams.brand || '',
     department: searchParams.department || '',
     acquisition: searchParams.acquisition || '',
     location: searchParams.location || '',
@@ -184,9 +189,10 @@ export default async function DashboardPage({
 
   let assetsQuery = supabase
     .from('assets')
-    .select('id, status, asset_type, department_id, acquisition_type, donation_value, location, created_at');
+    .select('id, status, asset_type, brand, department_id, acquisition_type, donation_value, location, created_at');
   if (f.status) assetsQuery = assetsQuery.eq('status', f.status as AssetStatus);
   if (f.type) assetsQuery = assetsQuery.eq('asset_type', f.type);
+  if (f.brand) assetsQuery = assetsQuery.eq('brand', f.brand);
   if (f.department) assetsQuery = assetsQuery.eq('department_id', f.department);
   if (f.acquisition) assetsQuery = assetsQuery.eq('acquisition_type', f.acquisition);
   if (f.location) assetsQuery = assetsQuery.eq('location', f.location);
@@ -201,7 +207,7 @@ export default async function DashboardPage({
     { data: filteredAssets },
     { data: assignedAssetIdRows },
     { data: departments },
-    { data: typeRows },
+    catalog,
     { data: locationRows },
     { data: recentLogs },
     { data: outstanding },
@@ -212,7 +218,7 @@ export default async function DashboardPage({
     assetsQuery,
     supabase.from('asset_assignments').select('asset_id'),
     supabase.from('departments').select('id, code, name'),
-    supabase.from('assets').select('asset_type'),
+    getAssetCatalog(supabase),
     supabase.from('assets').select('location').not('location', 'is', null),
     supabase
       .from('audit_logs')
@@ -235,7 +241,6 @@ export default async function DashboardPage({
 
   const total = filteredAssets?.length || 0;
   const everAssignedIds = new Set((assignedAssetIdRows || []).map(r => r.asset_id));
-  const distinctTypes = [...new Set((typeRows || []).map(t => t.asset_type))].sort();
   const distinctLocations = [...new Set((locationRows || []).map(l => l.location).filter(Boolean))].sort() as string[];
   const deptNameById = new Map((departments || []).map(d => [d.id, d.name]));
   const deptCodeById = new Map((departments || []).map(d => [d.id, d.code]));
@@ -343,7 +348,7 @@ export default async function DashboardPage({
         <h2 className="form-section-title">
           <FilterIcon className="h-4 w-4 text-slate-400" /> Dashboard Filters
         </h2>
-        <form className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 items-end" method="get">
+        <form className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-3 items-end" method="get">
           <div>
             <label className="label">Status</label>
             <select name="status" defaultValue={f.status} className="input">
@@ -355,17 +360,7 @@ export default async function DashboardPage({
               ))}
             </select>
           </div>
-          <div>
-            <label className="label">Category</label>
-            <select name="type" defaultValue={f.type} className="input">
-              <option value="">All categories</option>
-              {distinctTypes.map(t => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
-          </div>
+          <TypeBrandFilter catalog={catalog} defaultType={f.type} defaultBrand={f.brand} />
           <div>
             <label className="label">Department</label>
             <select name="department" defaultValue={f.department} className="input">

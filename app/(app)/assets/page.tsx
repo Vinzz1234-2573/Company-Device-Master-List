@@ -4,7 +4,9 @@ import { getCurrentProfile, isAdmin } from '@/lib/current-user';
 import { StatusBadge, VerificationBadge, DonationBadge } from '@/components/badge';
 import { Pagination } from '@/components/pagination';
 import { PageHeader } from '@/components/page-header';
+import { TypeBrandFilter } from '@/components/type-brand-filter';
 import { AssetsIcon } from '@/components/icons';
+import { getAssetCatalog } from '@/lib/catalog';
 import type { AssetStatus } from '@/lib/types';
 import { ExportButtons } from '@/components/export-buttons';
 
@@ -29,6 +31,7 @@ export default async function AssetsPage({
   searchParams: {
     q?: string;
     type?: string;
+    brand?: string;
     department?: string;
     status?: string;
     verification?: string;
@@ -55,6 +58,7 @@ export default async function AssetsPage({
     );
   }
   if (searchParams.type) query = query.eq('asset_type', searchParams.type);
+  if (searchParams.brand) query = query.eq('brand', searchParams.brand);
   if (searchParams.department) query = query.eq('department_id', searchParams.department);
   if (searchParams.status) query = query.eq('status', searchParams.status as AssetStatus);
   if (searchParams.verification === '1') query = query.eq('needs_verification', true);
@@ -78,11 +82,12 @@ export default async function AssetsPage({
 
   const holderByAsset = new Map((openAssignments || []).map(a => [a.asset_id, a.employee]));
 
-  const { data: types } = await supabase.from('assets').select('asset_type');
-  const distinctTypes = [...new Set((types || []).map(t => t.asset_type))].sort();
-  const { data: locationRows } = await supabase.from('assets').select('location').not('location', 'is', null);
+  const [catalog, { data: locationRows }, { data: departments }] = await Promise.all([
+    getAssetCatalog(supabase),
+    supabase.from('assets').select('location').not('location', 'is', null),
+    supabase.from('departments').select('id, code, name').order('name'),
+  ]);
   const distinctLocations = [...new Set((locationRows || []).map(l => l.location).filter(Boolean))].sort() as string[];
-  const { data: departments } = await supabase.from('departments').select('id, code, name').order('name');
 
   const totalPages = Math.max(1, Math.ceil((count || 0) / PAGE_SIZE));
 
@@ -105,22 +110,12 @@ export default async function AssetsPage({
         }
       />
 
-      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 items-end" method="get">
+      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-3 items-end" method="get">
         <div className="col-span-2 md:col-span-2">
           <label className="label">Search</label>
           <input name="q" defaultValue={searchParams.q} className="input" placeholder="Type, brand, serial, IMEI…" />
         </div>
-        <div>
-          <label className="label">Asset Type</label>
-          <select name="type" defaultValue={searchParams.type || ''} className="input">
-            <option value="">All types</option>
-            {distinctTypes.map(t => (
-              <option key={t} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
+        <TypeBrandFilter catalog={catalog} defaultType={searchParams.type || ''} defaultBrand={searchParams.brand || ''} />
         <div>
           <label className="label">Department</label>
           <select name="department" defaultValue={searchParams.department || ''} className="input">
@@ -182,7 +177,8 @@ export default async function AssetsPage({
             <tr>
               <th>Asset Code</th>
               <th>Type</th>
-              <th>Description / Serial</th>
+              <th>Brand</th>
+              <th>Model</th>
               <th>Status</th>
               <th>Assigned To</th>
               <th>Department</th>
@@ -198,8 +194,9 @@ export default async function AssetsPage({
                     {asset.asset_code}
                   </td>
                   <td data-label="Type">{asset.asset_type}</td>
-                  <td data-label="Description / Serial" className="td-block max-w-xs">
-                    <div className="truncate">{[asset.brand, asset.model, asset.description].filter(Boolean).join(' — ') || '—'}</div>
+                  <td data-label="Brand">{asset.brand || '—'}</td>
+                  <td data-label="Model" className="td-block">
+                    <div className="truncate">{asset.model || '—'}</div>
                     <div className="text-xs text-slate-400">{asset.serial_no || 'No serial'}</div>
                   </td>
                   <td data-label="Status">
@@ -221,7 +218,7 @@ export default async function AssetsPage({
             })}
             {(!assets || assets.length === 0) && (
               <tr>
-                <td colSpan={7} className="text-center text-slate-400 py-8">
+                <td colSpan={8} className="text-center text-slate-400 py-8">
                   No assets match these filters.
                 </td>
               </tr>

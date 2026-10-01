@@ -74,6 +74,21 @@ export interface Asset {
   updated_by: string | null;
 }
 
+export interface AssetTypeCatalogEntry {
+  id: string;
+  name: string;
+  is_active: boolean;
+  sort_order: number;
+  created_at: string;
+}
+
+export interface BrandCatalogEntry {
+  id: string;
+  name: string;
+  is_active: boolean;
+  created_at: string;
+}
+
 export interface AssetDocument {
   id: string;
   asset_id: string;

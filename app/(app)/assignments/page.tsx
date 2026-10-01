@@ -21,7 +21,7 @@ export default async function AssignmentsPage({
 
   let query = supabase
     .from('asset_assignments')
-    .select('*, employee:employees(id, name), department:departments(id, code, name), asset:assets(id, asset_code, asset_type, description)', {
+    .select('*, employee:employees(id, name), department:departments(id, code, name), asset:assets(id, asset_code, asset_type, brand, model, description)', {
       count: 'exact',
     });
 
@@ -91,7 +91,7 @@ export default async function AssignmentsPage({
               <tr key={a.id}>
                 <td data-label="Asset">
                   <Link href={`/assets/${a.asset?.id}`} className="text-brand-600 hover:underline">
-                    {a.asset?.asset_code} — {a.asset?.asset_type}
+                    {a.asset?.asset_code} — {[a.asset?.asset_type, a.asset?.brand, a.asset?.model].filter(Boolean).join(' ')}
                   </Link>
                 </td>
                 <td data-label="Employee">

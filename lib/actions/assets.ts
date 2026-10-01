@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { logAudit, friendlyDbError } from '@/lib/audit';
+import { growCatalog } from '@/lib/catalog';
 import type { AcquisitionType, AssetStatus } from '@/lib/types';
 
 export type ActionState = { error: string | null; ok?: boolean };
@@ -64,6 +65,17 @@ function parseDonationFields(formData: FormData): DonationFields | { error: stri
   return { acquisition_type, quantity, donor_name, donation_value, donation_received_date: requiredStr(formData, 'donation_received_date') };
 }
 
+function resolveTypeAndBrand(formData: FormData): { asset_type: string; brand: string | null } | { error: string } {
+  const typeSelect = requiredStr(formData, 'asset_type_select');
+  const asset_type = typeSelect === 'Other' ? requiredStr(formData, 'asset_type_other') : typeSelect;
+  if (!asset_type) return { error: 'Asset type is required.' };
+
+  const brandSelect = requiredStr(formData, 'brand_select');
+  const brand = brandSelect === 'Other' ? requiredStr(formData, 'brand_other') : brandSelect || null;
+
+  return { asset_type, brand };
+}
+
 function readDocumentFiles(formData: FormData, fieldName: string): File[] | { error: string } {
   const files = formData.getAll(fieldName).filter((f): f is File => f instanceof File && f.size > 0);
   for (const file of files) {
@@ -108,8 +120,9 @@ export async function createAsset(_prev: ActionState, formData: FormData): Promi
   const { data: profile } = await supabase.from('profiles').select('role').eq('id', user?.id).single();
   if (profile?.role !== 'admin') return { error: 'Only an administrator can add assets.' };
 
-  const asset_type = requiredStr(formData, 'asset_type');
-  if (!asset_type) return { error: 'Asset type is required.' };
+  const typeAndBrand = resolveTypeAndBrand(formData);
+  if ('error' in typeAndBrand) return { error: typeAndBrand.error };
+  const { asset_type, brand } = typeAndBrand;
 
   const serial_no = requiredStr(formData, 'serial_no');
   const overrideDuplicate = formData.get('override_duplicate') === 'on';
@@ -128,7 +141,7 @@ export async function createAsset(_prev: ActionState, formData: FormData): Promi
 
   const payload = {
     asset_type,
-    brand: requiredStr(formData, 'brand'),
+    brand,
     model: requiredStr(formData, 'model'),
     description: requiredStr(formData, 'description'),
     serial_no,
@@ -149,6 +162,7 @@ export async function createAsset(_prev: ActionState, formData: FormData): Promi
   if (error) return { error: friendlyDbError(error) };
 
   if (documentFiles.length > 0) await uploadAssetDocuments(supabase, data.id, documentFiles, user?.id);
+  await growCatalog(supabase, asset_type, brand);
 
   await logAudit(supabase, { action: 'asset_created', entity_type: 'asset', entity_id: data.id, new_value: payload });
   revalidatePath('/assets');
@@ -165,8 +179,9 @@ export async function updateAsset(assetId: string, _prev: ActionState, formData:
 
   const { data: before } = await supabase.from('assets').select('*').eq('id', assetId).single();
 
-  const asset_type = requiredStr(formData, 'asset_type');
-  if (!asset_type) return { error: 'Asset type is required.' };
+  const typeAndBrand = resolveTypeAndBrand(formData);
+  if ('error' in typeAndBrand) return { error: typeAndBrand.error };
+  const { asset_type, brand } = typeAndBrand;
 
   const serial_no = requiredStr(formData, 'serial_no');
   const overrideDuplicate = formData.get('override_duplicate') === 'on';
@@ -185,7 +200,7 @@ export async function updateAsset(assetId: string, _prev: ActionState, formData:
 
   const payload = {
     asset_type,
-    brand: requiredStr(formData, 'brand'),
+    brand,
     model: requiredStr(formData, 'model'),
     description: requiredStr(formData, 'description'),
     serial_no,
@@ -204,6 +219,7 @@ export async function updateAsset(assetId: string, _prev: ActionState, formData:
   if (error) return { error: friendlyDbError(error) };
 
   if (documentFiles.length > 0) await uploadAssetDocuments(supabase, assetId, documentFiles, user?.id);
+  await growCatalog(supabase, asset_type, brand);
 
   await logAudit(supabase, { action: 'asset_edited', entity_type: 'asset', entity_id: assetId, old_value: before, new_value: payload });
   revalidatePath('/assets');

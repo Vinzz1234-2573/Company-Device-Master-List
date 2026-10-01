@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
 import { getCurrentProfile, isAdmin } from '@/lib/current-user';
 import { createAsset } from '@/lib/actions/assets';
+import { getAssetCatalog } from '@/lib/catalog';
 import { PageHeader } from '@/components/page-header';
 import { AssetsIcon } from '@/components/icons';
 import { AssetForm } from '../asset-form';
@@ -11,7 +12,10 @@ export default async function NewAssetPage() {
   if (!isAdmin(profile)) redirect('/assets');
 
   const supabase = createClient();
-  const { data: departments } = await supabase.from('departments').select('*').order('name');
+  const [{ data: departments }, catalog] = await Promise.all([
+    supabase.from('departments').select('*').order('name'),
+    getAssetCatalog(supabase),
+  ]);
 
   return (
     <div className="space-y-5">
@@ -21,7 +25,7 @@ export default async function NewAssetPage() {
         title="Add Asset"
         subtitle="Purchased or a non-cash donation — switch Acquisition type on the right to match."
       />
-      <AssetForm action={createAsset} departments={departments || []} />
+      <AssetForm action={createAsset} departments={departments || []} catalog={catalog} />
     </div>
   );
 }
