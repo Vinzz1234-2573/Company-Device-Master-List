@@ -9,9 +9,11 @@
 -- live system. This catalog is the controlled vocabulary the form
 -- pulls its dropdown options from; the stored value is still just
 -- the catalog entry's name.
+--
+-- Every statement here is written to be safe to re-run.
 -- ============================================================
 
-create table asset_types (
+create table if not exists asset_types (
   id uuid primary key default gen_random_uuid(),
   name text not null unique,
   is_active boolean not null default true,
@@ -19,14 +21,14 @@ create table asset_types (
   created_at timestamptz not null default now()
 );
 
-create table brands (
+create table if not exists brands (
   id uuid primary key default gen_random_uuid(),
   name text not null unique,
   is_active boolean not null default true,
   created_at timestamptz not null default now()
 );
 
-create table asset_type_brands (
+create table if not exists asset_type_brands (
   asset_type_id uuid not null references asset_types(id) on delete cascade,
   brand_id uuid not null references brands(id) on delete cascade,
   primary key (asset_type_id, brand_id)
@@ -36,16 +38,40 @@ alter table asset_types enable row level security;
 alter table brands enable row level security;
 alter table asset_type_brands enable row level security;
 
-create policy asset_types_select on asset_types for select using (auth.uid() is not null);
-create policy asset_types_insert on asset_types for insert with check (is_admin());
-create policy asset_types_update on asset_types for update using (is_admin()) with check (is_admin());
+do $$ begin
+  create policy asset_types_select on asset_types for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_types_insert on asset_types for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_types_update on asset_types for update using (is_admin()) with check (is_admin());
+exception when duplicate_object then null;
+end $$;
 
-create policy brands_select on brands for select using (auth.uid() is not null);
-create policy brands_insert on brands for insert with check (is_admin());
-create policy brands_update on brands for update using (is_admin()) with check (is_admin());
+do $$ begin
+  create policy brands_select on brands for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy brands_insert on brands for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy brands_update on brands for update using (is_admin()) with check (is_admin());
+exception when duplicate_object then null;
+end $$;
 
-create policy asset_type_brands_select on asset_type_brands for select using (auth.uid() is not null);
-create policy asset_type_brands_insert on asset_type_brands for insert with check (is_admin());
+do $$ begin
+  create policy asset_type_brands_select on asset_type_brands for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_type_brands_insert on asset_type_brands for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
 
 -- ============================================================
 -- Starting master list (per the brief). Treated as a seed, not a

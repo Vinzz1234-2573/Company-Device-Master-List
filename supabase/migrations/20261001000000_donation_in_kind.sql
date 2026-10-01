@@ -2,23 +2,38 @@
 -- Donation in Kind: a special acquisition case for assets that
 -- arrive as non-cash donations (equipment, furniture, food,
 -- supplies, vehicles, etc.) rather than being purchased.
+--
+-- Every statement here is written to be safe to re-run — if an
+-- earlier attempt partially applied this (e.g. the enum type got
+-- created but a later statement in the same run failed), running
+-- this again picks up exactly where it left off instead of erroring
+-- on "already exists".
 -- ============================================================
 
-create type acquisition_type as enum ('purchased', 'donation_in_kind');
+do $$ begin
+  create type acquisition_type as enum ('purchased', 'donation_in_kind');
+exception when duplicate_object then null;
+end $$;
 
 alter table assets
-  add column acquisition_type acquisition_type not null default 'purchased',
-  add column quantity integer not null default 1,
-  add column donor_name text,
-  add column donation_value numeric(14, 2),
-  add column donation_received_date date;
+  add column if not exists acquisition_type acquisition_type not null default 'purchased',
+  add column if not exists quantity integer not null default 1,
+  add column if not exists donor_name text,
+  add column if not exists donation_value numeric(14, 2),
+  add column if not exists donation_received_date date;
 
-alter table assets
-  add constraint assets_quantity_positive check (quantity > 0),
-  add constraint assets_donation_requires_donor
+do $$ begin
+  alter table assets add constraint assets_quantity_positive check (quantity > 0);
+exception when duplicate_object then null;
+end $$;
+
+do $$ begin
+  alter table assets add constraint assets_donation_requires_donor
     check (acquisition_type <> 'donation_in_kind' or donor_name is not null);
+exception when duplicate_object then null;
+end $$;
 
-create index assets_acquisition_type_idx on assets (acquisition_type);
+create index if not exists assets_acquisition_type_idx on assets (acquisition_type);
 
 comment on column assets.acquisition_type is 'How the asset was acquired: purchased, or donation_in_kind (non-cash donation).';
 comment on column assets.quantity is 'Number of identical units this record represents (mainly for bulk/consumable donations, e.g. 50 chairs).';
@@ -30,7 +45,7 @@ comment on column assets.donation_received_date is 'Date the donation was receiv
 -- Supporting documents (donation letters, delivery orders,
 -- photos, etc.) attached to an asset record.
 -- ============================================================
-create table asset_documents (
+create table if not exists asset_documents (
   id uuid primary key default gen_random_uuid(),
   asset_id uuid not null references assets(id) on delete cascade,
   file_name text not null,
@@ -41,22 +56,40 @@ create table asset_documents (
   created_at timestamptz not null default now()
 );
 
-create index asset_documents_asset_idx on asset_documents (asset_id);
+create index if not exists asset_documents_asset_idx on asset_documents (asset_id);
 
 alter table asset_documents enable row level security;
 
-create policy asset_documents_select on asset_documents for select using (auth.uid() is not null);
-create policy asset_documents_insert on asset_documents for insert with check (is_admin());
-create policy asset_documents_delete on asset_documents for delete using (is_admin());
+do $$ begin
+  create policy asset_documents_select on asset_documents for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_insert on asset_documents for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_delete on asset_documents for delete using (is_admin());
+exception when duplicate_object then null;
+end $$;
 
 -- Private storage bucket backing asset_documents.storage_path.
 insert into storage.buckets (id, name, public)
 values ('asset-documents', 'asset-documents', false)
 on conflict (id) do nothing;
 
-create policy asset_documents_storage_select on storage.objects for select
-  using (bucket_id = 'asset-documents' and auth.uid() is not null);
-create policy asset_documents_storage_insert on storage.objects for insert
-  with check (bucket_id = 'asset-documents' and is_admin());
-create policy asset_documents_storage_delete on storage.objects for delete
-  using (bucket_id = 'asset-documents' and is_admin());
+do $$ begin
+  create policy asset_documents_storage_select on storage.objects for select
+    using (bucket_id = 'asset-documents' and auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_storage_insert on storage.objects for insert
+    with check (bucket_id = 'asset-documents' and is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_storage_delete on storage.objects for delete
+    using (bucket_id = 'asset-documents' and is_admin());
+exception when duplicate_object then null;
+end $$;

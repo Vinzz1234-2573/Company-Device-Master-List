@@ -402,23 +402,31 @@ $$;
 -- Donation in Kind (see supabase/migrations/20261001000000_donation_in_kind.sql
 -- for the authoritative, independently-applied version of this change)
 -- ============================================================
-create type acquisition_type as enum ('purchased', 'donation_in_kind');
+do $$ begin
+  create type acquisition_type as enum ('purchased', 'donation_in_kind');
+exception when duplicate_object then null;
+end $$;
 
 alter table assets
-  add column acquisition_type acquisition_type not null default 'purchased',
-  add column quantity integer not null default 1,
-  add column donor_name text,
-  add column donation_value numeric(14, 2),
-  add column donation_received_date date;
+  add column if not exists acquisition_type acquisition_type not null default 'purchased',
+  add column if not exists quantity integer not null default 1,
+  add column if not exists donor_name text,
+  add column if not exists donation_value numeric(14, 2),
+  add column if not exists donation_received_date date;
 
-alter table assets
-  add constraint assets_quantity_positive check (quantity > 0),
-  add constraint assets_donation_requires_donor
+do $$ begin
+  alter table assets add constraint assets_quantity_positive check (quantity > 0);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  alter table assets add constraint assets_donation_requires_donor
     check (acquisition_type <> 'donation_in_kind' or donor_name is not null);
+exception when duplicate_object then null;
+end $$;
 
-create index assets_acquisition_type_idx on assets (acquisition_type);
+create index if not exists assets_acquisition_type_idx on assets (acquisition_type);
 
-create table asset_documents (
+create table if not exists asset_documents (
   id uuid primary key default gen_random_uuid(),
   asset_id uuid not null references assets(id) on delete cascade,
   file_name text not null,
@@ -429,30 +437,48 @@ create table asset_documents (
   created_at timestamptz not null default now()
 );
 
-create index asset_documents_asset_idx on asset_documents (asset_id);
+create index if not exists asset_documents_asset_idx on asset_documents (asset_id);
 
 alter table asset_documents enable row level security;
 
-create policy asset_documents_select on asset_documents for select using (auth.uid() is not null);
-create policy asset_documents_insert on asset_documents for insert with check (is_admin());
-create policy asset_documents_delete on asset_documents for delete using (is_admin());
+do $$ begin
+  create policy asset_documents_select on asset_documents for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_insert on asset_documents for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_delete on asset_documents for delete using (is_admin());
+exception when duplicate_object then null;
+end $$;
 
 insert into storage.buckets (id, name, public)
 values ('asset-documents', 'asset-documents', false)
 on conflict (id) do nothing;
 
-create policy asset_documents_storage_select on storage.objects for select
-  using (bucket_id = 'asset-documents' and auth.uid() is not null);
-create policy asset_documents_storage_insert on storage.objects for insert
-  with check (bucket_id = 'asset-documents' and is_admin());
-create policy asset_documents_storage_delete on storage.objects for delete
-  using (bucket_id = 'asset-documents' and is_admin());
+do $$ begin
+  create policy asset_documents_storage_select on storage.objects for select
+    using (bucket_id = 'asset-documents' and auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_storage_insert on storage.objects for insert
+    with check (bucket_id = 'asset-documents' and is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_documents_storage_delete on storage.objects for delete
+    using (bucket_id = 'asset-documents' and is_admin());
+exception when duplicate_object then null;
+end $$;
 
 -- ============================================================
 -- Asset Type / Brand catalog (see supabase/migrations/20261002000000_asset_type_brand_catalog.sql
 -- for the authoritative, independently-applied version of this change)
 -- ============================================================
-create table asset_types (
+create table if not exists asset_types (
   id uuid primary key default gen_random_uuid(),
   name text not null unique,
   is_active boolean not null default true,
@@ -460,14 +486,14 @@ create table asset_types (
   created_at timestamptz not null default now()
 );
 
-create table brands (
+create table if not exists brands (
   id uuid primary key default gen_random_uuid(),
   name text not null unique,
   is_active boolean not null default true,
   created_at timestamptz not null default now()
 );
 
-create table asset_type_brands (
+create table if not exists asset_type_brands (
   asset_type_id uuid not null references asset_types(id) on delete cascade,
   brand_id uuid not null references brands(id) on delete cascade,
   primary key (asset_type_id, brand_id)
@@ -477,16 +503,40 @@ alter table asset_types enable row level security;
 alter table brands enable row level security;
 alter table asset_type_brands enable row level security;
 
-create policy asset_types_select on asset_types for select using (auth.uid() is not null);
-create policy asset_types_insert on asset_types for insert with check (is_admin());
-create policy asset_types_update on asset_types for update using (is_admin()) with check (is_admin());
+do $$ begin
+  create policy asset_types_select on asset_types for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_types_insert on asset_types for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_types_update on asset_types for update using (is_admin()) with check (is_admin());
+exception when duplicate_object then null;
+end $$;
 
-create policy brands_select on brands for select using (auth.uid() is not null);
-create policy brands_insert on brands for insert with check (is_admin());
-create policy brands_update on brands for update using (is_admin()) with check (is_admin());
+do $$ begin
+  create policy brands_select on brands for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy brands_insert on brands for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy brands_update on brands for update using (is_admin()) with check (is_admin());
+exception when duplicate_object then null;
+end $$;
 
-create policy asset_type_brands_select on asset_type_brands for select using (auth.uid() is not null);
-create policy asset_type_brands_insert on asset_type_brands for insert with check (is_admin());
+do $$ begin
+  create policy asset_type_brands_select on asset_type_brands for select using (auth.uid() is not null);
+exception when duplicate_object then null;
+end $$;
+do $$ begin
+  create policy asset_type_brands_insert on asset_type_brands for insert with check (is_admin());
+exception when duplicate_object then null;
+end $$;
 
 insert into asset_types (name, sort_order) values
   ('Laptop', 10), ('Laptop Adapter', 20), ('Desktop / PC', 30), ('Monitor', 40),
