@@ -539,8 +539,8 @@ exception when duplicate_object then null;
 end $$;
 
 insert into asset_types (name, sort_order) values
-  ('Laptop', 10), ('Laptop Adapter', 20), ('Desktop / PC', 30), ('Monitor', 40),
-  ('Monitor Adapter', 50), ('Handphone', 60), ('Handphone Charger', 70), ('Simcard', 80),
+  ('Laptop', 10), ('Laptop Adapter', 20), ('PC', 30), ('Monitor', 40),
+  ('Monitor Adapter', 50), ('Handphone', 60), ('Handphone Charger', 70), ('SIM Card', 80),
   ('Keyboard', 90), ('Mouse', 100), ('Wireless Mouse', 110), ('Bluetooth Mouse', 120),
   ('Printer', 130), ('Camera', 140), ('Camera Accessory', 150), ('Tablet', 160),
   ('HDMI Cable', 170), ('Router', 180), ('Wifi Modem', 190), ('Pendrive', 200), ('Other', 999)
@@ -563,7 +563,7 @@ from (values
   ('Monitor', 'Dell'), ('Monitor', 'HP'), ('Monitor', 'Lenovo'), ('Monitor', 'ASUS'), ('Monitor', 'Acer'),
   ('Monitor', 'Samsung'), ('Monitor', 'LG'), ('Monitor', 'ViewSonic'),
   ('Printer', 'Canon'), ('Printer', 'Epson'), ('Printer', 'HP'), ('Printer', 'Brother'), ('Printer', 'Xerox'),
-  ('Desktop / PC', 'Dell'), ('Desktop / PC', 'HP'), ('Desktop / PC', 'Lenovo'), ('Desktop / PC', 'Acer'), ('Desktop / PC', 'ASUS'),
+  ('PC', 'Dell'), ('PC', 'HP'), ('PC', 'Lenovo'), ('PC', 'Acer'), ('PC', 'ASUS'),
   ('Keyboard', 'Logitech'), ('Keyboard', 'Microsoft'), ('Keyboard', 'Dell'), ('Keyboard', 'HP'), ('Keyboard', 'Lenovo'),
   ('Mouse', 'Logitech'), ('Mouse', 'Microsoft'), ('Mouse', 'Dell'), ('Mouse', 'HP'), ('Mouse', 'Lenovo'),
   ('Wireless Mouse', 'Logitech'), ('Wireless Mouse', 'Microsoft'), ('Wireless Mouse', 'Dell'), ('Wireless Mouse', 'HP'),
@@ -616,8 +616,7 @@ on conflict do nothing;
 -- ============================================================
 insert into asset_types (name, sort_order) values
   ('Camera Battery', 141), ('Camera Battery Charger', 142), ('Camera Adapter', 143),
-  ('Camera Stabilization', 144), ('Camera Tripod', 145), ('Camera Mic', 146),
-  ('Machine', 210)
+  ('Camera Stabilization', 144), ('Camera Tripod', 145), ('Camera Mic', 146)
 on conflict (name) do nothing;
 
 insert into brands (name) values
@@ -631,9 +630,9 @@ on conflict (name) do nothing;
 insert into asset_type_brands (asset_type_id, brand_id)
 select t.id, b.id
 from (values
-  ('Simcard', 'Maxis'), ('Simcard', 'Celcom'), ('Simcard', 'Digi'), ('Simcard', 'U Mobile'),
-  ('Simcard', 'Unifi Mobile'), ('Simcard', 'Yes'), ('Simcard', 'Tune Talk'), ('Simcard', 'RedONE'),
-  ('Simcard', 'XOX'), ('Simcard', 'Merchantrade'),
+  ('SIM Card', 'Maxis'), ('SIM Card', 'Celcom'), ('SIM Card', 'Digi'), ('SIM Card', 'U Mobile'),
+  ('SIM Card', 'Unifi Mobile'), ('SIM Card', 'Yes'), ('SIM Card', 'Tune Talk'), ('SIM Card', 'RedONE'),
+  ('SIM Card', 'XOX'), ('SIM Card', 'Merchantrade'),
 
   ('Camera', 'Canon'), ('Camera', 'Sony'), ('Camera', 'Panasonic'), ('Camera', 'Nikon'),
   ('Camera', 'Fujifilm'), ('Camera', 'GoPro'), ('Camera', 'DJI'), ('Camera', 'Olympus'),
@@ -686,6 +685,9 @@ on conflict do nothing;
 update asset_types set name = 'PC' where name = 'Desktop / PC';
 update asset_types set name = 'SIM Card' where name = 'Simcard';
 update asset_types set name = 'Credit Card Machine' where name = 'Machine';
+
+insert into asset_types (name, sort_order) values ('Credit Card Machine', 210)
+on conflict (name) do nothing;
 
 insert into asset_types (name, sort_order) values ('Credit Card Machine Charger', 211)
 on conflict (name) do nothing;

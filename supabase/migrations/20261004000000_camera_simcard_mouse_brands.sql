@@ -23,8 +23,7 @@
 
 insert into asset_types (name, sort_order) values
   ('Camera Battery', 141), ('Camera Battery Charger', 142), ('Camera Adapter', 143),
-  ('Camera Stabilization', 144), ('Camera Tripod', 145), ('Camera Mic', 146),
-  ('Machine', 210)
+  ('Camera Stabilization', 144), ('Camera Tripod', 145), ('Camera Mic', 146)
 on conflict (name) do nothing;
 
 -- ============================================================
@@ -45,9 +44,9 @@ on conflict (name) do nothing;
 insert into asset_type_brands (asset_type_id, brand_id)
 select t.id, b.id
 from (values
-  ('Simcard', 'Maxis'), ('Simcard', 'Celcom'), ('Simcard', 'Digi'), ('Simcard', 'U Mobile'),
-  ('Simcard', 'Unifi Mobile'), ('Simcard', 'Yes'), ('Simcard', 'Tune Talk'), ('Simcard', 'RedONE'),
-  ('Simcard', 'XOX'), ('Simcard', 'Merchantrade'),
+  ('SIM Card', 'Maxis'), ('SIM Card', 'Celcom'), ('SIM Card', 'Digi'), ('SIM Card', 'U Mobile'),
+  ('SIM Card', 'Unifi Mobile'), ('SIM Card', 'Yes'), ('SIM Card', 'Tune Talk'), ('SIM Card', 'RedONE'),
+  ('SIM Card', 'XOX'), ('SIM Card', 'Merchantrade'),
 
   ('Camera', 'Canon'), ('Camera', 'Sony'), ('Camera', 'Panasonic'), ('Camera', 'Nikon'),
   ('Camera', 'Fujifilm'), ('Camera', 'GoPro'), ('Camera', 'DJI'), ('Camera', 'Olympus'),

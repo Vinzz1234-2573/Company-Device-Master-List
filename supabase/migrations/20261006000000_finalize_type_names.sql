@@ -14,5 +14,11 @@ update asset_types set name = 'PC' where name = 'Desktop / PC';
 update asset_types set name = 'SIM Card' where name = 'Simcard';
 update asset_types set name = 'Credit Card Machine' where name = 'Machine';
 
+-- Belt-and-suspenders: on a fresh install (or one where migration 4 never
+-- seeded "Machine" in the first place) there is nothing to rename above, so
+-- make sure the canonical name exists either way.
+insert into asset_types (name, sort_order) values ('Credit Card Machine', 210)
+on conflict (name) do nothing;
+
 insert into asset_types (name, sort_order) values ('Credit Card Machine Charger', 211)
 on conflict (name) do nothing;

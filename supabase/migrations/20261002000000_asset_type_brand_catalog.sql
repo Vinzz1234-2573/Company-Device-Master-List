@@ -80,8 +80,8 @@ end $$;
 -- one in, so the catalog grows on its own as real assets are added.
 -- ============================================================
 insert into asset_types (name, sort_order) values
-  ('Laptop', 10), ('Laptop Adapter', 20), ('Desktop / PC', 30), ('Monitor', 40),
-  ('Monitor Adapter', 50), ('Handphone', 60), ('Handphone Charger', 70), ('Simcard', 80),
+  ('Laptop', 10), ('Laptop Adapter', 20), ('PC', 30), ('Monitor', 40),
+  ('Monitor Adapter', 50), ('Handphone', 60), ('Handphone Charger', 70), ('SIM Card', 80),
   ('Keyboard', 90), ('Mouse', 100), ('Wireless Mouse', 110), ('Bluetooth Mouse', 120),
   ('Printer', 130), ('Camera', 140), ('Camera Accessory', 150), ('Tablet', 160),
   ('HDMI Cable', 170), ('Router', 180), ('Wifi Modem', 190), ('Pendrive', 200), ('Other', 999)
@@ -104,7 +104,7 @@ from (values
   ('Monitor', 'Dell'), ('Monitor', 'HP'), ('Monitor', 'Lenovo'), ('Monitor', 'ASUS'), ('Monitor', 'Acer'),
   ('Monitor', 'Samsung'), ('Monitor', 'LG'), ('Monitor', 'ViewSonic'),
   ('Printer', 'Canon'), ('Printer', 'Epson'), ('Printer', 'HP'), ('Printer', 'Brother'), ('Printer', 'Xerox'),
-  ('Desktop / PC', 'Dell'), ('Desktop / PC', 'HP'), ('Desktop / PC', 'Lenovo'), ('Desktop / PC', 'Acer'), ('Desktop / PC', 'ASUS'),
+  ('PC', 'Dell'), ('PC', 'HP'), ('PC', 'Lenovo'), ('PC', 'Acer'), ('PC', 'ASUS'),
   ('Keyboard', 'Logitech'), ('Keyboard', 'Microsoft'), ('Keyboard', 'Dell'), ('Keyboard', 'HP'), ('Keyboard', 'Lenovo'),
   ('Mouse', 'Logitech'), ('Mouse', 'Microsoft'), ('Mouse', 'Dell'), ('Mouse', 'HP'), ('Mouse', 'Lenovo'),
   ('Wireless Mouse', 'Logitech'), ('Wireless Mouse', 'Microsoft'), ('Wireless Mouse', 'Dell'), ('Wireless Mouse', 'HP'),
