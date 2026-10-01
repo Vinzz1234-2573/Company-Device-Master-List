@@ -558,3 +558,55 @@ from (values
 join asset_types t on t.name = x.type_name
 join brands b on b.name = x.brand_name
 on conflict do nothing;
+
+-- ============================================================
+-- Camera-accessory types, "Machine", and Simcard/Camera/Mouse brands
+-- (see supabase/migrations/20261004000000_camera_simcard_mouse_brands.sql
+-- for the authoritative, independently-applied version of this change)
+-- ============================================================
+insert into asset_types (name, sort_order) values
+  ('Camera Battery', 141), ('Camera Battery Charger', 142), ('Camera Adapter', 143),
+  ('Camera Stabilization', 144), ('Camera Tripod', 145), ('Camera Mic', 146),
+  ('Machine', 210)
+on conflict (name) do nothing;
+
+insert into brands (name) values
+  ('Maxis'), ('Celcom'), ('Digi'), ('U Mobile'), ('Unifi Mobile'), ('Yes'),
+  ('Tune Talk'), ('RedONE'), ('XOX'), ('Merchantrade'),
+  ('Nikon'), ('Fujifilm'), ('GoPro'), ('DJI'), ('Olympus'), ('Leica'), ('Ricoh'), ('Pentax'),
+  ('Manfrotto'), ('Joby'), ('Benro'), ('Rode'), ('Sennheiser'), ('Shure'), ('Zhiyun'),
+  ('A4Tech'), ('Rapoo'), ('Fantech')
+on conflict (name) do nothing;
+
+insert into asset_type_brands (asset_type_id, brand_id)
+select t.id, b.id
+from (values
+  ('Simcard', 'Maxis'), ('Simcard', 'Celcom'), ('Simcard', 'Digi'), ('Simcard', 'U Mobile'),
+  ('Simcard', 'Unifi Mobile'), ('Simcard', 'Yes'), ('Simcard', 'Tune Talk'), ('Simcard', 'RedONE'),
+  ('Simcard', 'XOX'), ('Simcard', 'Merchantrade'),
+
+  ('Camera', 'Canon'), ('Camera', 'Sony'), ('Camera', 'Panasonic'), ('Camera', 'Nikon'),
+  ('Camera', 'Fujifilm'), ('Camera', 'GoPro'), ('Camera', 'DJI'), ('Camera', 'Olympus'),
+  ('Camera', 'Leica'), ('Camera', 'Ricoh'), ('Camera', 'Pentax'),
+
+  ('Camera Battery', 'Canon'), ('Camera Battery', 'Sony'), ('Camera Battery', 'Nikon'),
+  ('Camera Battery', 'Fujifilm'), ('Camera Battery', 'Panasonic'), ('Camera Battery', 'GoPro'), ('Camera Battery', 'DJI'),
+
+  ('Camera Battery Charger', 'Canon'), ('Camera Battery Charger', 'Sony'), ('Camera Battery Charger', 'Nikon'),
+  ('Camera Battery Charger', 'Fujifilm'), ('Camera Battery Charger', 'Panasonic'), ('Camera Battery Charger', 'GoPro'),
+  ('Camera Battery Charger', 'DJI'),
+
+  ('Camera Adapter', 'Canon'), ('Camera Adapter', 'Sony'), ('Camera Adapter', 'Nikon'),
+  ('Camera Adapter', 'Fujifilm'), ('Camera Adapter', 'Panasonic'),
+
+  ('Camera Stabilization', 'DJI'), ('Camera Stabilization', 'Zhiyun'), ('Camera Stabilization', 'Manfrotto'),
+
+  ('Camera Tripod', 'Manfrotto'), ('Camera Tripod', 'Joby'), ('Camera Tripod', 'Benro'),
+
+  ('Camera Mic', 'Rode'), ('Camera Mic', 'Sennheiser'), ('Camera Mic', 'Shure'), ('Camera Mic', 'DJI'),
+
+  ('Mouse', 'A4Tech'), ('Mouse', 'Rapoo'), ('Mouse', 'Fantech'), ('Mouse', 'Razer'), ('Mouse', 'ASUS')
+) as x(type_name, brand_name)
+join asset_types t on t.name = x.type_name
+join brands b on b.name = x.brand_name
+on conflict do nothing;
