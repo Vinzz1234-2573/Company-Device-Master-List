@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useFormState } from 'react-dom';
 import { useState } from 'react';
 import { SubmitButton } from '@/components/submit-button';
@@ -23,9 +24,12 @@ export function AssetForm({
   asset?: Asset;
   departments: Department[];
 }) {
+  const searchParams = useSearchParams();
   const [state, formAction] = useFormState(action, { error: null });
   const [confirmDup, setConfirmDup] = useState(false);
-  const [acquisitionType, setAcquisitionType] = useState<AcquisitionType>(asset?.acquisition_type || 'purchased');
+  const [acquisitionType, setAcquisitionType] = useState<AcquisitionType>(
+    asset?.acquisition_type || (searchParams.get('acquisition') === 'donation_in_kind' ? 'donation_in_kind' : 'purchased')
+  );
   const isDonation = acquisitionType === 'donation_in_kind';
   const cancelHref = asset ? `/assets/${asset.id}` : '/assets';
 

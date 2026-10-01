@@ -155,6 +155,61 @@ export function PaperclipIcon({ className = 'h-5 w-5' }: IconProps) {
   );
 }
 
+export function FilterIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <path d="M4 5h16M7 12h10M10.5 19h3" />
+    </svg>
+  );
+}
+
+export function CalendarIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <rect x="3.5" y="5" width="17" height="15.5" rx="1.5" />
+      <path d="M3.5 9.5h17M8 3v3.5M16 3v3.5" />
+    </svg>
+  );
+}
+
+export function PinIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <path d="M12 21s7-6.1 7-11.5a7 7 0 1 0-14 0C5 14.9 12 21 12 21Z" />
+      <circle cx="12" cy="9.5" r="2.25" />
+    </svg>
+  );
+}
+
+export function CoinIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5v9M14.75 9.75c0-1.24-1.23-2.25-2.75-2.25s-2.75.9-2.75 2c0 3 5.5 1.5 5.5 4.5 0 1.1-1.23 2-2.75 2s-2.75-1.01-2.75-2.25" />
+    </svg>
+  );
+}
+
+export function AlertCircleIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.75v5" />
+      <path d="M12 16.1v.1" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
+export function InfoIcon({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg {...base} className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 11v5.5" />
+      <path d="M12 7.9v.1" strokeWidth="2.5" />
+    </svg>
+  );
+}
+
 export function ChevronRightIcon({ className = 'h-4 w-4' }: IconProps) {
   return (
     <svg {...base} className={className} aria-hidden="true">

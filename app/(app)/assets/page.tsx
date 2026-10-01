@@ -33,6 +33,10 @@ export default async function AssetsPage({
     status?: string;
     verification?: string;
     acquisition?: string;
+    location?: string;
+    condition?: string;
+    from?: string;
+    to?: string;
     page?: string;
   };
 }) {
@@ -55,6 +59,10 @@ export default async function AssetsPage({
   if (searchParams.status) query = query.eq('status', searchParams.status as AssetStatus);
   if (searchParams.verification === '1') query = query.eq('needs_verification', true);
   if (searchParams.acquisition) query = query.eq('acquisition_type', searchParams.acquisition);
+  if (searchParams.location) query = query.eq('location', searchParams.location);
+  if (searchParams.condition) query = query.eq('condition', searchParams.condition);
+  if (searchParams.from) query = query.gte('created_at', searchParams.from);
+  if (searchParams.to) query = query.lte('created_at', `${searchParams.to}T23:59:59`);
 
   const { data: assets, count } = await query.order('asset_code', { ascending: true }).range(from, to);
 
@@ -72,6 +80,8 @@ export default async function AssetsPage({
 
   const { data: types } = await supabase.from('assets').select('asset_type');
   const distinctTypes = [...new Set((types || []).map(t => t.asset_type))].sort();
+  const { data: locationRows } = await supabase.from('assets').select('location').not('location', 'is', null);
+  const distinctLocations = [...new Set((locationRows || []).map(l => l.location).filter(Boolean))].sort() as string[];
   const { data: departments } = await supabase.from('departments').select('id, code, name').order('name');
 
   const totalPages = Math.max(1, Math.ceil((count || 0) / PAGE_SIZE));
@@ -95,8 +105,8 @@ export default async function AssetsPage({
         }
       />
 
-      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-3 items-end" method="get">
-        <div className="col-span-2 md:col-span-1">
+      <form className="card p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 items-end" method="get">
+        <div className="col-span-2 md:col-span-2">
           <label className="label">Search</label>
           <input name="q" defaultValue={searchParams.q} className="input" placeholder="Type, brand, serial, IMEI…" />
         </div>
@@ -141,9 +151,24 @@ export default async function AssetsPage({
             <option value="donation_in_kind">Donation in Kind</option>
           </select>
         </div>
+        <div>
+          <label className="label">Location</label>
+          <select name="location" defaultValue={searchParams.location || ''} className="input">
+            <option value="">All locations</option>
+            {distinctLocations.map(l => (
+              <option key={l} value={l}>
+                {l}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className="label">Added From</label>
+          <input type="date" name="from" defaultValue={searchParams.from} className="input" />
+        </div>
         <div className="flex gap-2">
           <button type="submit" className="btn-primary w-full">
-            Apply Filters
+            Apply
           </button>
           <Link href="/assets" className="btn-secondary">
             Clear
